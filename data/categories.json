@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "arrays-hashing",
+      "name": "Arrays & Hashing",
+      "order": 1,
+      "blurb": "Frequency maps, sets, prefix products \u2014 the foundation everything else builds on.",
+      "default_io": "array",
+      "prerequisites": [],
+      "position": {
+        "x": 480,
+        "y": 0
+      }
+    },
+    {
+      "id": "two-pointers",
+      "name": "Two Pointers",
+      "order": 2,
+      "blurb": "Converging/scanning pointers on sorted or symmetric data.",
+      "default_io": "array",
+      "prerequisites": [
+        "arrays-hashing"
+      ],
+      "position": {
+        "x": 240,
+        "y": 130
+      }
+    },
+    {
+      "id": "stack",
+      "name": "Stack",
+      "order": 3,
+      "blurb": "LIFO patterns: matching, monotonic stacks, expression evaluation.",
+      "default_io": "array",
+      "prerequisites": [
+        "arrays-hashing"
+      ],
+      "position": {
+        "x": 720,
+        "y": 130
+      }
+    },
+    {
+      "id": "sliding-window",
+      "name": "Sliding Window",
+      "order": 4,
+      "blurb": "Expand/shrink a window to track a running constraint.",
+      "default_io": "array",
+      "prerequisites": [
+        "two-pointers"
+      ],
+      "position": {
+        "x": 240,
+        "y": 260
+      }
+    },
+    {
+      "id": "binary-search",
+      "name": "Binary Search",
+      "order": 5,
+      "blurb": "Halving the search space on sorted data or on the answer itself.",
+      "default_io": "array",
+      "prerequisites": [
+        "two-pointers"
+      ],
+      "position": {
+        "x": 0,
+        "y": 260
+      }
+    },
+    {
+      "id": "linked-list",
+      "name": "Linked List",
+      "order": 6,
+      "blurb": "Pointer manipulation, fast/slow pointers, in-place reversal.",
+      "default_io": "linkedlist",
+      "prerequisites": [
+        "two-pointers"
+      ],
+      "position": {
+        "x": 480,
+        "y": 260
+      }
+    },
+    {
+      "id": "trees",
+      "name": "Trees",
+      "order": 7,
+      "blurb": "DFS/BFS recursion, BST invariants, tree construction.",
+      "default_io": "tree",
+      "prerequisites": [
+        "binary-search",
+        "linked-list"
+      ],
+      "position": {
+        "x": 240,
+        "y": 390
+      }
+    },
+    {
+      "id": "tries",
+      "name": "Tries",
+      "order": 8,
+      "blurb": "Prefix trees for word lookup and autocomplete-style problems.",
+      "default_io": "design",
+      "prerequisites": [
+        "trees"
+      ],
+      "position": {
+        "x": 0,
+        "y": 520
+      }
+    },
+    {
+      "id": "heap",
+      "name": "Heap / Priority Queue",
+      "order": 9,
+      "blurb": "Top-k, streaming medians, scheduling via a priority queue.",
+      "default_io": "heap",
+      "prerequisites": [
+        "trees"
+      ],
+      "position": {
+        "x": 480,
+        "y": 520
+      }
+    },
+    {
+      "id": "backtracking",
+      "name": "Backtracking",
+      "order": 10,
+      "blurb": "Build candidates incrementally and prune \u2014 subsets, permutations, search.",
+      "default_io": "array",
+      "prerequisites": [
+        "trees"
+      ],
+      "position": {
+        "x": 240,
+        "y": 520
+      }
+    },
+    {
+      "id": "graphs",
+      "name": "Graphs",
+      "order": 11,
+      "blurb": "Grid + adjacency BFS/DFS, topological sort, union-find.",
+      "default_io": "graph",
+      "prerequisites": [
+        "backtracking"
+      ],
+      "position": {
+        "x": 240,
+        "y": 650
+      }
+    },
+    {
+      "id": "advanced-graphs",
+      "name": "Advanced Graphs",
+      "order": 12,
+      "blurb": "Dijkstra, Prim/Kruskal MST, Bellman-Ford, advanced topological order.",
+      "default_io": "graph",
+      "prerequisites": [
+        "graphs",
+        "heap"
+      ],
+      "position": {
+        "x": 240,
+        "y": 780
+      }
+    },
+    {
+      "id": "dp-1d",
+      "name": "1-D Dynamic Programming",
+      "order": 13,
+      "blurb": "Linear state DP: choices over a single dimension.",
+      "default_io": "array",
+      "prerequisites": [
+        "backtracking"
+      ],
+      "position": {
+        "x": 720,
+        "y": 650
+      }
+    },
+    {
+      "id": "dp-2d",
+      "name": "2-D Dynamic Programming",
+      "order": 14,
+      "blurb": "Grid / two-sequence DP with a 2-D state table.",
+      "default_io": "array",
+      "prerequisites": [
+        "graphs",
+        "dp-1d"
+      ],
+      "position": {
+        "x": 480,
+        "y": 780
+      }
+    },
+    {
+      "id": "greedy",
+      "name": "Greedy",
+      "order": 15,
+      "blurb": "Locally optimal choices that yield a global optimum.",
+      "default_io": "array",
+      "prerequisites": [
+        "dp-1d"
+      ],
+      "position": {
+        "x": 720,
+        "y": 780
+      }
+    },
+    {
+      "id": "intervals",
+      "name": "Intervals",
+      "order": 16,
+      "blurb": "Sort + sweep over ranges: merge, overlap, scheduling.",
+      "default_io": "array",
+      "prerequisites": [
+        "heap"
+      ],
+      "position": {
+        "x": 0,
+        "y": 650
+      }
+    },
+    {
+      "id": "math-geometry",
+      "name": "Math & Geometry",
+      "order": 17,
+      "blurb": "Matrix transforms, number theory, coordinate tricks. Largely standalone.",
+      "default_io": "matrix",
+      "prerequisites": [
+        "greedy"
+      ],
+      "position": {
+        "x": 720,
+        "y": 910
+      }
+    },
+    {
+      "id": "bit-manipulation",
+      "name": "Bit Manipulation",
+      "order": 18,
+      "blurb": "XOR tricks, bit counting, building arithmetic from bit ops. Largely standalone.",
+      "default_io": "bit",
+      "prerequisites": [
+        "dp-1d"
+      ],
+      "position": {
+        "x": 960,
+        "y": 780
+      }
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "arrays-hashing",
+        "label": "Arrays & Hashing",
+        "position": {
+          "x": 480,
+          "y": 0
+        }
+      },
+      {
+        "id": "two-pointers",
+        "label": "Two Pointers",
+        "position": {
+          "x": 240,
+          "y": 130
+        }
+      },
+      {
+        "id": "stack",
+        "label": "Stack",
+        "position": {
+          "x": 720,
+          "y": 130
+        }
+      },
+      {
+        "id": "sliding-window",
+        "label": "Sliding Window",
+        "position": {
+          "x": 240,
+          "y": 260
+        }
+      },
+      {
+        "id": "binary-search",
+        "label": "Binary Search",
+        "position": {
+          "x": 0,
+          "y": 260
+        }
+      },
+      {
+        "id": "linked-list",
+        "label": "Linked List",
+        "position": {
+          "x": 480,
+          "y": 260
+        }
+      },
+      {
+        "id": "trees",
+        "label": "Trees",
+        "position": {
+          "x": 240,
+          "y": 390
+        }
+      },
+      {
+        "id": "tries",
+        "label": "Tries",
+        "position": {
+          "x": 0,
+          "y": 520
+        }
+      },
+      {
+        "id": "heap",
+        "label": "Heap / Priority Queue",
+        "position": {
+          "x": 480,
+          "y": 520
+        }
+      },
+      {
+        "id": "backtracking",
+        "label": "Backtracking",
+        "position": {
+          "x": 240,
+          "y": 520
+        }
+      },
+      {
+        "id": "graphs",
+        "label": "Graphs",
+        "position": {
+          "x": 240,
+          "y": 650
+        }
+      },
+      {
+        "id": "advanced-graphs",
+        "label": "Advanced Graphs",
+        "position": {
+          "x": 240,
+          "y": 780
+        }
+      },
+      {
+        "id": "dp-1d",
+        "label": "1-D Dynamic Programming",
+        "position": {
+          "x": 720,
+          "y": 650
+        }
+      },
+      {
+        "id": "dp-2d",
+        "label": "2-D Dynamic Programming",
+        "position": {
+          "x": 480,
+          "y": 780
+        }
+      },
+      {
+        "id": "greedy",
+        "label": "Greedy",
+        "position": {
+          "x": 720,
+          "y": 780
+        }
+      },
+      {
+        "id": "intervals",
+        "label": "Intervals",
+        "position": {
+          "x": 0,
+          "y": 650
+        }
+      },
+      {
+        "id": "math-geometry",
+        "label": "Math & Geometry",
+        "position": {
+          "x": 720,
+          "y": 910
+        }
+      },
+      {
+        "id": "bit-manipulation",
+        "label": "Bit Manipulation",
+        "position": {
+          "x": 960,
+          "y": 780
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "arrays-hashing->two-pointers",
+        "source": "arrays-hashing",
+        "target": "two-pointers"
+      },
+      {
+        "id": "arrays-hashing->stack",
+        "source": "arrays-hashing",
+        "target": "stack"
+      },
+      {
+        "id": "two-pointers->binary-search",
+        "source": "two-pointers",
+        "target": "binary-search"
+      },
+      {
+        "id": "two-pointers->sliding-window",
+        "source": "two-pointers",
+        "target": "sliding-window"
+      },
+      {
+        "id": "two-pointers->linked-list",
+        "source": "two-pointers",
+        "target": "linked-list"
+      },
+      {
+        "id": "binary-search->trees",
+        "source": "binary-search",
+        "target": "trees"
+      },
+      {
+        "id": "linked-list->trees",
+        "source": "linked-list",
+        "target": "trees"
+      },
+      {
+        "id": "trees->tries",
+        "source": "trees",
+        "target": "tries"
+      },
+      {
+        "id": "trees->heap",
+        "source": "trees",
+        "target": "heap"
+      },
+      {
+        "id": "trees->backtracking",
+        "source": "trees",
+        "target": "backtracking"
+      },
+      {
+        "id": "backtracking->graphs",
+        "source": "backtracking",
+        "target": "graphs"
+      },
+      {
+        "id": "backtracking->dp-1d",
+        "source": "backtracking",
+        "target": "dp-1d"
+      },
+      {
+        "id": "graphs->advanced-graphs",
+        "source": "graphs",
+        "target": "advanced-graphs"
+      },
+      {
+        "id": "graphs->dp-2d",
+        "source": "graphs",
+        "target": "dp-2d"
+      },
+      {
+        "id": "heap->advanced-graphs",
+        "source": "heap",
+        "target": "advanced-graphs"
+      },
+      {
+        "id": "heap->intervals",
+        "source": "heap",
+        "target": "intervals"
+      },
+      {
+        "id": "dp-1d->dp-2d",
+        "source": "dp-1d",
+        "target": "dp-2d"
+      },
+      {
+        "id": "dp-1d->greedy",
+        "source": "dp-1d",
+        "target": "greedy"
+      },
+      {
+        "id": "greedy->math-geometry",
+        "source": "greedy",
+        "target": "math-geometry"
+      },
+      {
+        "id": "dp-1d->bit-manipulation",
+        "source": "dp-1d",
+        "target": "bit-manipulation"
+      }
+    ]
+  }
+}
