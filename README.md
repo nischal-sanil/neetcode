@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neetpath 150
 
-## Getting Started
+A local, single-user web app that turns the **NeetCode 150** into an interactive learning environment: a visual dependency roadmap of the 18 topics, a browsable problem list per topic, and an in-browser code editor that runs your Python/JavaScript solutions against real test cases — entirely client-side (Pyodide + JS web workers), with progress persisted to a local Postgres database.
 
-First, run the development server:
+## Stack
+
+Next.js 16 (App Router, React 19, TS) · Tailwind v4 + shadcn/ui · @xyflow/react (roadmap) · Monaco editor · Pyodide + JS web workers (execution) · Drizzle ORM + Postgres · zustand.
+
+Content (150 problems, 18 topics, 14 runnable challenges) lives in `/data` as JSON and is the source of truth. Postgres holds **only** user state (progress, drafts, submissions).
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+brew services start postgresql@17
+createdb neetcode_local              # once
+cp .env.example .env.local           # confirm DATABASE_URL=postgresql://localhost:5432/neetcode_local
+npm install
+npm run db:push                      # create the 3 tables
+npm run dev                          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Using it
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **/** — the roadmap. Topics laid out top-down by prerequisite; each node shows a progress ring. Click a node to enter it.
+- **/topic/[id]** — the problem list for a topic, in recommended order, with difficulty colors and solved/attempted/starred state.
+- **/problem/[slug]** — the solve view. 14 problems are playable (editor + tests); the rest link out to LeetCode. Pick a language, write your solution, and **Run** (Cmd/Ctrl+Enter). Drafts autosave per problem+language; all-pass marks the problem solved and the roadmap rings update.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The first Python run boots Pyodide from the CDN (a few seconds, once per session); JavaScript runs instantly.
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| command | does |
+|---|---|
+| `npm run dev` | dev server |
+| `npm run build` / `npm start` | production build / serve |
+| `npm run db:push` | push the Drizzle schema to Postgres |
+| `npm run db:studio` | Drizzle Studio |
+| `npm run lint` | eslint |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/            routes: / (roadmap), /topic/[id], /problem/[slug]
+components/     roadmap/, topic/, solve/, ui/ (shadcn), brand/, shell/
+lib/
+  data/         typed JSON loaders (content)
+  db/           drizzle client + schema + queries
+  actions/      server actions: progress transitions, draft autosave
+  workers/      js.worker, python.worker, comparison + 5s-timeout client
+data/           categories.json, problems.json, challenges.json (seed content)
+```

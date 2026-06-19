@@ -7,6 +7,9 @@ import { getProgressMap } from "@/lib/db/queries"
 
 import { RoadmapGraph, type RoadmapEdge, type RoadmapNode } from "@/components/roadmap/RoadmapGraph"
 
+// Progress rings reflect live DB state on every load (no static staleness window).
+export const dynamic = "force-dynamic"
+
 export default async function Home() {
   const categories = getCategories()
   const { nodes, edges } = getCategoriesGraph()
