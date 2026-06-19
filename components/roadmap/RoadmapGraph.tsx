@@ -98,8 +98,11 @@ export function RoadmapGraph({
     [edges]
   )
 
+  // Explicit height (viewport minus the h-14 nav) — React Flow measures its
+  // parent on mount and needs a definite height, which a flex-1 chain doesn't
+  // reliably provide at first paint.
   return (
-    <div className="relative min-h-0 w-full flex-1">
+    <div className="relative w-full h-[calc(100dvh-3.5rem)]">
       <ReactFlowProvider>
         <TooltipProvider delay={140}>
           <ReactFlow
