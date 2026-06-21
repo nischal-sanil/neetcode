@@ -73,13 +73,43 @@ export interface ProblemsFile {
   problems: Problem[];
 }
 
-// --- challenges.json ---
+// --- challenges (one file per slug under data/challenges/) ---
 
-export type Comparison = "exact" | "set" | "nested-unordered";
+export type Comparison = "exact" | "set" | "nested-unordered" | "float";
+
+/**
+ * How a single argument or a return value is encoded as JSON in a test case,
+ * and how the harness must (de)serialize it around the user's function.
+ * Everything crosses the worker boundary as plain JSON; structured node objects
+ * exist only transiently inside the worker during the call.
+ *  - plain            ints/strings/bools/arrays/matrices/bitmasks — used as-is.
+ *  - tree             LeetCode level-order array (with nulls) <-> TreeNode.
+ *  - linkedlist       value array                              <-> ListNode.
+ *  - linkedlist-cycle { list: number[], pos: number }          -> cyclic ListNode (pos=-1: none).
+ *  - linkedlist-random[[val, randomIndex|null], ...]           <-> ListNode w/ random pointer.
+ *  - graph-node       1-indexed adjacency array                <-> clone-graph Node.
+ */
+export type IoType =
+  | "plain"
+  | "tree"
+  | "linkedlist"
+  | "linkedlist-cycle"
+  | "linkedlist-random"
+  | "graph-node";
 
 export interface TestCase {
   args: unknown[];
   expected: unknown;
+}
+
+/** One operation-replay sequence for a stateful "design" problem. */
+export interface DesignTestCase {
+  /** operations[0] is the constructor and equals class_name; the rest are methods. */
+  operations: string[];
+  /** args[i] is spread into operations[i]. */
+  args: unknown[][];
+  /** expected[i] is the return of operations[i]; null for constructor & void methods. */
+  expected: unknown[];
 }
 
 export interface StarterCode {
@@ -89,14 +119,19 @@ export interface StarterCode {
 
 export interface Challenge {
   slug: string;
+  /** "function" (default) calls one entry function; "design" replays a class API. */
+  kind?: "function" | "design";
   entry_function: string;
   params: string[];
+  /** Positional, parallel to a test case's args[]; defaults to all "plain". */
+  arg_types?: IoType[];
+  /** Encoding of the return value; defaults to "plain". */
+  return_type?: IoType;
+  /** Index of an in-place-mutated arg used AS the result (void-returning problems). */
+  mutates_arg?: number | null;
+  /** For kind:"design": the class the user must implement (operations[0]). */
+  class_name?: string;
   comparison: Comparison;
   starter_code: StarterCode;
-  test_cases: TestCase[];
-}
-
-export interface ChallengesFile {
-  version: number;
-  challenges: Challenge[];
+  test_cases: TestCase[] | DesignTestCase[];
 }

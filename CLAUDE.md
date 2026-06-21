@@ -4,7 +4,7 @@ Reference facts for this project. Design intent and build sequencing live in the
 
 ## What this is
 
-A local, single-user web app that turns the **NeetCode 150** into an interactive learning environment: a visual dependency roadmap of the 18 topics, a browsable problem list per topic, and an in-browser code editor where the user solves a subset of problems against real test cases in Python or JavaScript. Progress persists to a local Postgres database. There is no auth and no multi-user concept — it runs only on this machine.
+A local, single-user web app that turns the **NeetCode 150** into an interactive learning environment: a visual dependency roadmap of the 18 topics, a browsable problem list per topic, and an in-browser code editor where the user solves all 150 problems against real test cases in Python or JavaScript. Progress persists to a local Postgres database. There is no auth and no multi-user concept — it runs only on this machine.
 
 ## Stack (decided — do not substitute without reason)
 
@@ -70,23 +70,34 @@ problems: [{
   leetcode_url: string       // canonical, always present and correct
   is_premium: boolean        // 7 problems are LeetCode-premium; the LeetCode link hits a paywall
   io_kind: string            // "array"|"string"|"tree"|"linkedlist"|"graph"|"heap"|"design"|"matrix"|"bit"
-  playable: boolean          // true => has an entry in challenges.json with runnable tests
+  playable: boolean          // derived: true iff data/challenges/<slug>.json exists (see sync-playable)
 }]
 ```
+`io_kind` is a coarse display hint and is NOT authoritative — several "array"/"heap" problems are actually stateful design classes. Classify a challenge from its real signature, not `io_kind`.
 
-### `challenges.json` — the runnable subset (14 problems today)
+### `data/challenges/<slug>.json` — one bare Challenge object per problem (all 150 playable)
+Challenges live as one file per slug under `data/challenges/`. `scripts/gen-challenge-index.mjs` builds the static barrel `data/challenges/index.ts` that `lib/data/content.ts` imports; `scripts/sync-playable.mjs` sets `problems.json.playable` from which files exist. (This per-file layout lets many authors add challenges in parallel without merge conflicts.)
 ```
-version: number
-challenges: [{
-  slug: string               // matches a problem with playable:true
-  entry_function: string     // function name the user must define (LeetCode-style camelCase, same in both languages)
-  params: string[]           // ordered parameter names
-  comparison: "exact"|"set"|"nested-unordered"
-  starter_code: { python: string, javascript: string }   // function stub the editor opens with
-  test_cases: [{ args: any[], expected: any }]            // args spread into entry_function in order
-}]
+{
+  slug: string
+  kind?: "function" | "design"        // default "function"
+  entry_function: string              // LeetCode camelCase, same in both languages (design: the class name)
+  params: string[]
+  arg_types?: IoType[]                 // per-param encoding, parallel to a case's args[]; default all "plain"
+  return_type?: IoType                 // encoding of the return; default "plain"
+  mutates_arg?: number | null          // index of an in-place-mutated arg used AS the result (void problems)
+  class_name?: string                  // kind:"design" only — operations[0] === class_name
+  comparison: "exact"|"set"|"nested-unordered"|"float"
+  starter_code: { python: string, javascript: string }
+  test_cases: [{ args, expected }]                       // function kind
+              | [{ operations, args, expected }]         // design kind (constructor/void slots => null)
+}
+// IoType = "plain"|"tree"|"linkedlist"|"linkedlist-cycle"|"linkedlist-random"|"graph-node"
 ```
-Only problems with simple JSON-serializable I/O (arrays/strings/ints/bools) are playable right now. Problems whose `io_kind` is `tree`, `linkedlist`, `graph`, `heap`, or `design` need per-problem build/serialize helpers in the harness before they can become playable; they are intentionally `playable:false` and ship no test cases. Adding more later means: add a `challenges.json` entry, set the problem's `playable:true`, and (for structured I/O) extend the harness with the relevant (de)serializer.
+Structured I/O crosses the worker boundary as plain JSON and is (de)serialized inside the worker by `lib/workers/serde.ts` (JS) and `lib/workers/py_harness.py` (Python, embedded via the generated `py-harness.generated.ts`): trees as LeetCode level-order arrays, linked lists as value arrays, clone-graph as 1-indexed adjacency, etc. Adding a problem: write `data/challenges/<slug>.json` + a reference under `/refsol`, run `npm run verify`, then `npm run gen`.
+
+### `/refsol` and the verification gate
+`/refsol/<slug>.{py,js}` (+ optional `.adversarial.*`) hold reference solutions used ONLY by the offline verifier — they are never imported by app code (eslint-banned) and never ship. `scripts/verify-challenge.mjs` runs every reference for a slug through the SAME serde/compare logic the workers use and asserts each reproduces every `expected`; `npm run verify` runs `serde-parity` (JS↔Python parity) + all 150. Every challenge must have ≥2 independent references that agree before it is trusted.
 
 ## Code-execution contract
 
@@ -94,8 +105,10 @@ Both languages run **inside a Web Worker**, never on the main thread, and never 
 
 Worker input:
 ```
-{ code: string, entryFunction: string, testCases: [{args, expected}], comparison: string }
+{ code, entryFunction, testCases, comparison,
+  mode?: "function"|"design", argTypes?, returnType?, mutatesArg?, className? }
 ```
+For structured I/O the worker deserializes tagged args (via `argTypes`) into TreeNode/ListNode/graph-Node before the call and serializes the tagged return (`returnType`) back to plain JSON before comparing. `mode:"design"` instantiates `className` and replays the `operations` sequence, collecting each call's result.
 Worker output:
 ```
 { results: [{ index, passed, got?, expected, error? }], summary: { passed, total, runtimeMs } }
@@ -154,8 +167,14 @@ createdb neetcode_local
 cp .env.example .env.local        # then confirm DATABASE_URL
 npm install
 npm run db:push                   # drizzle-kit push to create tables
-npm run db:seed                   # optional: load /data JSON into reference tables if you choose DB-backed content
-npm run dev
+npm run dev                       # predev runs gen (harness + challenge index + playable sync)
+```
+
+Content/verification scripts:
+```
+npm run gen        # regenerate py-harness.generated.ts, data/challenges/index.ts, problems.json playable
+npm run verify     # serde JS↔Python parity + run every challenge's references through the harness
+npm run verify:one <slug>
 ```
 
 ## Conventions and hard constraints

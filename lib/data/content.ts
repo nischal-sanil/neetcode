@@ -3,13 +3,12 @@
 
 import categoriesJson from "@/data/categories.json";
 import problemsJson from "@/data/problems.json";
-import challengesJson from "@/data/challenges.json";
+import { challenges } from "@/data/challenges/index";
 
 import type {
   CategoriesFile,
   Category,
   Challenge,
-  ChallengesFile,
   GraphEdge,
   GraphNode,
   Problem,
@@ -18,7 +17,6 @@ import type {
 
 const categoriesFile = categoriesJson as CategoriesFile;
 const problemsFile = problemsJson as ProblemsFile;
-const challengesFile = challengesJson as ChallengesFile;
 
 export function getCategories(): Category[] {
   return categoriesFile.categories;
@@ -47,9 +45,9 @@ export function getProblemsByCategory(categoryId: string): Problem[] {
 }
 
 export function getChallenge(slug: string): Challenge | null {
-  return challengesFile.challenges.find((c) => c.slug === slug) ?? null;
+  return challenges[slug] ?? null;
 }
 
 export function isPlayable(slug: string): boolean {
-  return getProblemBySlug(slug)?.playable ?? false;
+  return slug in challenges;
 }

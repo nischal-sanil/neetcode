@@ -118,16 +118,30 @@ function sortedCopy(arr: unknown[]): unknown[] {
   return [...arr].sort(cmp);
 }
 
+/** Float tolerance for the "float" comparison mode (median, averages, etc.). */
+const FLOAT_EPS = 1e-5;
+
+function floatEqual(got: unknown, expected: unknown): boolean {
+  if (typeof got !== "number" || typeof expected !== "number") return false;
+  if (Number.isNaN(got) && Number.isNaN(expected)) return true;
+  const diff = Math.abs(got - expected);
+  return diff <= FLOAT_EPS || diff <= FLOAT_EPS * Math.max(Math.abs(got), Math.abs(expected));
+}
+
 /**
  * Compare a produced value against the expected value under a comparison mode.
  * - exact: structural deep equality.
  * - set: both top-level values are arrays compared order-independently.
  * - nested-unordered: sort each inner array, then sort the outer list (3Sum / Group Anagrams style).
+ * - float: numeric equality within a small tolerance.
  */
 export function compare(got: unknown, expected: unknown, mode: Comparison): boolean {
   switch (mode) {
     case "exact":
       return deepEqual(got, expected);
+
+    case "float":
+      return floatEqual(got, expected);
 
     case "set": {
       if (!Array.isArray(got) || !Array.isArray(expected)) return false;

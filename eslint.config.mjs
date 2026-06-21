@@ -5,6 +5,16 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  // Reference solutions under /refsol are for offline verification only and
+  // must never reach the app bundle.
+  {
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        { patterns: ["**/refsol/*", "@/refsol/*"] },
+      ],
+    },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -12,6 +22,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated + non-source content.
+    "data/challenges/index.ts",
+    "lib/workers/py-harness.generated.ts",
+    "scripts/**",
+    "refsol/**",
   ]),
 ]);
 

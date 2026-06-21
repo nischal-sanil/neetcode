@@ -88,6 +88,11 @@ export function SolveView(props: SolveViewProps) {
       entryFunction: challenge.entry_function,
       testCases: challenge.test_cases,
       comparison: challenge.comparison,
+      mode: challenge.kind === "design" ? "design" : "function",
+      argTypes: challenge.arg_types,
+      returnType: challenge.return_type,
+      mutatesArg: challenge.mutates_arg,
+      className: challenge.class_name,
     });
 
     setResults(out.results, out.summary);

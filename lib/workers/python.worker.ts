@@ -2,6 +2,11 @@
 // the interpreter warm across messages. Booting is slow (a few seconds), so a
 // "warmup" message lets the UI show a one-time "starting Python" state.
 //
+// Structured I/O (trees, lists, graphs) and stateful "design" classes are
+// handled by the embedded Python harness (lib/workers/py_harness.py), exec'd
+// into the user namespace BEFORE the user code so a solution can reference
+// TreeNode / ListNode / Node. Only plain JSON ever crosses the boundary.
+//
 // This file only ever runs inside a Web Worker — Pyodide is never imported at
 // module top level in a way that executes during SSR.
 //
@@ -9,6 +14,7 @@
 // outputs are provided.
 
 import { compare } from "./compare";
+import { PY_HARNESS } from "./py-harness.generated";
 import type { CaseResult, WorkerInput, WorkerMessage, WorkerOutput } from "./types";
 
 // Pinned Pyodide version. Keep the loader URL and the indexURL on the same tag.
@@ -77,24 +83,58 @@ function toPlainJs(value: unknown): unknown {
   return value;
 }
 
+function destroyProxy(p: unknown): void {
+  if (p && typeof (p as PyProxy).destroy === "function") {
+    try {
+      (p as PyProxy).destroy();
+    } catch {
+      /* already destroyed */
+    }
+  }
+}
+
+// Driver: __raw__ (this case's args) + __ops__ (design op names) + __cfg__
+// (constant config dict) are set from JS; produces __result__.
+const DRIVER = `
+if __cfg__['kind'] == 'design':
+    __result__ = _run_design(__cfg__['class_name'], __ops__, __raw__)
+else:
+    __result__ = _run_function(__cfg__['entry'], __raw__, __cfg__['arg_types'], __cfg__['return_type'], __cfg__['mutates'])
+`;
+
 async function run(input: WorkerInput): Promise<WorkerOutput> {
-  const { code, entryFunction, testCases, comparison } = input;
+  const { code, entryFunction, testCases, comparison, mode, className } = input;
   const pyodide = await getPyodide();
   const start = performance.now();
   const results: CaseResult[] = [];
+  const isDesign = mode === "design";
+  const requiredName = isDesign ? className ?? "" : entryFunction;
 
-  // exec the user code into an isolated namespace, then fetch the entry function.
+  // exec the harness, then the user code, into an isolated namespace; then
+  // verify the required entry / class is defined.
   let ns: PyNamespace | null = null;
+  let cfgProxy: unknown = null;
   let buildError: string | null = null;
   try {
     ns = (pyodide.globals.get("dict") as () => PyNamespace)();
+    pyodide.runPython(PY_HARNESS, { globals: ns });
     pyodide.runPython(code, { globals: ns });
-    const fnExists = pyodide.runPython(
-      `'${entryFunction}' in dir() or '${entryFunction}' in globals()`,
+    const exists = pyodide.runPython(
+      `'${requiredName}' in dir() or '${requiredName}' in globals()`,
       { globals: ns },
     );
-    if (!fnExists) {
-      buildError = `Function "${entryFunction}" is not defined.`;
+    if (!exists) {
+      buildError = `${isDesign ? "Class" : "Function"} "${requiredName}" is not defined.`;
+    } else {
+      cfgProxy = pyodide.toPy({
+        kind: isDesign ? "design" : "function",
+        entry: entryFunction,
+        class_name: className ?? null,
+        arg_types: input.argTypes ?? null,
+        return_type: input.returnType ?? null,
+        mutates: input.mutatesArg ?? null,
+      });
+      ns.set("__cfg__", cfgProxy);
     }
   } catch (e) {
     buildError = errorMessage(e);
@@ -106,37 +146,34 @@ async function run(input: WorkerInput): Promise<WorkerOutput> {
       results.push({ index: i, passed: false, expected: tc.expected, error: buildError ?? "Build error" });
       continue;
     }
-    let argsProxy: unknown = null;
+    let rawProxy: unknown = null;
+    let opsProxy: unknown = null;
     try {
-      // Convert JS args -> Python, then call entryFunction(*args).
-      argsProxy = pyodide.toPy(tc.args);
-      ns.set("__args__", argsProxy);
-      const rawResult = pyodide.runPython(`${entryFunction}(*__args__)`, { globals: ns });
-      const got = toPlainJs(rawResult);
+      rawProxy = pyodide.toPy(tc.args);
+      ns.set("__raw__", rawProxy);
+      opsProxy = pyodide.toPy(isDesign ? tc.operations ?? [] : []);
+      ns.set("__ops__", opsProxy);
+      pyodide.runPython(DRIVER, { globals: ns });
+      const got = toPlainJs(ns.get("__result__"));
       const passed = compare(got, tc.expected, comparison);
       results.push({ index: i, passed, got, expected: tc.expected });
     } catch (e) {
       results.push({ index: i, passed: false, expected: tc.expected, error: errorMessage(e) });
     } finally {
-      if (argsProxy && typeof (argsProxy as PyProxy).destroy === "function") {
-        try {
-          (argsProxy as PyProxy).destroy();
-        } catch {
-          /* already destroyed */
-        }
-      }
+      destroyProxy(rawProxy);
+      destroyProxy(opsProxy);
     }
   }
 
+  destroyProxy(cfgProxy);
   if (ns) ns.destroy();
 
-  const runtimeMs = Math.round(performance.now() - start);
   return {
     results,
     summary: {
       passed: results.filter((r) => r.passed).length,
       total: testCases.length,
-      runtimeMs,
+      runtimeMs: Math.round(performance.now() - start),
     },
   };
 }
