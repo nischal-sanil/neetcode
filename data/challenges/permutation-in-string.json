@@ -1,0 +1,39 @@
+{
+  "slug": "permutation-in-string",
+  "entry_function": "checkInclusion",
+  "params": [
+    "s1",
+    "s2"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def checkInclusion(s1, s2):\n    # Write your solution here\n    pass\n",
+    "javascript": "function checkInclusion(s1, s2) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["ab", "eidbaooo"],
+      "expected": true
+    },
+    {
+      "args": ["ab", "eidboaoo"],
+      "expected": false
+    },
+    {
+      "args": ["a", "a"],
+      "expected": true
+    },
+    {
+      "args": ["abc", "ab"],
+      "expected": false
+    },
+    {
+      "args": ["adc", "dcda"],
+      "expected": true
+    },
+    {
+      "args": ["hello", "ooolleoooleh"],
+      "expected": false
+    }
+  ]
+}

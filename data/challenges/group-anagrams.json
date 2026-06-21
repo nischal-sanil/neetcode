@@ -1,0 +1,58 @@
+{
+  "slug": "group-anagrams",
+  "entry_function": "groupAnagrams",
+  "params": [
+    "strs"
+  ],
+  "comparison": "nested-unordered",
+  "starter_code": {
+    "python": "def groupAnagrams(strs):\n    # Write your solution here\n    pass\n",
+    "javascript": "function groupAnagrams(strs) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        ["eat", "tea", "tan", "ate", "nat", "bat"]
+      ],
+      "expected": [
+        ["bat"],
+        ["nat", "tan"],
+        ["ate", "eat", "tea"]
+      ]
+    },
+    {
+      "args": [
+        [""]
+      ],
+      "expected": [
+        [""]
+      ]
+    },
+    {
+      "args": [
+        ["a"]
+      ],
+      "expected": [
+        ["a"]
+      ]
+    },
+    {
+      "args": [
+        ["abc", "bca", "cab", "xyz", "zyx"]
+      ],
+      "expected": [
+        ["abc", "bca", "cab"],
+        ["xyz", "zyx"]
+      ]
+    },
+    {
+      "args": [
+        ["ddddddddddg", "dgggggggggg"]
+      ],
+      "expected": [
+        ["dgggggggggg"],
+        ["ddddddddddg"]
+      ]
+    }
+  ]
+}

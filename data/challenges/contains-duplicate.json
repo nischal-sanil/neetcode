@@ -1,0 +1,76 @@
+{
+  "slug": "contains-duplicate",
+  "entry_function": "containsDuplicate",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def containsDuplicate(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function containsDuplicate(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [
+          -1,
+          -1,
+          0,
+          2
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0,
+          -1,
+          5
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

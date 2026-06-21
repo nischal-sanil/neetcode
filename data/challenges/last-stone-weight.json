@@ -1,0 +1,50 @@
+{
+  "slug": "last-stone-weight",
+  "entry_function": "lastStoneWeight",
+  "params": [
+    "stones"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def lastStoneWeight(stones):\n    # Write your solution here\n    pass\n",
+    "javascript": "function lastStoneWeight(stones) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [2, 7, 4, 1, 8, 1]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [1]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [2, 2]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [3, 7, 2]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [10, 4, 4, 10]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [9, 3, 2, 10, 7, 5, 1]
+      ],
+      "expected": 1
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "min-stack",
+  "kind": "design",
+  "entry_function": "MinStack",
+  "params": [],
+  "class_name": "MinStack",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class MinStack:\n    def __init__(self):\n        # Write your solution here\n        pass\n\n    def push(self, val):\n        pass\n\n    def pop(self):\n        pass\n\n    def top(self):\n        pass\n\n    def getMin(self):\n        pass\n",
+    "javascript": "class MinStack {\n  constructor() {\n    // Write your solution here\n  }\n\n  push(val) {}\n\n  pop() {}\n\n  top() {}\n\n  getMin() {}\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["MinStack", "push", "push", "push", "getMin", "pop", "top", "getMin"],
+      "args": [[], [-2], [0], [-3], [], [], [], []],
+      "expected": [null, null, null, null, -3, null, 0, -2]
+    },
+    {
+      "operations": ["MinStack", "push", "push", "getMin", "pop", "getMin"],
+      "args": [[], [1], [2], [], [], []],
+      "expected": [null, null, null, 1, null, 1]
+    }
+  ]
+}

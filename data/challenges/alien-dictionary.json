@@ -1,0 +1,50 @@
+{
+  "slug": "alien-dictionary",
+  "entry_function": "alienOrder",
+  "params": [
+    "words"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def alienOrder(words):\n    # Write your solution here\n    pass\n",
+    "javascript": "function alienOrder(words) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        ["wrt", "wrf", "er", "ett", "rftt"]
+      ],
+      "expected": "wertf"
+    },
+    {
+      "args": [
+        ["z", "x"]
+      ],
+      "expected": "zx"
+    },
+    {
+      "args": [
+        ["z", "z"]
+      ],
+      "expected": "z"
+    },
+    {
+      "args": [
+        ["z", "x", "z"]
+      ],
+      "expected": ""
+    },
+    {
+      "args": [
+        ["abc", "ab"]
+      ],
+      "expected": ""
+    },
+    {
+      "args": [
+        ["ba", "ab", "bc"]
+      ],
+      "expected": ""
+    }
+  ]
+}

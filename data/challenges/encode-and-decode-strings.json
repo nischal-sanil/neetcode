@@ -1,0 +1,44 @@
+{
+  "slug": "encode-and-decode-strings",
+  "kind": "design",
+  "entry_function": "Codec",
+  "params": [],
+  "class_name": "Codec",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class Codec:\n    def encode(self, strs):\n        # Encodes a list of strings to a single string.\n        # Write your solution here\n        pass\n\n    def decode(self, s):\n        # Decodes a single string back to a list of strings.\n        # Write your solution here\n        pass\n\n    # Provided: round-trips your encode + decode (do not edit).\n    def encodeDecode(self, strs):\n        return self.decode(self.encode(strs))\n",
+    "javascript": "class Codec {\n  // Encodes a list of strings to a single string.\n  encode(strs) {\n    // Write your solution here\n  }\n\n  // Decodes a single string back to a list of strings.\n  decode(s) {\n    // Write your solution here\n  }\n\n  // Provided: round-trips your encode + decode (do not edit).\n  encodeDecode(strs) {\n    return this.decode(this.encode(strs));\n  }\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["Codec", "encodeDecode"],
+      "args": [[], [["neet", "code", "love", "you"]]],
+      "expected": [null, ["neet", "code", "love", "you"]]
+    },
+    {
+      "operations": ["Codec", "encodeDecode"],
+      "args": [[], [["we", "say", ":", "yes"]]],
+      "expected": [null, ["we", "say", ":", "yes"]]
+    },
+    {
+      "operations": ["Codec", "encodeDecode"],
+      "args": [[], [[]]],
+      "expected": [null, []]
+    },
+    {
+      "operations": ["Codec", "encodeDecode"],
+      "args": [[], [[""]]],
+      "expected": [null, [""]]
+    },
+    {
+      "operations": ["Codec", "encodeDecode"],
+      "args": [[], [["", "", ""]]],
+      "expected": [null, ["", "", ""]]
+    },
+    {
+      "operations": ["Codec", "encodeDecode"],
+      "args": [[], [["a#b", "3#xyz", "", "12345"]]],
+      "expected": [null, ["a#b", "3#xyz", "", "12345"]]
+    }
+  ]
+}

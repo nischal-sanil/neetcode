@@ -1,0 +1,44 @@
+{
+  "slug": "find-the-duplicate-number",
+  "entry_function": "findDuplicate",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def findDuplicate(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function findDuplicate(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [1, 3, 4, 2, 2]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [3, 1, 3, 4, 2]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [1, 1]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [2, 2, 2, 2, 2]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [9, 4, 7, 1, 8, 6, 5, 3, 2, 9]
+      ],
+      "expected": 9
+    }
+  ]
+}

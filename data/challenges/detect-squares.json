@@ -1,0 +1,39 @@
+{
+  "slug": "detect-squares",
+  "kind": "design",
+  "entry_function": "DetectSquares",
+  "params": [],
+  "class_name": "DetectSquares",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class DetectSquares:\n    def __init__(self):\n        # Write your solution here\n        pass\n\n    def add(self, point):\n        pass\n\n    def count(self, point):\n        pass\n",
+    "javascript": "class DetectSquares {\n  constructor() {\n    // Write your solution here\n  }\n\n  add(point) {}\n\n  count(point) {}\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["DetectSquares", "add", "add", "add", "count", "count", "add", "count"],
+      "args": [[], [[3, 10]], [[11, 2]], [[3, 2]], [[11, 10]], [[14, 8]], [[11, 2]], [[11, 10]]],
+      "expected": [null, null, null, null, 1, 0, null, 2]
+    },
+    {
+      "operations": ["DetectSquares", "count", "add", "count"],
+      "args": [[], [[0, 0]], [[5, 5]], [[0, 0]]],
+      "expected": [null, 0, null, 0]
+    },
+    {
+      "operations": ["DetectSquares", "add", "add", "add", "add", "count", "add", "count"],
+      "args": [[], [[0, 0]], [[0, 1]], [[1, 0]], [[1, 1]], [[0, 0]], [[0, 1]], [[0, 0]]],
+      "expected": [null, null, null, null, null, 1, null, 2]
+    },
+    {
+      "operations": ["DetectSquares", "add", "add", "add", "count"],
+      "args": [[], [[1, 1]], [[2, 2]], [[3, 3]], [[0, 0]]],
+      "expected": [null, null, null, null, 0]
+    },
+    {
+      "operations": ["DetectSquares", "add", "add", "add", "count"],
+      "args": [[], [[-1, -1]], [[-1, 1]], [[1, -1]], [[1, 1]]],
+      "expected": [null, null, null, null, 1]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "task-scheduler",
+  "entry_function": "leastInterval",
+  "params": [
+    "tasks",
+    "n"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def leastInterval(tasks, n):\n    # Write your solution here\n    pass\n",
+    "javascript": "function leastInterval(tasks, n) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        ["A", "A", "A", "B", "B", "B"],
+        2
+      ],
+      "expected": 8
+    },
+    {
+      "args": [
+        ["A", "A", "A", "B", "B", "B"],
+        0
+      ],
+      "expected": 6
+    },
+    {
+      "args": [
+        ["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"],
+        2
+      ],
+      "expected": 16
+    },
+    {
+      "args": [
+        ["A"],
+        5
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        ["A", "B", "C", "D"],
+        2
+      ],
+      "expected": 4
+    },
+    {
+      "args": [
+        ["A", "A", "A", "B", "B", "B", "C", "C", "C", "D", "D", "E"],
+        2
+      ],
+      "expected": 12
+    }
+  ]
+}

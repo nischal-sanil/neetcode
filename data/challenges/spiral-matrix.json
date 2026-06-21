@@ -1,0 +1,70 @@
+{
+  "slug": "spiral-matrix",
+  "entry_function": "spiralOrder",
+  "params": [
+    "matrix"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def spiralOrder(matrix):\n    # Write your solution here\n    pass\n",
+    "javascript": "function spiralOrder(matrix) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]
+        ]
+      ],
+      "expected": [1, 2, 3, 6, 9, 8, 7, 4, 5]
+    },
+    {
+      "args": [
+        [
+          [1, 2, 3, 4],
+          [5, 6, 7, 8],
+          [9, 10, 11, 12]
+        ]
+      ],
+      "expected": [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+    },
+    {
+      "args": [
+        [
+          [7]
+        ]
+      ],
+      "expected": [7]
+    },
+    {
+      "args": [
+        [
+          [1, 2, 3, 4, 5]
+        ]
+      ],
+      "expected": [1, 2, 3, 4, 5]
+    },
+    {
+      "args": [
+        [
+          [1],
+          [2],
+          [3],
+          [4]
+        ]
+      ],
+      "expected": [1, 2, 3, 4]
+    },
+    {
+      "args": [
+        [
+          [-1, -2],
+          [-3, -4]
+        ]
+      ],
+      "expected": [-1, -2, -4, -3]
+    }
+  ]
+}

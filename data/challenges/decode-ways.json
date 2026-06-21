@@ -1,0 +1,42 @@
+{
+  "slug": "decode-ways",
+  "entry_function": "numDecodings",
+  "params": [
+    "s"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def numDecodings(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function numDecodings(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["12"],
+      "expected": 2
+    },
+    {
+      "args": ["226"],
+      "expected": 3
+    },
+    {
+      "args": ["0"],
+      "expected": 0
+    },
+    {
+      "args": ["06"],
+      "expected": 0
+    },
+    {
+      "args": ["27"],
+      "expected": 1
+    },
+    {
+      "args": ["11106"],
+      "expected": 2
+    },
+    {
+      "args": ["2611055971756562"],
+      "expected": 4
+    }
+  ]
+}

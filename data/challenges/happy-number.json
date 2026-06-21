@@ -1,0 +1,50 @@
+{
+  "slug": "happy-number",
+  "entry_function": "isHappy",
+  "params": [
+    "n"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def isHappy(n):\n    # Write your solution here\n    pass\n",
+    "javascript": "function isHappy(n) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        19
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        2
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        1
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        7
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        116
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        100
+      ],
+      "expected": true
+    }
+  ]
+}

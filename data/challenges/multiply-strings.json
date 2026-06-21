@@ -1,0 +1,39 @@
+{
+  "slug": "multiply-strings",
+  "entry_function": "multiply",
+  "params": [
+    "num1",
+    "num2"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def multiply(num1, num2):\n    # Write your solution here\n    pass\n",
+    "javascript": "function multiply(num1, num2) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["2", "3"],
+      "expected": "6"
+    },
+    {
+      "args": ["123", "456"],
+      "expected": "56088"
+    },
+    {
+      "args": ["0", "52"],
+      "expected": "0"
+    },
+    {
+      "args": ["999", "999"],
+      "expected": "998001"
+    },
+    {
+      "args": ["9", "9"],
+      "expected": "81"
+    },
+    {
+      "args": ["123456789", "987654321"],
+      "expected": "121932631112635269"
+    }
+  ]
+}

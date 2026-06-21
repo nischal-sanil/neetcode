@@ -1,0 +1,20 @@
+{
+  "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+  "entry_function": "buildTree",
+  "params": ["preorder", "inorder"],
+  "arg_types": ["plain", "plain"],
+  "return_type": "tree",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# TreeNode is provided: class TreeNode: __init__(self, val=0, left=None, right=None)\ndef buildTree(preorder, inorder):\n    # Write your solution here\n    pass\n",
+    "javascript": "// TreeNode is provided: { val, left, right }\nfunction buildTree(preorder, inorder) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[3, 9, 20, 15, 7], [9, 3, 15, 20, 7]], "expected": [3, 9, 20, null, null, 15, 7] },
+    { "args": [[-1], [-1]], "expected": [-1] },
+    { "args": [[1, 2], [2, 1]], "expected": [1, 2] },
+    { "args": [[1, 2], [1, 2]], "expected": [1, null, 2] },
+    { "args": [[3, 1, 2, 4], [1, 2, 3, 4]], "expected": [3, 1, 4, null, 2] },
+    { "args": [[5, 3, 2, 1, 4, 8, 7, 9], [1, 2, 3, 4, 5, 7, 8, 9]], "expected": [5, 3, 8, 2, 4, 7, 9, 1] }
+  ]
+}

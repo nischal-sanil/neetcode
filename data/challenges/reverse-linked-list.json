@@ -1,0 +1,18 @@
+{
+  "slug": "reverse-linked-list",
+  "entry_function": "reverseList",
+  "params": ["head"],
+  "arg_types": ["linkedlist"],
+  "return_type": "linkedlist",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# ListNode is provided: class ListNode: __init__(self, val=0, next=None)\ndef reverseList(head):\n    # Write your solution here\n    pass\n",
+    "javascript": "// ListNode is provided: { val, next }\nfunction reverseList(head) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[1, 2, 3, 4, 5]], "expected": [5, 4, 3, 2, 1] },
+    { "args": [[1, 2]], "expected": [2, 1] },
+    { "args": [[]], "expected": [] },
+    { "args": [[7]], "expected": [7] }
+  ]
+}

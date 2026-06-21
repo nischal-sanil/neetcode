@@ -1,0 +1,20 @@
+{
+  "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+  "entry_function": "lowestCommonAncestor",
+  "params": ["root", "p", "q"],
+  "arg_types": ["tree", "plain", "plain"],
+  "return_type": "tree",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# TreeNode is provided: class TreeNode: __init__(self, val=0, left=None, right=None)\n# p and q are node values; return the lowest common ancestor node.\ndef lowestCommonAncestor(root, p, q):\n    # Write your solution here\n    pass\n",
+    "javascript": "// TreeNode is provided: { val, left, right }\n// p and q are node values; return the lowest common ancestor node.\nfunction lowestCommonAncestor(root, p, q) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[6, 2, 8, 0, 4, 7, 9, null, null, 3, 5], 2, 8], "expected": [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5] },
+    { "args": [[6, 2, 8, 0, 4, 7, 9, null, null, 3, 5], 2, 4], "expected": [2, 0, 4, null, null, 3, 5] },
+    { "args": [[6, 2, 8, 0, 4, 7, 9, null, null, 3, 5], 0, 5], "expected": [2, 0, 4, null, null, 3, 5] },
+    { "args": [[6, 2, 8, 0, 4, 7, 9, null, null, 3, 5], 7, 9], "expected": [8, 7, 9] },
+    { "args": [[5], 5, 5], "expected": [5] },
+    { "args": [[2, 1], 1, 2], "expected": [2, 1] }
+  ]
+}

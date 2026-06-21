@@ -1,0 +1,20 @@
+{
+  "slug": "reverse-nodes-in-k-group",
+  "entry_function": "reverseKGroup",
+  "params": ["head", "k"],
+  "arg_types": ["linkedlist", "plain"],
+  "return_type": "linkedlist",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# ListNode is provided: class ListNode: __init__(self, val=0, next=None)\ndef reverseKGroup(head, k):\n    # Write your solution here\n    pass\n",
+    "javascript": "// ListNode is provided: { val, next }\nfunction reverseKGroup(head, k) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[1, 2, 3, 4, 5], 2], "expected": [2, 1, 4, 3, 5] },
+    { "args": [[1, 2, 3, 4, 5], 3], "expected": [3, 2, 1, 4, 5] },
+    { "args": [[1, 2, 3, 4, 5, 6], 3], "expected": [3, 2, 1, 6, 5, 4] },
+    { "args": [[1, 2, 3, 4], 1], "expected": [1, 2, 3, 4] },
+    { "args": [[7], 2], "expected": [7] },
+    { "args": [[], 3], "expected": [] }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "top-k-frequent-elements",
+  "entry_function": "topKFrequent",
+  "params": [
+    "nums",
+    "k"
+  ],
+  "comparison": "set",
+  "starter_code": {
+    "python": "def topKFrequent(nums, k):\n    # Write your solution here\n    pass\n",
+    "javascript": "function topKFrequent(nums, k) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [1, 1, 1, 2, 2, 3],
+        2
+      ],
+      "expected": [1, 2]
+    },
+    {
+      "args": [
+        [1],
+        1
+      ],
+      "expected": [1]
+    },
+    {
+      "args": [
+        [4, 4, 4, 5, 5, 6, 6, 6, 6, 7],
+        2
+      ],
+      "expected": [6, 4]
+    },
+    {
+      "args": [
+        [-1, -1, -1, -2, -2, 3, 3, 3, 3],
+        3
+      ],
+      "expected": [3, -1, -2]
+    },
+    {
+      "args": [
+        [10, 10, 20, 20, 20, 30, 30, 30, 30, 40, 40, 40, 40, 40],
+        3
+      ],
+      "expected": [40, 30, 20]
+    }
+  ]
+}

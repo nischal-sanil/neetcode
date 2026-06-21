@@ -1,0 +1,71 @@
+{
+  "slug": "number-of-islands",
+  "entry_function": "numIslands",
+  "params": [
+    "grid"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def numIslands(grid):\n    # Write your solution here\n    pass\n",
+    "javascript": "function numIslands(grid) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          ["1", "1", "1", "1", "0"],
+          ["1", "1", "0", "1", "0"],
+          ["1", "1", "0", "0", "0"],
+          ["0", "0", "0", "0", "0"]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          ["1", "1", "0", "0", "0"],
+          ["1", "1", "0", "0", "0"],
+          ["0", "0", "1", "0", "0"],
+          ["0", "0", "0", "1", "1"]
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [
+          ["0", "0", "0"],
+          ["0", "0", "0"]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          ["1"]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          ["1", "0", "1", "0", "1"]
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [
+          ["1", "0", "1"],
+          ["0", "1", "0"],
+          ["1", "0", "1"]
+        ]
+      ],
+      "expected": 5
+    }
+  ]
+}

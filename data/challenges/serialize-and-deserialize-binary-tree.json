@@ -1,0 +1,20 @@
+{
+  "slug": "serialize-and-deserialize-binary-tree",
+  "entry_function": "serializeDeserialize",
+  "params": ["root"],
+  "arg_types": ["tree"],
+  "return_type": "tree",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# TreeNode is provided: class TreeNode: __init__(self, val=0, left=None, right=None)\n# Implement Codec so that deserialize(serialize(root)) rebuilds an identical tree.\nclass Codec:\n    def serialize(self, root):\n        # Encode a tree to a single string.\n        pass\n\n    def deserialize(self, data):\n        # Decode your encoded string back to a tree.\n        pass\n\n\n# Round-trips a tree through your Codec; do not edit.\ndef serializeDeserialize(root):\n    codec = Codec()\n    return codec.deserialize(codec.serialize(root))\n",
+    "javascript": "// TreeNode is provided: { val, left, right }\n// Implement Codec so that deserialize(serialize(root)) rebuilds an identical tree.\nclass Codec {\n  serialize(root) {\n    // Encode a tree to a single string.\n  }\n\n  deserialize(data) {\n    // Decode your encoded string back to a tree.\n  }\n}\n\n// Round-trips a tree through your Codec; do not edit.\nfunction serializeDeserialize(root) {\n  const codec = new Codec();\n  return codec.deserialize(codec.serialize(root));\n}\n"
+  },
+  "test_cases": [
+    { "args": [[1, 2, 3, null, null, 4, 5]], "expected": [1, 2, 3, null, null, 4, 5] },
+    { "args": [[]], "expected": [] },
+    { "args": [[1]], "expected": [1] },
+    { "args": [[1, 2, null, 3, null, 4]], "expected": [1, 2, null, 3, null, 4] },
+    { "args": [[-5, 0, 7, -10, null, null, 13]], "expected": [-5, 0, 7, -10, null, null, 13] },
+    { "args": [[5, 4, 7, 3, null, 2, null, -1, null, 9]], "expected": [5, 4, 7, 3, null, 2, null, -1, null, 9] }
+  ]
+}

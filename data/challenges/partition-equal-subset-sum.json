@@ -1,0 +1,50 @@
+{
+  "slug": "partition-equal-subset-sum",
+  "entry_function": "canPartition",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def canPartition(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function canPartition(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [1, 5, 11, 5]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [1, 2, 3, 5]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [1, 1]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [1]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [2, 2, 1, 1]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [3, 3, 3, 4, 5]
+      ],
+      "expected": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "binary-search",
+  "entry_function": "search",
+  "params": [
+    "nums",
+    "target"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def search(nums, target):\n    # Write your solution here\n    pass\n",
+    "javascript": "function search(nums, target) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [-1, 0, 3, 5, 9, 12],
+        9
+      ],
+      "expected": 4
+    },
+    {
+      "args": [
+        [-1, 0, 3, 5, 9, 12],
+        2
+      ],
+      "expected": -1
+    },
+    {
+      "args": [
+        [5],
+        5
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [5],
+        -3
+      ],
+      "expected": -1
+    },
+    {
+      "args": [
+        [-8, -5, -2, 0, 4, 7, 11, 18, 23, 30],
+        -8
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [-8, -5, -2, 0, 4, 7, 11, 18, 23, 30],
+        30
+      ],
+      "expected": 9
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "linked-list-cycle",
+  "entry_function": "hasCycle",
+  "params": ["head"],
+  "arg_types": ["linkedlist-cycle"],
+  "return_type": "plain",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# ListNode is provided: class ListNode: __init__(self, val=0, next=None)\ndef hasCycle(head):\n    # Write your solution here\n    pass\n",
+    "javascript": "// ListNode is provided: { val, next }\nfunction hasCycle(head) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [{ "list": [3, 2, 0, -4], "pos": 1 }], "expected": true },
+    { "args": [{ "list": [1, 2], "pos": 0 }], "expected": true },
+    { "args": [{ "list": [1], "pos": -1 }], "expected": false },
+    { "args": [{ "list": [], "pos": -1 }], "expected": false },
+    { "args": [{ "list": [1, 2, 3], "pos": -1 }], "expected": false }
+  ]
+}

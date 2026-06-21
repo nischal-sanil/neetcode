@@ -1,0 +1,81 @@
+{
+  "slug": "min-cost-climbing-stairs",
+  "entry_function": "minCostClimbingStairs",
+  "params": [
+    "cost"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def minCostClimbingStairs(cost):\n    # Write your solution here\n    pass\n",
+    "javascript": "function minCostClimbingStairs(cost) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          10,
+          15,
+          20
+        ]
+      ],
+      "expected": 15
+    },
+    {
+      "args": [
+        [
+          1,
+          100,
+          1,
+          1,
+          1,
+          100,
+          1,
+          1,
+          100,
+          1
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "args": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          5,
+          10
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "args": [
+        [
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [
+          0,
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

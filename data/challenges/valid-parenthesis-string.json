@@ -1,0 +1,62 @@
+{
+  "slug": "valid-parenthesis-string",
+  "entry_function": "checkValidString",
+  "params": [
+    "s"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def checkValidString(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function checkValidString(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "()"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "(*)"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "(*))"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        ")("
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "(((*)"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "**(("
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "(*()"
+      ],
+      "expected": true
+    }
+  ]
+}

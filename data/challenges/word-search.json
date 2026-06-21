@@ -1,0 +1,82 @@
+{
+  "slug": "word-search",
+  "entry_function": "exist",
+  "params": [
+    "board",
+    "word"
+  ],
+  "arg_types": [
+    "plain",
+    "plain"
+  ],
+  "return_type": "plain",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def exist(board, word):\n    # Write your solution here\n    pass\n",
+    "javascript": "function exist(board, word) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          ["A", "B", "C", "E"],
+          ["S", "F", "C", "S"],
+          ["A", "D", "E", "E"]
+        ],
+        "ABCCED"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          ["A", "B", "C", "E"],
+          ["S", "F", "C", "S"],
+          ["A", "D", "E", "E"]
+        ],
+        "SEE"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          ["A", "B", "C", "E"],
+          ["S", "F", "C", "S"],
+          ["A", "D", "E", "E"]
+        ],
+        "ABCB"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [
+          ["A"]
+        ],
+        "A"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          ["A"]
+        ],
+        "B"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [
+          ["A", "A", "A", "A"],
+          ["A", "A", "A", "A"],
+          ["A", "A", "A", "A"]
+        ],
+        "AAAAAAAAAAAAB"
+      ],
+      "expected": false
+    }
+  ]
+}

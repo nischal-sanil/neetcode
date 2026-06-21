@@ -1,0 +1,39 @@
+{
+  "slug": "kth-largest-element-in-a-stream",
+  "kind": "design",
+  "entry_function": "KthLargest",
+  "params": ["k", "nums"],
+  "class_name": "KthLargest",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class KthLargest:\n    def __init__(self, k, nums):\n        # Write your solution here\n        pass\n\n    def add(self, val):\n        pass\n",
+    "javascript": "class KthLargest {\n  constructor(k, nums) {\n    // Write your solution here\n  }\n\n  add(val) {}\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["KthLargest", "add", "add", "add", "add", "add"],
+      "args": [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]],
+      "expected": [null, 4, 5, 5, 8, 8]
+    },
+    {
+      "operations": ["KthLargest", "add", "add", "add", "add", "add"],
+      "args": [[1, []], [-3], [-2], [-4], [0], [4]],
+      "expected": [null, -3, -2, -2, 0, 4]
+    },
+    {
+      "operations": ["KthLargest", "add", "add", "add", "add", "add"],
+      "args": [[2, [0]], [-1], [1], [-2], [-4], [3]],
+      "expected": [null, -1, 0, 0, 0, 1]
+    },
+    {
+      "operations": ["KthLargest", "add", "add", "add", "add", "add"],
+      "args": [[3, [5, -1]], [2], [1], [-1], [3], [4]],
+      "expected": [null, -1, 1, 1, 2, 3]
+    },
+    {
+      "operations": ["KthLargest", "add", "add", "add", "add"],
+      "args": [[4, [7, 7, 7, 7, 8, 3]], [2], [10], [9], [9]],
+      "expected": [null, 7, 7, 7, 8]
+    }
+  ]
+}

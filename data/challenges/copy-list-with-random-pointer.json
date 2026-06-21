@@ -1,0 +1,20 @@
+{
+  "slug": "copy-list-with-random-pointer",
+  "entry_function": "copyRandomList",
+  "params": ["head"],
+  "arg_types": ["linkedlist-random"],
+  "return_type": "linkedlist-random",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# Each node has: val (int), next (Node|None), random (Node|None).\n# Return a DEEP COPY of the list (new nodes), preserving next + random links.\ndef copyRandomList(head):\n    # Write your solution here\n    pass\n",
+    "javascript": "// Each node has: val (number), next (Node|null), random (Node|null).\n// Return a DEEP COPY of the list (new nodes), preserving next + random links.\nfunction copyRandomList(head) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]], "expected": [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]] },
+    { "args": [[[1, 1], [2, 1]]], "expected": [[1, 1], [2, 1]] },
+    { "args": [[[3, null], [3, 0], [3, null]]], "expected": [[3, null], [3, 0], [3, null]] },
+    { "args": [[]], "expected": [] },
+    { "args": [[[5, 0]]], "expected": [[5, 0]] },
+    { "args": [[[-1, null], [-2, null]]], "expected": [[-1, null], [-2, null]] }
+  ]
+}

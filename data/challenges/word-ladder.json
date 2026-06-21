@@ -1,0 +1,64 @@
+{
+  "slug": "word-ladder",
+  "entry_function": "ladderLength",
+  "params": [
+    "beginWord",
+    "endWord",
+    "wordList"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def ladderLength(beginWord, endWord, wordList):\n    # Write your solution here\n    pass\n",
+    "javascript": "function ladderLength(beginWord, endWord, wordList) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "hit",
+        "cog",
+        ["hot", "dot", "dog", "lot", "log", "cog"]
+      ],
+      "expected": 5
+    },
+    {
+      "args": [
+        "hit",
+        "cog",
+        ["hot", "dot", "dog", "lot", "log"]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        "a",
+        "c",
+        ["a", "b", "c"]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        "hot",
+        "dog",
+        ["hot", "dog"]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        "leet",
+        "code",
+        ["lest", "leet", "lose", "code", "lode", "robe", "lost"]
+      ],
+      "expected": 6
+    },
+    {
+      "args": [
+        "cat",
+        "cat",
+        ["cat", "bat", "hat"]
+      ],
+      "expected": 1
+    }
+  ]
+}

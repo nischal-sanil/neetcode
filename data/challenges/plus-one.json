@@ -1,0 +1,50 @@
+{
+  "slug": "plus-one",
+  "entry_function": "plusOne",
+  "params": [
+    "digits"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def plusOne(digits):\n    # Write your solution here\n    pass\n",
+    "javascript": "function plusOne(digits) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [1, 2, 3]
+      ],
+      "expected": [1, 2, 4]
+    },
+    {
+      "args": [
+        [4, 3, 2, 1]
+      ],
+      "expected": [4, 3, 2, 2]
+    },
+    {
+      "args": [
+        [9]
+      ],
+      "expected": [1, 0]
+    },
+    {
+      "args": [
+        [9, 9, 9]
+      ],
+      "expected": [1, 0, 0, 0]
+    },
+    {
+      "args": [
+        [1, 9, 9]
+      ],
+      "expected": [2, 0, 0]
+    },
+    {
+      "args": [
+        [0]
+      ],
+      "expected": [1]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "longest-palindromic-substring",
+  "entry_function": "longestPalindrome",
+  "params": [
+    "s"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def longestPalindrome(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function longestPalindrome(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["cbbd"],
+      "expected": "bb"
+    },
+    {
+      "args": ["racecar"],
+      "expected": "racecar"
+    },
+    {
+      "args": ["a"],
+      "expected": "a"
+    },
+    {
+      "args": [""],
+      "expected": ""
+    },
+    {
+      "args": ["bananas"],
+      "expected": "anana"
+    },
+    {
+      "args": ["forgeeksskeegfor"],
+      "expected": "geeksskeeg"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "add-two-numbers",
+  "entry_function": "addTwoNumbers",
+  "params": ["l1", "l2"],
+  "arg_types": ["linkedlist", "linkedlist"],
+  "return_type": "linkedlist",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# ListNode is provided: class ListNode: __init__(self, val=0, next=None)\ndef addTwoNumbers(l1, l2):\n    # Write your solution here\n    pass\n",
+    "javascript": "// ListNode is provided: { val, next }\nfunction addTwoNumbers(l1, l2) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[2, 4, 3], [5, 6, 4]], "expected": [7, 0, 8] },
+    { "args": [[0], [0]], "expected": [0] },
+    { "args": [[9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]], "expected": [8, 9, 9, 9, 0, 0, 0, 1] },
+    { "args": [[5], [5]], "expected": [0, 1] },
+    { "args": [[1, 8], []], "expected": [1, 8] },
+    { "args": [[9, 9], [1]], "expected": [0, 0, 1] }
+  ]
+}

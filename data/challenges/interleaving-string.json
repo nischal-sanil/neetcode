@@ -1,0 +1,38 @@
+{
+  "slug": "interleaving-string",
+  "entry_function": "isInterleave",
+  "params": ["s1", "s2", "s3"],
+  "arg_types": ["plain", "plain", "plain"],
+  "return_type": "plain",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def isInterleave(s1, s2, s3):\n    # Write your solution here\n    pass\n",
+    "javascript": "function isInterleave(s1, s2, s3) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["aabcc", "dbbca", "aadbbcbcac"],
+      "expected": true
+    },
+    {
+      "args": ["aabcc", "dbbca", "aadbbbaccc"],
+      "expected": false
+    },
+    {
+      "args": ["", "", ""],
+      "expected": true
+    },
+    {
+      "args": ["", "abc", "abc"],
+      "expected": true
+    },
+    {
+      "args": ["abc", "", "acb"],
+      "expected": false
+    },
+    {
+      "args": ["a", "b", "ab"],
+      "expected": true
+    }
+  ]
+}

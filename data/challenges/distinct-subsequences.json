@@ -1,0 +1,39 @@
+{
+  "slug": "distinct-subsequences",
+  "entry_function": "numDistinct",
+  "params": [
+    "s",
+    "t"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def numDistinct(s, t):\n    # Write your solution here\n    pass\n",
+    "javascript": "function numDistinct(s, t) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["rabbbit", "rabbit"],
+      "expected": 3
+    },
+    {
+      "args": ["babgbag", "bag"],
+      "expected": 5
+    },
+    {
+      "args": ["abc", "abc"],
+      "expected": 1
+    },
+    {
+      "args": ["abc", ""],
+      "expected": 1
+    },
+    {
+      "args": ["abc", "abcd"],
+      "expected": 0
+    },
+    {
+      "args": ["aaaa", "aa"],
+      "expected": 6
+    }
+  ]
+}

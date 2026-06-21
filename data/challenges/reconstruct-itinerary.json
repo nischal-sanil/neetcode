@@ -1,0 +1,80 @@
+{
+  "slug": "reconstruct-itinerary",
+  "entry_function": "findItinerary",
+  "params": [
+    "tickets"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def findItinerary(tickets):\n    # Write your solution here\n    pass\n",
+    "javascript": "function findItinerary(tickets) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          ["MUC", "LHR"],
+          ["JFK", "MUC"],
+          ["SFO", "SJC"],
+          ["LHR", "SFO"]
+        ]
+      ],
+      "expected": ["JFK", "MUC", "LHR", "SFO", "SJC"]
+    },
+    {
+      "args": [
+        [
+          ["JFK", "SFO"],
+          ["JFK", "ATL"],
+          ["SFO", "ATL"],
+          ["ATL", "JFK"],
+          ["ATL", "SFO"]
+        ]
+      ],
+      "expected": ["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"]
+    },
+    {
+      "args": [
+        [
+          ["JFK", "KUL"],
+          ["JFK", "NRT"],
+          ["NRT", "JFK"]
+        ]
+      ],
+      "expected": ["JFK", "NRT", "JFK", "KUL"]
+    },
+    {
+      "args": [
+        [
+          ["JFK", "A"],
+          ["A", "JFK"],
+          ["JFK", "B"],
+          ["B", "JFK"]
+        ]
+      ],
+      "expected": ["JFK", "A", "JFK", "B", "JFK"]
+    },
+    {
+      "args": [
+        [
+          ["JFK", "AAA"]
+        ]
+      ],
+      "expected": ["JFK", "AAA"]
+    },
+    {
+      "args": [
+        [
+          ["JFK", "ZZZ"],
+          ["ZZZ", "JFK"],
+          ["JFK", "AAA"],
+          ["AAA", "JFK"],
+          ["JFK", "KKK"],
+          ["KKK", "AAA"],
+          ["AAA", "ZZZ"]
+        ]
+      ],
+      "expected": ["JFK", "AAA", "JFK", "KKK", "AAA", "ZZZ", "JFK", "ZZZ"]
+    }
+  ]
+}

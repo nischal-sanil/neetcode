@@ -1,0 +1,70 @@
+{
+  "slug": "rotting-oranges",
+  "entry_function": "orangesRotting",
+  "params": [
+    "grid"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def orangesRotting(grid):\n    # Write your solution here\n    pass\n",
+    "javascript": "function orangesRotting(grid) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          [2, 1, 1],
+          [1, 1, 0],
+          [0, 1, 1]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "args": [
+        [
+          [2, 1, 1],
+          [0, 1, 1],
+          [1, 0, 1]
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "args": [
+        [
+          [0, 2]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          [1]
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "args": [
+        [
+          [2, 1, 1],
+          [1, 1, 1],
+          [0, 1, 2]
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [
+          [1, 1, 1, 1],
+          [1, 2, 1, 1],
+          [1, 1, 1, 1]
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

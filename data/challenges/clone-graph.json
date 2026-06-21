@@ -1,0 +1,18 @@
+{
+  "slug": "clone-graph",
+  "entry_function": "cloneGraph",
+  "params": ["node"],
+  "arg_types": ["graph-node"],
+  "return_type": "graph-node",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# Node is provided: class Node: __init__(self, val=0, neighbors=None)\ndef cloneGraph(node):\n    # Write your solution here\n    pass\n",
+    "javascript": "// Node is provided: { val, neighbors }\nfunction cloneGraph(node) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[[2, 4], [1, 3], [2, 4], [1, 3]]], "expected": [[2, 4], [1, 3], [2, 4], [1, 3]] },
+    { "args": [[[2], [1]]], "expected": [[2], [1]] },
+    { "args": [[[]]], "expected": [[]] },
+    { "args": [[]], "expected": [] }
+  ]
+}

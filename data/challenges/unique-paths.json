@@ -1,0 +1,39 @@
+{
+  "slug": "unique-paths",
+  "entry_function": "uniquePaths",
+  "params": [
+    "m",
+    "n"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def uniquePaths(m, n):\n    # Write your solution here\n    pass\n",
+    "javascript": "function uniquePaths(m, n) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [3, 7],
+      "expected": 28
+    },
+    {
+      "args": [3, 2],
+      "expected": 3
+    },
+    {
+      "args": [1, 1],
+      "expected": 1
+    },
+    {
+      "args": [1, 10],
+      "expected": 1
+    },
+    {
+      "args": [10, 10],
+      "expected": 48620
+    },
+    {
+      "args": [7, 3],
+      "expected": 28
+    }
+  ]
+}

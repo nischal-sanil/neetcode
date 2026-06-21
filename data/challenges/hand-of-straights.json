@@ -1,0 +1,57 @@
+{
+  "slug": "hand-of-straights",
+  "entry_function": "isNStraightHand",
+  "params": [
+    "hand",
+    "groupSize"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def isNStraightHand(hand, groupSize):\n    # Write your solution here\n    pass\n",
+    "javascript": "function isNStraightHand(hand, groupSize) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [1, 2, 3, 6, 2, 3, 4, 7, 8],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [1, 2, 3, 4, 5],
+        4
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [8, 10, 12],
+        3
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [1, 1, 2, 2, 3, 3],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [1],
+        1
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [3, 2, 1, 2, 3, 4, 3, 4, 5, 9, 10, 11],
+        3
+      ],
+      "expected": true
+    }
+  ]
+}

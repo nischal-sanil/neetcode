@@ -1,0 +1,39 @@
+{
+  "slug": "minimum-interval-to-include-each-query",
+  "entry_function": "minInterval",
+  "params": [
+    "intervals",
+    "queries"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def minInterval(intervals, queries):\n    # Write your solution here\n    pass\n",
+    "javascript": "function minInterval(intervals, queries) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [[[1, 4], [2, 4], [3, 6], [4, 4]], [2, 3, 4, 5]],
+      "expected": [3, 3, 1, 4]
+    },
+    {
+      "args": [[[2, 3], [2, 5], [1, 8], [20, 25]], [2, 19, 5, 22]],
+      "expected": [2, -1, 4, 6]
+    },
+    {
+      "args": [[[1, 1]], [1, 2, 0]],
+      "expected": [1, -1, -1]
+    },
+    {
+      "args": [[[5, 10]], [3]],
+      "expected": [-1]
+    },
+    {
+      "args": [[[1, 100], [50, 60], [40, 55], [30, 70]], [55, 1, 100, 45, 65]],
+      "expected": [11, 100, 100, 16, 41]
+    },
+    {
+      "args": [[[1, 2], [3, 4]], [2, 3]],
+      "expected": [2, 2]
+    }
+  ]
+}

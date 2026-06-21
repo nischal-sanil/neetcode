@@ -1,0 +1,50 @@
+{
+  "slug": "number-of-1-bits",
+  "entry_function": "hammingWeight",
+  "params": [
+    "n"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def hammingWeight(n):\n    # Write your solution here\n    pass\n",
+    "javascript": "function hammingWeight(n) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        11
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        128
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        4294967293
+      ],
+      "expected": 31
+    },
+    {
+      "args": [
+        2147483648
+      ],
+      "expected": 1
+    }
+  ]
+}

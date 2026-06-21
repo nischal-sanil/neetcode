@@ -1,0 +1,56 @@
+{
+  "slug": "longest-substring-without-repeating-characters",
+  "entry_function": "lengthOfLongestSubstring",
+  "params": [
+    "s"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def lengthOfLongestSubstring(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function lengthOfLongestSubstring(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "abcabcbb"
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        "bbbbb"
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        "pwwkew"
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        ""
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        " "
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        "dvdf"
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        "abba"
+      ],
+      "expected": 2
+    }
+  ]
+}

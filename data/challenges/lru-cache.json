@@ -1,0 +1,44 @@
+{
+  "slug": "lru-cache",
+  "kind": "design",
+  "entry_function": "LRUCache",
+  "params": ["capacity"],
+  "class_name": "LRUCache",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class LRUCache:\n    def __init__(self, capacity):\n        # Write your solution here\n        pass\n\n    def get(self, key):\n        pass\n\n    def put(self, key, value):\n        pass\n",
+    "javascript": "class LRUCache {\n  constructor(capacity) {\n    // Write your solution here\n  }\n\n  get(key) {}\n\n  put(key, value) {}\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"],
+      "args": [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]],
+      "expected": [null, null, null, 1, null, -1, null, -1, 3, 4]
+    },
+    {
+      "operations": ["LRUCache", "get"],
+      "args": [[1], [0]],
+      "expected": [null, -1]
+    },
+    {
+      "operations": ["LRUCache", "put", "put", "get"],
+      "args": [[1], [1, 10], [2, 20], [1]],
+      "expected": [null, null, null, -1]
+    },
+    {
+      "operations": ["LRUCache", "put", "put", "put", "get"],
+      "args": [[2], [1, 1], [1, 2], [1, 3], [1]],
+      "expected": [null, null, null, null, 3]
+    },
+    {
+      "operations": ["LRUCache", "put", "put", "get", "put", "get", "get"],
+      "args": [[2], [2, 1], [1, 1], [2], [4, 1], [1], [2]],
+      "expected": [null, null, null, 1, null, -1, 1]
+    },
+    {
+      "operations": ["LRUCache", "put", "put", "put", "put", "get", "get"],
+      "args": [[3], [1, 1], [2, 2], [3, 3], [4, 4], [1], [4]],
+      "expected": [null, null, null, null, null, -1, 4]
+    }
+  ]
+}

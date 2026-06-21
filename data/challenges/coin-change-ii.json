@@ -1,0 +1,39 @@
+{
+  "slug": "coin-change-ii",
+  "entry_function": "change",
+  "params": [
+    "amount",
+    "coins"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def change(amount, coins):\n    # Write your solution here\n    pass\n",
+    "javascript": "function change(amount, coins) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [5, [1, 2, 5]],
+      "expected": 4
+    },
+    {
+      "args": [3, [2]],
+      "expected": 0
+    },
+    {
+      "args": [10, [10]],
+      "expected": 1
+    },
+    {
+      "args": [0, [7]],
+      "expected": 1
+    },
+    {
+      "args": [4, [1, 2, 3]],
+      "expected": 4
+    },
+    {
+      "args": [500, [1, 2, 5, 10]],
+      "expected": 219776
+    }
+  ]
+}

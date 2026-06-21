@@ -1,0 +1,39 @@
+{
+  "slug": "add-and-search-word-data-structure-design",
+  "kind": "design",
+  "entry_function": "WordDictionary",
+  "params": [],
+  "class_name": "WordDictionary",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class WordDictionary:\n    def __init__(self):\n        # Write your solution here\n        pass\n\n    def addWord(self, word):\n        pass\n\n    def search(self, word):\n        pass\n",
+    "javascript": "class WordDictionary {\n  constructor() {\n    // Write your solution here\n  }\n\n  addWord(word) {}\n\n  search(word) {}\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["WordDictionary", "addWord", "addWord", "addWord", "search", "search", "search", "search"],
+      "args": [[], ["bad"], ["dad"], ["mad"], ["pad"], ["bad"], [".ad"], ["b.."]],
+      "expected": [null, null, null, null, false, true, true, true]
+    },
+    {
+      "operations": ["WordDictionary", "search", "addWord", "search", "search"],
+      "args": [[], ["a"], ["a"], ["a"], ["."]],
+      "expected": [null, false, null, true, true]
+    },
+    {
+      "operations": ["WordDictionary", "addWord", "search", "search", "search", "search"],
+      "args": [[], ["a"], ["a"], [".a"], ["a."], ["aa"]],
+      "expected": [null, null, true, false, false, false]
+    },
+    {
+      "operations": ["WordDictionary", "addWord", "addWord", "search", "search", "search", "search"],
+      "args": [[], ["at"], ["and"], [".at"], ["a.d"], ["..."], ["...."]],
+      "expected": [null, null, null, false, true, true, false]
+    },
+    {
+      "operations": ["WordDictionary", "addWord", "addWord", "addWord", "search", "search", "search", "search", "search"],
+      "args": [[], ["ran"], ["rune"], ["runs"], ["r.n"], ["run."], ["ru.."], ["......"], ["r.ne"]],
+      "expected": [null, null, null, null, true, true, true, false, true]
+    }
+  ]
+}

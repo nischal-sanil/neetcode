@@ -1,0 +1,50 @@
+{
+  "slug": "valid-palindrome",
+  "entry_function": "isPalindrome",
+  "params": [
+    "s"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def isPalindrome(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function isPalindrome(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "A man, a plan, a canal: Panama"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "race a car"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        " "
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "0P"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "ab_a"
+      ],
+      "expected": true
+    }
+  ]
+}

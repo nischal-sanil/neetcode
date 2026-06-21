@@ -1,0 +1,78 @@
+{
+  "slug": "house-robber-ii",
+  "entry_function": "rob",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def rob(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function rob(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          2,
+          3,
+          2
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [
+          200,
+          3,
+          140,
+          20,
+          10
+        ]
+      ],
+      "expected": 340
+    },
+    {
+      "args": [
+        [
+          6,
+          7,
+          1,
+          30,
+          8,
+          2,
+          4
+        ]
+      ],
+      "expected": 41
+    }
+  ]
+}

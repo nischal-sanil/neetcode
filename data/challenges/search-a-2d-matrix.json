@@ -1,0 +1,75 @@
+{
+  "slug": "search-a-2d-matrix",
+  "entry_function": "searchMatrix",
+  "params": [
+    "matrix",
+    "target"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def searchMatrix(matrix, target):\n    # Write your solution here\n    pass\n",
+    "javascript": "function searchMatrix(matrix, target) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          [1, 3, 5, 7],
+          [10, 11, 16, 20],
+          [23, 30, 34, 60]
+        ],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          [1, 3, 5, 7],
+          [10, 11, 16, 20],
+          [23, 30, 34, 60]
+        ],
+        13
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [
+          [1]
+        ],
+        1
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          [1]
+        ],
+        2
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [
+          [-10, -8, -3, 0],
+          [2, 5, 9, 14],
+          [21, 27, 33, 40]
+        ],
+        -8
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [
+          [1, 4, 7, 11, 15]
+        ],
+        15
+      ],
+      "expected": true
+    }
+  ]
+}

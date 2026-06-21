@@ -1,0 +1,18 @@
+{
+  "slug": "minimum-window-substring",
+  "entry_function": "minWindow",
+  "params": ["s", "t"],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def minWindow(s, t):\n    # Write your solution here\n    pass\n",
+    "javascript": "function minWindow(s, t) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": ["ADOBECODEBANC", "ABC"], "expected": "BANC" },
+    { "args": ["a", "a"], "expected": "a" },
+    { "args": ["a", "aa"], "expected": "" },
+    { "args": ["aa", "aa"], "expected": "aa" },
+    { "args": ["bba", "ab"], "expected": "ba" },
+    { "args": ["cabwefgewcwaefgcf", "cae"], "expected": "cwae" }
+  ]
+}

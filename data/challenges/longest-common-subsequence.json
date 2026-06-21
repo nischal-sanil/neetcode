@@ -1,0 +1,39 @@
+{
+  "slug": "longest-common-subsequence",
+  "entry_function": "longestCommonSubsequence",
+  "params": [
+    "text1",
+    "text2"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def longestCommonSubsequence(text1, text2):\n    # Write your solution here\n    pass\n",
+    "javascript": "function longestCommonSubsequence(text1, text2) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["abcde", "ace"],
+      "expected": 3
+    },
+    {
+      "args": ["abc", "abc"],
+      "expected": 3
+    },
+    {
+      "args": ["abc", "def"],
+      "expected": 0
+    },
+    {
+      "args": ["", "abc"],
+      "expected": 0
+    },
+    {
+      "args": ["bsbininm", "jmjkbkjkv"],
+      "expected": 1
+    },
+    {
+      "args": ["oxcpqrsvwf", "shmtulqrypy"],
+      "expected": 2
+    }
+  ]
+}

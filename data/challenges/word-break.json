@@ -1,0 +1,64 @@
+{
+  "slug": "word-break",
+  "entry_function": "wordBreak",
+  "params": [
+    "s",
+    "wordDict"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def wordBreak(s, wordDict):\n    # Write your solution here\n    pass\n",
+    "javascript": "function wordBreak(s, wordDict) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "leetcode",
+        ["leet", "code"]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "applepenapple",
+        ["apple", "pen"]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "catsandog",
+        ["cats", "dog", "sand", "and", "cat"]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "a",
+        ["b"]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "",
+        ["anything"]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "aaaaaaa",
+        ["aaaa", "aaa"]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "cars",
+        ["car", "ca", "rs"]
+      ],
+      "expected": true
+    }
+  ]
+}

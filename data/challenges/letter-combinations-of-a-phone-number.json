@@ -1,0 +1,80 @@
+{
+  "slug": "letter-combinations-of-a-phone-number",
+  "entry_function": "letterCombinations",
+  "params": [
+    "digits"
+  ],
+  "comparison": "set",
+  "starter_code": {
+    "python": "def letterCombinations(digits):\n    # Write your solution here\n    pass\n",
+    "javascript": "function letterCombinations(digits) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "23"
+      ],
+      "expected": [
+        "ad",
+        "ae",
+        "af",
+        "bd",
+        "be",
+        "bf",
+        "cd",
+        "ce",
+        "cf"
+      ]
+    },
+    {
+      "args": [
+        ""
+      ],
+      "expected": []
+    },
+    {
+      "args": [
+        "2"
+      ],
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "args": [
+        "7"
+      ],
+      "expected": [
+        "p",
+        "q",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "args": [
+        "79"
+      ],
+      "expected": [
+        "pw",
+        "px",
+        "py",
+        "pz",
+        "qw",
+        "qx",
+        "qy",
+        "qz",
+        "rw",
+        "rx",
+        "ry",
+        "rz",
+        "sw",
+        "sx",
+        "sy",
+        "sz"
+      ]
+    }
+  ]
+}

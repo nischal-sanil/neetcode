@@ -1,0 +1,46 @@
+{
+  "slug": "valid-parentheses",
+  "entry_function": "isValid",
+  "params": [
+    "s"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def isValid(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function isValid(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["()"],
+      "expected": true
+    },
+    {
+      "args": ["()[]{}"],
+      "expected": true
+    },
+    {
+      "args": ["(]"],
+      "expected": false
+    },
+    {
+      "args": ["([)]"],
+      "expected": false
+    },
+    {
+      "args": ["{[]}"],
+      "expected": true
+    },
+    {
+      "args": ["]"],
+      "expected": false
+    },
+    {
+      "args": ["((("],
+      "expected": false
+    },
+    {
+      "args": [""],
+      "expected": true
+    }
+  ]
+}

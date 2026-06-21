@@ -1,0 +1,67 @@
+{
+  "slug": "partition-labels",
+  "entry_function": "partitionLabels",
+  "params": [
+    "s"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def partitionLabels(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function partitionLabels(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "ababcbacadefegdehijhklij"
+      ],
+      "expected": [
+        9,
+        7,
+        8
+      ]
+    },
+    {
+      "args": [
+        "eccbbbbdec"
+      ],
+      "expected": [
+        10
+      ]
+    },
+    {
+      "args": [
+        "a"
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "args": [
+        "abc"
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "args": [
+        "aaaa"
+      ],
+      "expected": [
+        4
+      ]
+    },
+    {
+      "args": [
+        "abacddc"
+      ],
+      "expected": [
+        3,
+        4
+      ]
+    }
+  ]
+}

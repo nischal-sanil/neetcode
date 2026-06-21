@@ -1,0 +1,57 @@
+{
+  "slug": "koko-eating-bananas",
+  "entry_function": "minEatingSpeed",
+  "params": [
+    "piles",
+    "h"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def minEatingSpeed(piles, h):\n    # Write your solution here\n    pass\n",
+    "javascript": "function minEatingSpeed(piles, h) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [3, 6, 7, 11],
+        8
+      ],
+      "expected": 4
+    },
+    {
+      "args": [
+        [30, 11, 23, 4, 20],
+        5
+      ],
+      "expected": 30
+    },
+    {
+      "args": [
+        [30, 11, 23, 4, 20],
+        6
+      ],
+      "expected": 23
+    },
+    {
+      "args": [
+        [1000000000],
+        2
+      ],
+      "expected": 500000000
+    },
+    {
+      "args": [
+        [1],
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [5, 5, 5, 5],
+        20
+      ],
+      "expected": 1
+    }
+  ]
+}

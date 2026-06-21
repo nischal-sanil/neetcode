@@ -1,0 +1,38 @@
+{
+  "slug": "climbing-stairs",
+  "entry_function": "climbStairs",
+  "params": [
+    "n"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def climbStairs(n):\n    # Write your solution here\n    pass\n",
+    "javascript": "function climbStairs(n) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [1],
+      "expected": 1
+    },
+    {
+      "args": [2],
+      "expected": 2
+    },
+    {
+      "args": [3],
+      "expected": 3
+    },
+    {
+      "args": [5],
+      "expected": 8
+    },
+    {
+      "args": [10],
+      "expected": 89
+    },
+    {
+      "args": [45],
+      "expected": 1836311903
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "course-schedule-ii",
+  "entry_function": "findOrder",
+  "params": ["numCourses", "prerequisites"],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def findOrder(numCourses, prerequisites):\n    # Write your solution here\n    pass\n",
+    "javascript": "function findOrder(numCourses, prerequisites) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [1, []],
+      "expected": [0]
+    },
+    {
+      "args": [2, [[1, 0]]],
+      "expected": [0, 1]
+    },
+    {
+      "args": [4, [[1, 0], [2, 1], [3, 2]]],
+      "expected": [0, 1, 2, 3]
+    },
+    {
+      "args": [5, [[4, 3], [3, 2], [2, 1], [1, 0]]],
+      "expected": [0, 1, 2, 3, 4]
+    },
+    {
+      "args": [2, [[0, 1], [1, 0]]],
+      "expected": []
+    },
+    {
+      "args": [3, [[1, 0], [2, 1], [0, 2]]],
+      "expected": []
+    }
+  ]
+}

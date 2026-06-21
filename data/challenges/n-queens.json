@@ -1,0 +1,33 @@
+{
+  "slug": "n-queens",
+  "entry_function": "solveNQueens",
+  "params": [
+    "n"
+  ],
+  "comparison": "set",
+  "starter_code": {
+    "python": "def solveNQueens(n):\n    # Write your solution here\n    pass\n",
+    "javascript": "function solveNQueens(n) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [1],
+      "expected": [["Q"]]
+    },
+    {
+      "args": [2],
+      "expected": []
+    },
+    {
+      "args": [3],
+      "expected": []
+    },
+    {
+      "args": [4],
+      "expected": [
+        [".Q..", "...Q", "Q...", "..Q."],
+        ["..Q.", "Q...", "...Q", ".Q.."]
+      ]
+    }
+  ]
+}

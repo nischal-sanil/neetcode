@@ -1,0 +1,57 @@
+{
+  "slug": "kth-largest-element-in-an-array",
+  "entry_function": "findKthLargest",
+  "params": [
+    "nums",
+    "k"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def findKthLargest(nums, k):\n    # Write your solution here\n    pass\n",
+    "javascript": "function findKthLargest(nums, k) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [3, 2, 1, 5, 6, 4],
+        2
+      ],
+      "expected": 5
+    },
+    {
+      "args": [
+        [3, 2, 3, 1, 2, 4, 5, 5, 6],
+        4
+      ],
+      "expected": 4
+    },
+    {
+      "args": [
+        [1],
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [2, 1],
+        2
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [-1, -5, -3, -2, -4],
+        3
+      ],
+      "expected": -3
+    },
+    {
+      "args": [
+        [7, 7, 7, 7, 7],
+        3
+      ],
+      "expected": 7
+    }
+  ]
+}

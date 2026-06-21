@@ -1,0 +1,39 @@
+{
+  "slug": "edit-distance",
+  "entry_function": "minDistance",
+  "params": [
+    "word1",
+    "word2"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def minDistance(word1, word2):\n    # Write your solution here\n    pass\n",
+    "javascript": "function minDistance(word1, word2) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": ["horse", "ros"],
+      "expected": 3
+    },
+    {
+      "args": ["intention", "execution"],
+      "expected": 5
+    },
+    {
+      "args": ["", ""],
+      "expected": 0
+    },
+    {
+      "args": ["", "abc"],
+      "expected": 3
+    },
+    {
+      "args": ["abc", "abc"],
+      "expected": 0
+    },
+    {
+      "args": ["sunday", "saturday"],
+      "expected": 3
+    }
+  ]
+}

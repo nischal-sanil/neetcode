@@ -1,0 +1,72 @@
+{
+  "slug": "burst-balloons",
+  "entry_function": "maxCoins",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def maxCoins(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function maxCoins(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          3,
+          1,
+          5,
+          8
+        ]
+      ],
+      "expected": 167
+    },
+    {
+      "args": [
+        [
+          1,
+          5
+        ]
+      ],
+      "expected": 10
+    },
+    {
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": 7
+    },
+    {
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": 22
+    },
+    {
+      "args": [
+        [
+          9,
+          76,
+          64,
+          21,
+          97,
+          60
+        ]
+      ],
+      "expected": 1086136
+    }
+  ]
+}

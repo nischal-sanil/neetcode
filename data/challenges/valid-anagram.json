@@ -1,0 +1,57 @@
+{
+  "slug": "valid-anagram",
+  "entry_function": "isAnagram",
+  "params": [
+    "s",
+    "t"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def isAnagram(s, t):\n    # Write your solution here\n    pass\n",
+    "javascript": "function isAnagram(s, t) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "anagram",
+        "nagaram"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "rat",
+        "car"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        "ab",
+        "a"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "aacc",
+        "ccac"
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        "listen",
+        "silent"
+      ],
+      "expected": true
+    }
+  ]
+}

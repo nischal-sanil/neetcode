@@ -1,0 +1,20 @@
+{
+  "slug": "same-tree",
+  "entry_function": "isSameTree",
+  "params": ["p", "q"],
+  "arg_types": ["tree", "tree"],
+  "return_type": "plain",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# TreeNode is provided: class TreeNode: __init__(self, val=0, left=None, right=None)\ndef isSameTree(p, q):\n    # Write your solution here\n    pass\n",
+    "javascript": "// TreeNode is provided: { val, left, right }\nfunction isSameTree(p, q) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[1, 2, 3], [1, 2, 3]], "expected": true },
+    { "args": [[1, 2], [1, null, 2]], "expected": false },
+    { "args": [[1, 2, 1], [1, 1, 2]], "expected": false },
+    { "args": [[], []], "expected": true },
+    { "args": [[1], []], "expected": false },
+    { "args": [[10, 5, 15, 3, 7, null, 18], [10, 5, 15, 3, 7, null, 18]], "expected": true }
+  ]
+}

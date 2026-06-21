@@ -1,0 +1,78 @@
+{
+  "slug": "single-number",
+  "entry_function": "singleNumber",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def singleNumber(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function singleNumber(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          4,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          -1,
+          -1,
+          -3
+        ]
+      ],
+      "expected": -3
+    },
+    {
+      "args": [
+        [
+          7,
+          3,
+          5,
+          3,
+          7,
+          9,
+          5
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "args": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

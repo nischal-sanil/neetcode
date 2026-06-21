@@ -1,0 +1,50 @@
+{
+  "slug": "jump-game-ii",
+  "entry_function": "jump",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def jump(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function jump(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [2, 3, 1, 1, 4]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [2, 3, 0, 1, 4]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [0]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [1, 2]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [1, 1, 1, 1]
+      ],
+      "expected": 3
+    },
+    {
+      "args": [
+        [5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0]
+      ],
+      "expected": 3
+    }
+  ]
+}

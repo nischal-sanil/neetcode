@@ -1,0 +1,39 @@
+{
+  "slug": "implement-trie-prefix-tree",
+  "kind": "design",
+  "entry_function": "Trie",
+  "params": [],
+  "class_name": "Trie",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class Trie:\n    def __init__(self):\n        # Write your solution here\n        pass\n\n    def insert(self, word):\n        pass\n\n    def search(self, word):\n        pass\n\n    def startsWith(self, prefix):\n        pass\n",
+    "javascript": "class Trie {\n  constructor() {\n    // Write your solution here\n  }\n\n  insert(word) {}\n\n  search(word) {}\n\n  startsWith(prefix) {}\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["Trie", "insert", "search", "search", "startsWith", "insert", "search"],
+      "args": [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]],
+      "expected": [null, null, true, false, true, null, true]
+    },
+    {
+      "operations": ["Trie", "search", "startsWith"],
+      "args": [[], ["a"], ["a"]],
+      "expected": [null, false, false]
+    },
+    {
+      "operations": ["Trie", "insert", "insert", "search", "search", "startsWith", "startsWith"],
+      "args": [[], ["dog"], ["dog"], ["dog"], ["do"], ["do"], ["dox"]],
+      "expected": [null, null, null, true, false, true, false]
+    },
+    {
+      "operations": ["Trie", "insert", "insert", "insert", "search", "search", "search", "startsWith", "startsWith"],
+      "args": [[], ["cat"], ["car"], ["card"], ["car"], ["care"], ["card"], ["ca"], ["card"]],
+      "expected": [null, null, null, null, true, false, true, true, true]
+    },
+    {
+      "operations": ["Trie", "insert", "search", "startsWith", "insert", "search"],
+      "args": [[], [""], [""], [""], ["x"], [""]],
+      "expected": [null, null, true, true, null, true]
+    }
+  ]
+}

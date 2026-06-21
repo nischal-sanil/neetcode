@@ -1,0 +1,68 @@
+{
+  "slug": "palindrome-partitioning",
+  "entry_function": "partition",
+  "params": [
+    "s"
+  ],
+  "comparison": "nested-unordered",
+  "starter_code": {
+    "python": "def partition(s):\n    # Write your solution here\n    pass\n",
+    "javascript": "function partition(s) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        "aab"
+      ],
+      "expected": [
+        ["a", "a", "b"],
+        ["aa", "b"]
+      ]
+    },
+    {
+      "args": [
+        "a"
+      ],
+      "expected": [
+        ["a"]
+      ]
+    },
+    {
+      "args": [
+        "ab"
+      ],
+      "expected": [
+        ["a", "b"]
+      ]
+    },
+    {
+      "args": [
+        "aba"
+      ],
+      "expected": [
+        ["a", "b", "a"],
+        ["aba"]
+      ]
+    },
+    {
+      "args": [
+        "aaa"
+      ],
+      "expected": [
+        ["a", "a", "a"],
+        ["a", "aa"],
+        ["aa", "a"],
+        ["aaa"]
+      ]
+    },
+    {
+      "args": [
+        "efe"
+      ],
+      "expected": [
+        ["e", "f", "e"],
+        ["efe"]
+      ]
+    }
+  ]
+}

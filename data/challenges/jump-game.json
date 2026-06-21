@@ -1,0 +1,50 @@
+{
+  "slug": "jump-game",
+  "entry_function": "canJump",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def canJump(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function canJump(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [2, 3, 1, 1, 4]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [3, 2, 1, 0, 4]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [0]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [2, 0, 0]
+      ],
+      "expected": true
+    },
+    {
+      "args": [
+        [1, 0, 1, 0]
+      ],
+      "expected": false
+    },
+    {
+      "args": [
+        [5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0]
+      ],
+      "expected": true
+    }
+  ]
+}

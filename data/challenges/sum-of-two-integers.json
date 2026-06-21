@@ -1,0 +1,39 @@
+{
+  "slug": "sum-of-two-integers",
+  "entry_function": "getSum",
+  "params": [
+    "a",
+    "b"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def getSum(a, b):\n    # Write your solution here\n    pass\n",
+    "javascript": "function getSum(a, b) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [1, 2],
+      "expected": 3
+    },
+    {
+      "args": [2, 3],
+      "expected": 5
+    },
+    {
+      "args": [0, 0],
+      "expected": 0
+    },
+    {
+      "args": [-1, 1],
+      "expected": 0
+    },
+    {
+      "args": [-2, -3],
+      "expected": -5
+    },
+    {
+      "args": [1000, -999],
+      "expected": 1
+    }
+  ]
+}

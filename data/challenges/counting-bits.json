@@ -1,0 +1,78 @@
+{
+  "slug": "counting-bits",
+  "entry_function": "countBits",
+  "params": [
+    "n"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def countBits(n):\n    # Write your solution here\n    pass\n",
+    "javascript": "function countBits(n) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        0
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "args": [
+        2
+      ],
+      "expected": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "args": [
+        5
+      ],
+      "expected": [
+        0,
+        1,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "args": [
+        1
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": [
+        16
+      ],
+      "expected": [
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        2,
+        3,
+        2,
+        3,
+        3,
+        4,
+        1
+      ]
+    }
+  ]
+}

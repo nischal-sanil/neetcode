@@ -1,0 +1,39 @@
+{
+  "slug": "time-based-key-value-store",
+  "kind": "design",
+  "entry_function": "TimeMap",
+  "params": [],
+  "class_name": "TimeMap",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "class TimeMap:\n    def __init__(self):\n        # Write your solution here\n        pass\n\n    def set(self, key, value, timestamp):\n        pass\n\n    def get(self, key, timestamp):\n        pass\n",
+    "javascript": "class TimeMap {\n  constructor() {\n    // Write your solution here\n  }\n\n  set(key, value, timestamp) {}\n\n  get(key, timestamp) {}\n}\n"
+  },
+  "test_cases": [
+    {
+      "operations": ["TimeMap", "set", "get", "get", "set", "get", "get"],
+      "args": [[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]],
+      "expected": [null, null, "bar", "bar", null, "bar2", "bar2"]
+    },
+    {
+      "operations": ["TimeMap", "get", "set", "get"],
+      "args": [[], ["x", 5], ["x", "hello", 10], ["x", 7]],
+      "expected": [null, "", null, ""]
+    },
+    {
+      "operations": ["TimeMap", "set", "set", "set", "get", "get", "get", "get"],
+      "args": [[], ["a", "v1", 10], ["a", "v2", 20], ["a", "v3", 30], ["a", 5], ["a", 10], ["a", 25], ["a", 100]],
+      "expected": [null, null, null, null, "", "v1", "v2", "v3"]
+    },
+    {
+      "operations": ["TimeMap", "set", "set", "get", "get", "get"],
+      "args": [[], ["k1", "one", 1], ["k2", "two", 2], ["k1", 2], ["k2", 1], ["k2", 2]],
+      "expected": [null, null, null, "one", "", "two"]
+    },
+    {
+      "operations": ["TimeMap", "set", "set", "get", "get"],
+      "args": [[], ["love", "high", 10], ["love", "low", 20], ["love", 15], ["love", 20]],
+      "expected": [null, null, null, "high", "low"]
+    }
+  ]
+}

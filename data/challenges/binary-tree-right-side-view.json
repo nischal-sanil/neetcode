@@ -1,0 +1,20 @@
+{
+  "slug": "binary-tree-right-side-view",
+  "entry_function": "rightSideView",
+  "params": ["root"],
+  "arg_types": ["tree"],
+  "return_type": "plain",
+  "comparison": "exact",
+  "starter_code": {
+    "python": "# TreeNode is provided: class TreeNode: __init__(self, val=0, left=None, right=None)\ndef rightSideView(root):\n    # Write your solution here\n    pass\n",
+    "javascript": "// TreeNode is provided: { val, left, right }\nfunction rightSideView(root) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    { "args": [[1, 2, 3, null, 5, null, 4]], "expected": [1, 3, 4] },
+    { "args": [[1, null, 3]], "expected": [1, 3] },
+    { "args": [[]], "expected": [] },
+    { "args": [[1]], "expected": [1] },
+    { "args": [[1, 2, 3, 4]], "expected": [1, 3, 4] },
+    { "args": [[1, 2, 3, 4, null, null, null, 5]], "expected": [1, 3, 4, 5] }
+  ]
+}

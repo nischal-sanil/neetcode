@@ -1,0 +1,83 @@
+{
+  "slug": "missing-number",
+  "entry_function": "missingNumber",
+  "params": [
+    "nums"
+  ],
+  "comparison": "exact",
+  "starter_code": {
+    "python": "def missingNumber(nums):\n    # Write your solution here\n    pass\n",
+    "javascript": "function missingNumber(nums) {\n  // Write your solution here\n}\n"
+  },
+  "test_cases": [
+    {
+      "args": [
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "args": [
+        [
+          9,
+          6,
+          4,
+          2,
+          3,
+          5,
+          7,
+          0,
+          1
+        ]
+      ],
+      "expected": 8
+    },
+    {
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "args": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "expected": 11
+    }
+  ]
+}
