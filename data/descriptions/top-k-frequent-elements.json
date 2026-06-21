@@ -1,0 +1,22 @@
+{
+  "slug": "top-k-frequent-elements",
+  "summary": "Given an array of integers and a number k, return the k values that occur most often in the array.\n\nThe answer may be returned in any order, and the test is guaranteed to have a unique set of top-k elements.",
+  "examples": [
+    {
+      "input": "nums = [1, 1, 1, 2, 2, 3], k = 2",
+      "output": "[1, 2]",
+      "explanation": "1 appears three times and 2 appears twice, making them the two most frequent values."
+    },
+    {
+      "input": "nums = [4, 4, 4, 5, 5, 6, 6, 6, 6, 7], k = 2",
+      "output": "[6, 4]",
+      "explanation": "6 appears four times and 4 appears three times, so they are the two most frequent."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10^5",
+    "-10^4 <= nums[i] <= 10^4",
+    "1 <= k <= number of distinct values in nums",
+    "The set of top-k frequent elements is unique"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "single-number",
+  "summary": "You are given an array of integers in which every value appears exactly twice, except for one value that appears only once. Find and return that single value.\n\nAim for a solution that runs in linear time and uses only constant extra space. The XOR operation is a natural fit here, since pairing identical numbers cancels them out.",
+  "examples": [
+    {
+      "input": "nums = [2, 2, 1]",
+      "output": "1",
+      "explanation": "The two 2s cancel each other, leaving 1 as the lone value."
+    },
+    {
+      "input": "nums = [4, 1, 2, 1, 2]",
+      "output": "4",
+      "explanation": "1 and 2 each appear twice, so 4 is the only number without a pair."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 3 * 10^4",
+    "-3 * 10^4 <= nums[i] <= 3 * 10^4",
+    "Every element appears exactly twice except for one element which appears once",
+    "Solve it in linear runtime and with constant extra space"
+  ]
+}

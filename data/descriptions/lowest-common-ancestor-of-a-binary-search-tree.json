@@ -1,0 +1,22 @@
+{
+  "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+  "summary": "You are given the root of a binary search tree and two of its node values, p and q. Return the lowest common ancestor of the two nodes.\n\nThe lowest common ancestor is the deepest node that has both p and q somewhere in its subtree. A node is allowed to be an ancestor of itself. You can exploit the BST ordering to find it efficiently.",
+  "examples": [
+    {
+      "input": "root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8",
+      "output": "[6,2,8,0,4,7,9,null,null,3,5]",
+      "explanation": "2 lies in the left subtree and 8 in the right subtree of 6, so the root node 6 is their lowest common ancestor."
+    },
+    {
+      "input": "root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4",
+      "output": "[2,0,4,null,null,3,5]",
+      "explanation": "4 is a descendant of 2, so 2 is itself the lowest common ancestor."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [2, 10^5].",
+    "-10^9 <= Node.val <= 10^9.",
+    "All node values are unique, and p and q are distinct values both present in the tree.",
+    "The input tree is a valid binary search tree."
+  ]
+}

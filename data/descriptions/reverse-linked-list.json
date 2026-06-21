@@ -1,0 +1,22 @@
+{
+  "slug": "reverse-linked-list",
+  "summary": "You are given the head of a singly linked list. Reverse the order of its nodes so that the last node becomes the first, and return the head of the reversed list.\n\nThe links between nodes should be flipped in place; you do not need to allocate new nodes.",
+  "examples": [
+    {
+      "input": "head = [1, 2, 3, 4, 5]",
+      "output": "[5, 4, 3, 2, 1]",
+      "explanation": "Each pointer is flipped, so traversal now starts from the old tail."
+    },
+    {
+      "input": "head = []",
+      "output": "[]",
+      "explanation": "An empty list reverses to an empty list."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [0, 5000].",
+    "-5000 <= Node.val <= 5000",
+    "Reverse the list in place using O(1) extra space if possible.",
+    "Both an iterative and a recursive approach are acceptable."
+  ]
+}

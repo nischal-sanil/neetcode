@@ -1,0 +1,22 @@
+{
+  "slug": "gas-station",
+  "summary": "There are several gas stations arranged in a circle. The gas[i] array gives the fuel available at each station, and cost[i] gives the fuel needed to drive from station i to the next one. You drive clockwise with an empty tank and unlimited capacity.\n\nReturn the index of the station from which you can start and make a full loop back to it. If no such start exists, return -1. When a solution exists it is guaranteed to be unique.",
+  "examples": [
+    {
+      "input": "gas = [1, 2, 3, 4, 5], cost = [3, 4, 5, 1, 2]",
+      "output": "3",
+      "explanation": "Starting at station 3 lets the tank stay non-negative through every leg of the circuit."
+    },
+    {
+      "input": "gas = [2, 3, 4], cost = [3, 4, 3]",
+      "output": "-1",
+      "explanation": "Total fuel is less than total cost, so the loop can never be completed from any station."
+    }
+  ],
+  "constraints": [
+    "n == gas.length == cost.length",
+    "1 <= n <= 10^5",
+    "0 <= gas[i], cost[i] <= 10^4",
+    "If an answer exists, it is unique"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "regular-expression-matching",
+  "summary": "Given an input string s and a pattern p, determine whether the pattern matches the entire string. The pattern may contain two special characters: '.' matches any single character, and '*' matches zero or more copies of the element immediately before it.\n\nThe match must cover the whole string s, not just a part of it. Return true if the pattern matches and false otherwise.",
+  "examples": [
+    {
+      "input": "s = \"aa\", p = \"a\"",
+      "output": "false",
+      "explanation": "The pattern \"a\" matches only a single character, so it cannot cover the two-character string \"aa\"."
+    },
+    {
+      "input": "s = \"aa\", p = \"a*\"",
+      "output": "true",
+      "explanation": "\"a*\" can stand for any number of 'a' characters, including two, so it matches \"aa\"."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 20",
+    "1 <= p.length <= 20",
+    "s contains only lowercase English letters",
+    "p contains lowercase letters plus the special characters '.' and '*'",
+    "Every '*' in p is preceded by a valid character that it can repeat"
+  ]
+}

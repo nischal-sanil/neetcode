@@ -1,0 +1,21 @@
+{
+  "slug": "count-good-nodes-in-binary-tree",
+  "summary": "Given the root of a binary tree, count how many of its nodes are \"good\" and return that number.\n\nA node is good when, on the path from the root down to that node, no earlier node holds a larger value. Equivalently, the node's value is at least as big as every value seen above it on the way down. The root always counts as good.",
+  "examples": [
+    {
+      "input": "root = [3,1,4,3,null,1,5]",
+      "output": "4",
+      "explanation": "The root 3, the 4 below it, the leftmost 3, and the 5 are each at least as large as everything above them on their path."
+    },
+    {
+      "input": "root = [3,3,null,4,2]",
+      "output": "3",
+      "explanation": "The root 3, the second 3, and the 4 are good; the node valued 2 is smaller than an ancestor, so it does not count."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [1, 10^5].",
+    "Each node's value is between -10^4 and 10^4.",
+    "The root node is always counted as good."
+  ]
+}

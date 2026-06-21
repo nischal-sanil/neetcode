@@ -1,0 +1,23 @@
+{
+  "slug": "longest-increasing-path-in-a-matrix",
+  "summary": "Given an m x n grid of integers, find the length of the longest path along which the values strictly increase. From any cell you may move to one of its four orthogonal neighbors (up, down, left, or right), but never diagonally.\n\nYou cannot revisit a cell, and wrapping around the edges of the grid is not allowed. The path length is measured as the number of cells it contains.",
+  "examples": [
+    {
+      "input": "matrix = [[9,9,4],[6,6,8],[2,1,1]]",
+      "output": "4",
+      "explanation": "The longest strictly increasing path is 1 -> 2 -> 6 -> 9, which visits 4 cells."
+    },
+    {
+      "input": "matrix = [[3,4,5],[3,2,6],[2,2,1]]",
+      "output": "4",
+      "explanation": "The path 3 -> 4 -> 5 -> 6 increases at every step and has length 4."
+    }
+  ],
+  "constraints": [
+    "m == matrix.length and n == matrix[i].length",
+    "1 <= m, n <= 200",
+    "0 <= matrix[i][j] <= 2^31 - 1",
+    "Moves are only to the four orthogonally adjacent cells",
+    "Consecutive cells in the path must be strictly increasing"
+  ]
+}

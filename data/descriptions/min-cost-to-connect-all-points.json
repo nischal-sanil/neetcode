@@ -1,0 +1,22 @@
+{
+  "slug": "min-cost-to-connect-all-points",
+  "summary": "You are given an array of points on a 2D plane, where points[i] = [xi, yi]. The cost of connecting two points is their Manhattan distance: |xi - xj| + |yi - yj|.\n\nReturn the minimum total cost to connect every point so that there is exactly one path between any two of them. In other words, build a minimum spanning tree over the points and report its total weight.",
+  "examples": [
+    {
+      "input": "points = [[0,0], [2,2], [3,10], [5,2], [7,0]]",
+      "output": "20",
+      "explanation": "Connecting the points with the cheapest set of edges that links all five together costs 20 in total Manhattan distance."
+    },
+    {
+      "input": "points = [[3,12], [-2,5], [-4,1]]",
+      "output": "18",
+      "explanation": "The two edges (-4,1)-(-2,5) of cost 6 and (-2,5)-(3,12) of cost 12 connect all three points for a total of 18."
+    }
+  ],
+  "constraints": [
+    "1 <= points.length <= 1000",
+    "-10^6 <= xi, yi <= 10^6",
+    "All points are distinct",
+    "Edge cost between two points is the Manhattan distance |xi - xj| + |yi - yj|"
+  ]
+}

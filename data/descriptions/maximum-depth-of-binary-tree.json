@@ -1,0 +1,21 @@
+{
+  "slug": "maximum-depth-of-binary-tree",
+  "summary": "Given the root of a binary tree, return its maximum depth.\n\nThe depth is the number of nodes along the longest path that runs from the root down to the farthest leaf. An empty tree has depth 0.",
+  "examples": [
+    {
+      "input": "root = [3,9,20,null,null,15,7]",
+      "output": "3",
+      "explanation": "The longest root-to-leaf path passes through 3, 20, and either 15 or 7 — three nodes."
+    },
+    {
+      "input": "root = [1,null,2]",
+      "output": "2",
+      "explanation": "The tree is a single chain of two nodes, so the depth is 2."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [0, 10^4].",
+    "-100 <= Node.val <= 100.",
+    "An empty tree returns 0."
+  ]
+}

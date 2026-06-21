@@ -1,0 +1,21 @@
+{
+  "slug": "find-minimum-in-rotated-sorted-array",
+  "summary": "You start with an array of distinct integers sorted in ascending order, then rotate it some number of times so that a chunk from the front is moved to the back. For example, [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]. Given the rotated array, return its smallest element.\n\nThe array still contains a single sorted run wrapping around, so the minimum can be located in O(log n) time.",
+  "examples": [
+    {
+      "input": "nums = [3, 4, 5, 1, 2]",
+      "output": "1",
+      "explanation": "The original sorted array [1,2,3,4,5] was rotated, and its minimum is 1."
+    },
+    {
+      "input": "nums = [4, 5, 6, 7, 0, 1, 2]",
+      "output": "0"
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5000",
+    "-5000 <= nums[i] <= 5000",
+    "All integers in nums are unique",
+    "nums is a sorted ascending array rotated between 0 and n-1 times"
+  ]
+}

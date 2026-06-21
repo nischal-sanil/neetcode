@@ -1,0 +1,23 @@
+{
+  "slug": "rotting-oranges",
+  "summary": "In a grid, each cell is 0 (empty), 1 (a fresh orange), or 2 (a rotten orange). Every minute, any fresh orange that sits directly next to a rotten one (up, down, left, or right) becomes rotten as well.\n\nReturn the minimum number of minutes that must pass until no fresh orange remains. If some fresh orange can never rot, return -1.",
+  "examples": [
+    {
+      "input": "grid = [[2, 1, 1], [1, 1, 0], [0, 1, 1]]",
+      "output": "4",
+      "explanation": "Rot spreads outward from the top-left rotten orange; after 4 minutes every fresh orange has been infected."
+    },
+    {
+      "input": "grid = [[2, 1, 1], [0, 1, 1], [1, 0, 1]]",
+      "output": "-1",
+      "explanation": "The fresh orange in the bottom-left corner is isolated by empty cells and never rots, so the answer is -1."
+    }
+  ],
+  "constraints": [
+    "1 <= grid.length, grid[i].length <= 10",
+    "Each cell is 0 (empty), 1 (fresh), or 2 (rotten)",
+    "Rot spreads only to the four cardinal neighbors each minute",
+    "Return 0 if there are no fresh oranges to begin with",
+    "Return -1 if at least one fresh orange can never become rotten"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "partition-labels",
+  "summary": "Given a string, divide it into as many contiguous pieces as possible so that each distinct character appears in only one piece. In other words, no letter may show up in two different parts.\n\nReturn a list of the sizes of these pieces, in the order they occur in the string. Concatenating the pieces must reproduce the original string.",
+  "examples": [
+    {
+      "input": "s = \"ababcbacadefegdehijhklij\"",
+      "output": "[9, 7, 8]",
+      "explanation": "The string splits into 'ababcbaca', 'defegde', and 'hijhklij', and no character crosses a boundary."
+    },
+    {
+      "input": "s = \"eccbbbbdec\"",
+      "output": "[10]",
+      "explanation": "Because 'e' and 'c' both span the whole string, the only valid partition is the entire string."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 500",
+    "s consists of lowercase English letters only",
+    "Each character may appear in at most one returned piece",
+    "The sizes must sum to s.length",
+    "Pieces are returned in left-to-right order"
+  ]
+}

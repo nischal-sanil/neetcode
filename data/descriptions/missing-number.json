@@ -1,0 +1,23 @@
+{
+  "slug": "missing-number",
+  "summary": "You are given an array of length n containing distinct integers drawn from the range 0 to n. Since the array holds n of the n + 1 possible values, exactly one number in that range is absent. Return the missing number.\n\nA constant-space, linear-time approach works well here, for example by XORing all indices with all values, or by comparing the expected sum against the actual sum.",
+  "examples": [
+    {
+      "input": "nums = [3, 0, 1]",
+      "output": "2",
+      "explanation": "The array covers the range 0 to 3 but is missing 2."
+    },
+    {
+      "input": "nums = [9, 6, 4, 2, 3, 5, 7, 0, 1]",
+      "output": "8",
+      "explanation": "Every value from 0 to 9 appears except 8."
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "0 <= nums[i] <= n",
+    "All numbers in nums are distinct",
+    "Exactly one number from the range 0 to n is missing",
+    "Aim for linear time and constant extra space"
+  ]
+}

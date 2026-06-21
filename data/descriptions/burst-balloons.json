@@ -1,0 +1,22 @@
+{
+  "slug": "burst-balloons",
+  "summary": "You are given an array of integers representing balloons, where each value is the number painted on a balloon. You burst all of them one at a time.\n\nWhen you burst the balloon at index i, you earn nums[i-1] * nums[i] * nums[i+1] coins, where a balloon just outside the array boundary is treated as having value 1. After a balloon bursts, its neighbors become adjacent. Return the maximum number of coins you can collect by choosing a good order in which to burst them.",
+  "examples": [
+    {
+      "input": "nums = [3, 1, 5, 8]",
+      "output": "167",
+      "explanation": "Bursting in the order 1, 5, 3, 8 yields 3*1*5 + 3*5*8 + 1*3*8 + 1*8*1 = 15 + 120 + 24 + 8 = 167 coins."
+    },
+    {
+      "input": "nums = [1, 5]",
+      "output": "10",
+      "explanation": "Burst the 1 first for 1*1*5 = 5, then the 5 for 1*5*1 = 5, totaling 10."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 300",
+    "0 <= nums[i] <= 100",
+    "Balloons outside the array boundaries are treated as having value 1",
+    "Every balloon is eventually burst exactly once"
+  ]
+}

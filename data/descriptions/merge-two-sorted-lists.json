@@ -1,0 +1,22 @@
+{
+  "slug": "merge-two-sorted-lists",
+  "summary": "You are given the heads of two sorted singly linked lists. Combine them into one sorted list by splicing together the existing nodes from both inputs, and return the head of the merged list.\n\nThe result should keep the values in non-decreasing order.",
+  "examples": [
+    {
+      "input": "list1 = [1, 2, 4], list2 = [1, 3, 4]",
+      "output": "[1, 1, 2, 3, 4, 4]",
+      "explanation": "Nodes are picked from whichever list currently has the smaller front value."
+    },
+    {
+      "input": "list1 = [], list2 = [0]",
+      "output": "[0]",
+      "explanation": "When one list is empty, the other is returned as-is."
+    }
+  ],
+  "constraints": [
+    "The combined number of nodes across both lists is in the range [0, 50].",
+    "-100 <= Node.val <= 100",
+    "Both input lists are already sorted in non-decreasing order.",
+    "Reuse the existing nodes rather than creating new ones."
+  ]
+}

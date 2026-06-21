@@ -1,0 +1,22 @@
+{
+  "slug": "binary-search",
+  "summary": "You are given an array of integers sorted in ascending order and a target value. Find the index where the target appears and return it. If the target is not present in the array, return -1.\n\nYour solution must run in O(log n) time, which rules out a plain linear scan.",
+  "examples": [
+    {
+      "input": "nums = [-1, 0, 3, 5, 9, 12], target = 9",
+      "output": "4",
+      "explanation": "The value 9 sits at index 4."
+    },
+    {
+      "input": "nums = [-1, 0, 3, 5, 9, 12], target = 2",
+      "output": "-1",
+      "explanation": "2 does not appear in the array, so the answer is -1."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10^4",
+    "-10^4 < nums[i], target < 10^4",
+    "Every value in nums is unique",
+    "nums is sorted in ascending order"
+  ]
+}

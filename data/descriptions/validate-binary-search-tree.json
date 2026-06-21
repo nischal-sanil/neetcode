@@ -1,0 +1,21 @@
+{
+  "slug": "validate-binary-search-tree",
+  "summary": "Given the root of a binary tree, determine whether it is a valid binary search tree and return true or false.\n\nFor a valid BST, every node's entire left subtree must contain only smaller values, every node's entire right subtree must contain only larger values, and both subtrees must themselves be valid BSTs. The ordering rule applies across whole subtrees, not just immediate children.",
+  "examples": [
+    {
+      "input": "root = [2,1,3]",
+      "output": "true",
+      "explanation": "1 is less than 2 and 3 is greater than 2, satisfying the BST ordering."
+    },
+    {
+      "input": "root = [5,1,4,null,null,3,6]",
+      "output": "false",
+      "explanation": "The right child 4 is smaller than the root 5, so the tree breaks the BST property."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [1, 10^4].",
+    "-2^31 <= Node.val <= 2^31 - 1.",
+    "Values in the left subtree must be strictly less, and values in the right subtree strictly greater, than the node."
+  ]
+}

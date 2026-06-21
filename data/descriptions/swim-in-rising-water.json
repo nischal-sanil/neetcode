@@ -1,0 +1,23 @@
+{
+  "slug": "swim-in-rising-water",
+  "summary": "You are given an n x n grid where grid[r][c] is the elevation of cell (r, c). Rain begins falling, and at time t the water level everywhere is t. You can move between two adjacent cells (up, down, left, or right) only when the water level is at least as high as both cells' elevations, and swimming between adjacent cells takes no time.\n\nStarting at the top-left cell (0, 0), return the least time t at which you can reach the bottom-right cell (n-1, n-1).",
+  "examples": [
+    {
+      "input": "grid = [[0,2], [1,3]]",
+      "output": "3",
+      "explanation": "At time 3 the water level finally covers the cell of elevation 3, allowing a path from (0,0) to (1,1)."
+    },
+    {
+      "input": "grid = [[0,1,2,3,4], [24,23,22,21,5], [12,13,14,15,16], [11,17,18,19,20], [10,9,8,7,6]]",
+      "output": "16",
+      "explanation": "The earliest moment a connected route to the bottom-right exists is at water level 16."
+    }
+  ],
+  "constraints": [
+    "n == grid.length == grid[i].length",
+    "1 <= n <= 50",
+    "0 <= grid[i][j] < n^2",
+    "Each value in the grid is unique and is a permutation of 0..n^2 - 1",
+    "Movement is allowed only to the 4 orthogonally adjacent cells"
+  ]
+}

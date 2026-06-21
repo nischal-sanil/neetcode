@@ -1,0 +1,22 @@
+{
+  "slug": "search-a-2d-matrix",
+  "summary": "You are given an m x n grid of integers with two ordering guarantees: each row reads left to right in increasing order, and the first value of every row is larger than the last value of the row above it. Given a target value, determine whether it exists somewhere in the grid.\n\nReturn true if the target is found and false otherwise. The full grid behaves like one long sorted list, so the search should take O(log(m*n)) time.",
+  "examples": [
+    {
+      "input": "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3",
+      "output": "true",
+      "explanation": "3 appears in the first row."
+    },
+    {
+      "input": "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13",
+      "output": "false",
+      "explanation": "13 falls between the second and third rows but is not present."
+    }
+  ],
+  "constraints": [
+    "m == matrix.length and n == matrix[0].length",
+    "1 <= m, n <= 100",
+    "-10^4 <= matrix[i][j], target <= 10^4",
+    "Each row is sorted ascending; each row's first element exceeds the previous row's last element"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "plus-one",
+  "summary": "You are given a non-negative integer represented as an array of its digits, with the most significant digit first and each entry holding a single digit. Add one to this number and return the resulting array of digits.\n\nThe number has no leading zeros, except that the value 0 itself is the single-element array [0].",
+  "examples": [
+    {
+      "input": "digits = [1,2,3]",
+      "output": "[1,2,4]",
+      "explanation": "The number is 123; adding one gives 124."
+    },
+    {
+      "input": "digits = [9]",
+      "output": "[1,0]",
+      "explanation": "9 + 1 = 10, which carries over into an extra leading digit."
+    }
+  ],
+  "constraints": [
+    "1 <= digits.length <= 100",
+    "0 <= digits[i] <= 9",
+    "The array does not contain any leading zeros except for the number 0 itself"
+  ]
+}

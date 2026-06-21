@@ -1,0 +1,19 @@
+{
+  "slug": "happy-number",
+  "summary": "A number is called \"happy\" if the following process eventually reaches 1: replace the number with the sum of the squares of its digits, and repeat. If the process loops endlessly without ever hitting 1, the number is not happy.\n\nGiven an integer n, return true if it is a happy number and false otherwise.",
+  "examples": [
+    {
+      "input": "n = 19",
+      "output": "true",
+      "explanation": "1^2 + 9^2 = 82, then 8^2 + 2^2 = 68, then 6^2 + 8^2 = 100, then 1^2 + 0^2 + 0^2 = 1. Reaching 1 makes it happy."
+    },
+    {
+      "input": "n = 2",
+      "output": "false",
+      "explanation": "The digit-square sums fall into a cycle that never reaches 1."
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2^31 - 1"
+  ]
+}

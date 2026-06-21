@@ -1,0 +1,22 @@
+{
+  "slug": "longest-repeating-character-replacement",
+  "summary": "You are given a string of uppercase letters and an integer k. You may pick up to k characters anywhere in the string and change each of them to any uppercase letter you like.\n\nAfter making at most k such replacements, return the length of the longest contiguous block that consists of a single repeated letter.",
+  "examples": [
+    {
+      "input": "s = \"ABAB\", k = 2",
+      "output": "4",
+      "explanation": "Change both 'A's to 'B' (or both 'B's to 'A') and the whole string becomes one repeated letter of length 4."
+    },
+    {
+      "input": "s = \"AABABBA\", k = 1",
+      "output": "4",
+      "explanation": "Replacing the single middle character lets you form \"AABA\" -> \"AAAA\" or \"BABB\" -> \"BBBB\", a uniform run of length 4."
+    }
+  ],
+  "constraints": [
+    "0 <= s.length <= 10^5",
+    "s contains only uppercase English letters",
+    "0 <= k <= s.length",
+    "An empty string yields an answer of 0"
+  ]
+}

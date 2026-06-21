@@ -1,0 +1,17 @@
+{
+  "slug": "detect-squares",
+  "summary": "Design a data structure that tracks points on a 2D plane and can count axis-aligned squares formed with a given query point.\n\nImplement a class DetectSquares with three behaviors: the constructor initializes an empty structure; add(point) records a point [x, y] (the same point may be added more than once); and count(point) returns how many axis-aligned squares can be formed using the query point [x, y] together with three other points already stored. The four corners of such a square must all be present, and the square's sides must be parallel to the axes with non-zero area. Points added multiple times are counted with their multiplicity.",
+  "examples": [
+    {
+      "input": "operations = [\"DetectSquares\",\"add\",\"add\",\"add\",\"count\",\"count\",\"add\",\"count\"], args = [[],[[3,10]],[[11,2]],[[3,2]],[[11,10]],[[14,8]],[[11,2]],[[11,10]]]",
+      "output": "[null,null,null,null,1,0,null,2]",
+      "explanation": "After adding [3,10], [11,2], and [3,2], count([11,10]) finds exactly one square with corners [3,10],[11,2],[3,2],[11,10]. count([14,8]) finds 0. After adding [11,2] a second time, count([11,10]) returns 2 because the duplicated point doubles the square count."
+    }
+  ],
+  "constraints": [
+    "point.length == 2",
+    "0 <= x, y <= 1000",
+    "At most 3000 calls in total are made to add and count",
+    "Only axis-aligned squares with positive area are counted"
+  ]
+}

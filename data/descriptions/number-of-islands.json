@@ -1,0 +1,21 @@
+{
+  "slug": "number-of-islands",
+  "summary": "You are given a 2D grid where each cell holds either '1' (land) or '0' (water). An island is a maximal group of land cells connected horizontally or vertically. Count how many separate islands the grid contains.\n\nCells touching only diagonally are not considered connected, and the entire grid is surrounded by water.",
+  "examples": [
+    {
+      "input": "grid = [[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]",
+      "output": "1",
+      "explanation": "All the land cells touch through up/down/left/right neighbors, forming a single island."
+    },
+    {
+      "input": "grid = [[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]",
+      "output": "3",
+      "explanation": "Three disconnected groups of land cells: the top-left block, the single center cell, and the bottom-right pair."
+    }
+  ],
+  "constraints": [
+    "1 <= grid.length, grid[i].length <= 300",
+    "Each cell is either '1' (land) or '0' (water)",
+    "Connections count only in the four cardinal directions, not diagonally"
+  ]
+}

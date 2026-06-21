@@ -1,0 +1,22 @@
+{
+  "slug": "largest-rectangle-in-histogram",
+  "summary": "You are given an array heights where each value is the height of a bar in a histogram, and every bar has a width of 1. The bars sit side by side.\n\nFind the area of the largest rectangle that can be formed using one or more consecutive bars, where the rectangle's height is limited by the shortest bar it spans. Return that maximum area.",
+  "examples": [
+    {
+      "input": "heights = [2, 1, 5, 6, 2, 3]",
+      "output": "10",
+      "explanation": "The bars of heights 5 and 6 (at indices 2 and 3) form a rectangle of height 5 and width 2, giving an area of 10, which is the largest possible."
+    },
+    {
+      "input": "heights = [2, 4]",
+      "output": "4",
+      "explanation": "Using the single bar of height 4 gives area 4, which beats spanning both bars at height 2 (area 4) or the single bar of height 2."
+    }
+  ],
+  "constraints": [
+    "1 <= heights.length <= 10^5",
+    "0 <= heights[i] <= 10^4",
+    "Bars are contiguous and each has width 1",
+    "The rectangle's height is bounded by the shortest bar it covers"
+  ]
+}

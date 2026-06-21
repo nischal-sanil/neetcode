@@ -1,0 +1,23 @@
+{
+  "slug": "number-of-connected-components-in-an-undirected-graph",
+  "summary": "Given n nodes labeled 0 to n - 1 and a list of undirected edges, count how many connected components the graph has.\n\nA connected component is a maximal set of nodes where any node can be reached from any other through the edges. A node with no edges forms its own component.",
+  "examples": [
+    {
+      "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+      "output": "2",
+      "explanation": "Nodes 0, 1, and 2 form one component and nodes 3, 4 form another, giving 2 components."
+    },
+    {
+      "input": "n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]",
+      "output": "1",
+      "explanation": "All five nodes are linked into a single chain, so there is just 1 component."
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2000",
+    "0 <= edges.length <= 5000",
+    "Each edge connects two distinct nodes in the range 0 to n - 1",
+    "No duplicate edges appear",
+    "Isolated nodes each count as their own component"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "permutation-in-string",
+  "summary": "Given two strings s1 and s2, decide whether some rearrangement of s1 appears as a contiguous substring of s2.\n\nIn other words, return true if any window of s2 with the same length as s1 contains exactly the same letters with the same counts as s1, and false otherwise.",
+  "examples": [
+    {
+      "input": "s1 = \"ab\", s2 = \"eidbaooo\"",
+      "output": "true",
+      "explanation": "s2 contains the substring \"ba\", which is a permutation of \"ab\"."
+    },
+    {
+      "input": "s1 = \"ab\", s2 = \"eidboaoo\"",
+      "output": "false",
+      "explanation": "No length-2 window of s2 has exactly one 'a' and one 'b' adjacent, so no permutation of \"ab\" occurs."
+    }
+  ],
+  "constraints": [
+    "1 <= s1.length, s2.length <= 10^4",
+    "Both strings consist of lowercase English letters",
+    "If s1 is longer than s2 the answer is necessarily false"
+  ]
+}

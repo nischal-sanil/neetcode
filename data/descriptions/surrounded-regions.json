@@ -1,0 +1,23 @@
+{
+  "slug": "surrounded-regions",
+  "summary": "Given a board of 'X' and 'O' cells, capture every region of 'O's that is fully enclosed by 'X's by flipping those 'O's to 'X'. A region is a group of 'O' cells connected horizontally or vertically.\n\nAn 'O' region is safe only if it touches the border of the board; any region connected to an edge is never captured. Modify the board in place.",
+  "examples": [
+    {
+      "input": "board = [[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"X\"],[\"X\",\"X\",\"O\",\"X\"],[\"X\",\"O\",\"X\",\"X\"]]",
+      "output": "[[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\"]]",
+      "explanation": "The interior 'O' region is surrounded, so it flips to 'X'. The 'O' on the bottom edge touches the border and stays."
+    },
+    {
+      "input": "board = [[\"X\"]]",
+      "output": "[[\"X\"]]",
+      "explanation": "There are no 'O' cells, so nothing changes."
+    }
+  ],
+  "constraints": [
+    "m == board.length, n == board[i].length",
+    "1 <= m, n <= 200",
+    "Each cell is 'X' or 'O'",
+    "Cells are connected only in the four cardinal directions",
+    "Any 'O' region touching the board's border is never captured"
+  ]
+}

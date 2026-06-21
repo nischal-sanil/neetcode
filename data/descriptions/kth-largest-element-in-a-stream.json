@@ -1,0 +1,23 @@
+{
+  "slug": "kth-largest-element-in-a-stream",
+  "summary": "Design a class that keeps track of the kth largest value as numbers stream in over time. Note this is the kth largest by sorted position, not the kth distinct value.\n\nThe constructor receives the integer k and an initial list of numbers. Each call to add inserts a new number into the stream and returns the kth largest element seen so far.",
+  "examples": [
+    {
+      "input": "KthLargest(3, [4, 5, 8, 2]), then add(3), add(5), add(10), add(9), add(4)",
+      "output": "[null, 4, 5, 5, 8, 8]",
+      "explanation": "After add(3) the values are [2,3,4,5,8] and the 3rd largest is 4. After add(5) the 3rd largest is 5, and so on as more values arrive."
+    },
+    {
+      "input": "KthLargest(1, []), then add(-3), add(-2), add(-4), add(0), add(4)",
+      "output": "[null, -3, -2, -2, 0, 4]",
+      "explanation": "With k = 1 each add returns the current maximum."
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 10^4",
+    "0 <= initial number of elements <= 10^4",
+    "-10^4 <= each value <= 10^4",
+    "It is guaranteed there are at least k elements at the time each add is called",
+    "At most 10^4 calls to add will be made"
+  ]
+}

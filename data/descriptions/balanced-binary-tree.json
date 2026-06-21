@@ -1,0 +1,21 @@
+{
+  "slug": "balanced-binary-tree",
+  "summary": "Given the root of a binary tree, decide whether it is height-balanced and return true or false.\n\nA tree is height-balanced when, for every node, the heights of its left and right subtrees differ by at most one.",
+  "examples": [
+    {
+      "input": "root = [3,9,20,null,null,15,7]",
+      "output": "true",
+      "explanation": "At every node the left and right subtree heights are within one of each other."
+    },
+    {
+      "input": "root = [1,2,2,3,3,null,null,4,4]",
+      "output": "false",
+      "explanation": "The left side grows two levels deeper than the right at the top node, breaking the balance rule."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [0, 5000].",
+    "-10^4 <= Node.val <= 10^4.",
+    "An empty tree is considered balanced and returns true."
+  ]
+}

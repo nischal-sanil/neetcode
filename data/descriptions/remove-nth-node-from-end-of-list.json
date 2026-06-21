@@ -1,0 +1,22 @@
+{
+  "slug": "remove-nth-node-from-end-of-list",
+  "summary": "You are given the head of a singly linked list and an integer n. Remove the n-th node counting from the end of the list, then return the head of the resulting list.\n\nFor example, n = 1 removes the last node. Try to do it in a single pass.",
+  "examples": [
+    {
+      "input": "head = [1, 2, 3, 4, 5], n = 2",
+      "output": "[1, 2, 3, 5]",
+      "explanation": "The second node from the end is the value 4, which is removed."
+    },
+    {
+      "input": "head = [1], n = 1",
+      "output": "[]",
+      "explanation": "Removing the only node leaves an empty list."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [1, 30].",
+    "0 <= Node.val <= 100",
+    "1 <= n <= number of nodes in the list",
+    "A two-pointer gap of n nodes lets you solve it in one traversal."
+  ]
+}

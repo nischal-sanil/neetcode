@@ -1,0 +1,22 @@
+{
+  "slug": "3sum",
+  "summary": "Given an array of integers, find every unique group of three values that add up to zero. Each triplet must come from three distinct positions in the array.\n\nReturn the list of all such triplets, with no duplicate triplets included. The order of the triplets and the order of numbers within a triplet do not matter.",
+  "examples": [
+    {
+      "input": "nums = [-1, 0, 1, 2, -1, -4]",
+      "output": "[[-1, -1, 2], [-1, 0, 1]]",
+      "explanation": "Both triplets sum to zero. The triplet (-1, -1, 2) uses the two different -1 values, and (-1, 0, 1) is the other distinct combination. No other unique triplet sums to zero."
+    },
+    {
+      "input": "nums = [0, 1, 1]",
+      "output": "[]",
+      "explanation": "No three numbers add up to zero, so the result is empty."
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 3000",
+    "-10^5 <= nums[i] <= 10^5",
+    "Each triplet must use three different array indices",
+    "The returned list must not contain duplicate triplets"
+  ]
+}

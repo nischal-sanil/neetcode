@@ -1,0 +1,22 @@
+{
+  "slug": "longest-increasing-subsequence",
+  "summary": "Given an integer array nums, a subsequence is formed by deleting some (possibly zero) elements while keeping the remaining ones in their original order. A subsequence is strictly increasing if each value is larger than the one before it.\n\nReturn the length of the longest strictly increasing subsequence.",
+  "examples": [
+    {
+      "input": "nums = [10, 9, 2, 5, 3, 7, 101, 18]",
+      "output": "4",
+      "explanation": "One longest increasing subsequence is [2, 3, 7, 101], of length 4."
+    },
+    {
+      "input": "nums = [7, 7, 7, 7, 7, 7, 7]",
+      "output": "1",
+      "explanation": "Equal values are not strictly increasing, so the best length is 1."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 2500",
+    "-10^4 <= nums[i] <= 10^4",
+    "Elements keep their original relative order in a subsequence",
+    "The subsequence must be strictly increasing"
+  ]
+}

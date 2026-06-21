@@ -1,0 +1,21 @@
+{
+  "slug": "number-of-1-bits",
+  "summary": "Given an unsigned 32-bit integer, count how many of its bits are set to 1. This count is sometimes called the Hamming weight.\n\nReturn the total number of 1 bits in the binary representation of the input.",
+  "examples": [
+    {
+      "input": "n = 11",
+      "output": "3",
+      "explanation": "11 in binary is 1011, which contains three 1 bits."
+    },
+    {
+      "input": "n = 1",
+      "output": "1",
+      "explanation": "1 in binary is just 1, so there is a single set bit."
+    }
+  ],
+  "constraints": [
+    "The input is a 32-bit unsigned integer",
+    "0 <= n <= 2^32 - 1",
+    "The return value is the count of bits equal to 1"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "meeting-rooms",
+  "summary": "You are given a list of meeting time intervals, each written as [start, end]. Determine whether a single person could attend every meeting, meaning no two meetings overlap in time.\n\nReturn true if all meetings can be attended, or false if any pair of them clashes.",
+  "examples": [
+    {
+      "input": "intervals = [[0, 30], [5, 10], [15, 20]]",
+      "output": "false",
+      "explanation": "The meeting [0, 30] overlaps both [5, 10] and [15, 20], so they cannot all be attended."
+    },
+    {
+      "input": "intervals = [[7, 10], [2, 4]]",
+      "output": "true",
+      "explanation": "[2, 4] ends before [7, 10] begins, so there is no conflict."
+    }
+  ],
+  "constraints": [
+    "0 <= intervals.length <= 10^4",
+    "Each interval is [start, end] with start <= end",
+    "An empty list of meetings returns true",
+    "Meetings that only touch at an endpoint (one ends exactly when the next starts) are not in conflict",
+    "This is a LeetCode Premium problem"
+  ]
+}

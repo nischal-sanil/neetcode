@@ -1,0 +1,21 @@
+{
+  "slug": "invert-binary-tree",
+  "summary": "You are given the root of a binary tree. Flip the tree horizontally by swapping the left and right child of every node, then return the new root.\n\nThe operation is a mirror image: at each node the two subtrees trade places, all the way down to the leaves.",
+  "examples": [
+    {
+      "input": "root = [4,2,7,1,3,6,9]",
+      "output": "[4,7,2,9,6,3,1]",
+      "explanation": "Every node's left and right children are swapped, producing a mirror of the original tree."
+    },
+    {
+      "input": "root = [2,1,3]",
+      "output": "[2,3,1]",
+      "explanation": "The two children of the root trade places."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [0, 100].",
+    "-100 <= Node.val <= 100.",
+    "An empty tree (root = []) should return an empty tree."
+  ]
+}

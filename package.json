@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "gen": "node scripts/gen-py-harness.mjs && node scripts/gen-challenge-index.mjs && node scripts/sync-playable.mjs",
+    "gen": "node scripts/gen-py-harness.mjs && node scripts/gen-challenge-index.mjs && node scripts/gen-description-index.mjs && node scripts/sync-playable.mjs",
     "verify": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/serde-parity.mjs && node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-all.mjs",
     "verify:one": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/verify-challenge.mjs",
     "predev": "npm run gen",

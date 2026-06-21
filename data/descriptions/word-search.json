@@ -1,0 +1,23 @@
+{
+  "slug": "word-search",
+  "summary": "Given an m x n grid of characters and a target word, determine whether the word can be traced through the grid.\n\nThe word is formed from letters of cells that are horizontally or vertically adjacent (up, down, left, right). A single cell may not be reused within one path. Return true if such a path exists, otherwise false.",
+  "examples": [
+    {
+      "input": "board = [[\"A\",\"B\",\"C\",\"E\"], [\"S\",\"F\",\"C\",\"S\"], [\"A\",\"D\",\"E\",\"E\"]], word = \"ABCCED\"",
+      "output": "true",
+      "explanation": "A -> B -> C across the top row, then down to C and E, then left to D spells ABCCED using adjacent cells."
+    },
+    {
+      "input": "board = [[\"A\",\"B\",\"C\",\"E\"], [\"S\",\"F\",\"C\",\"S\"], [\"A\",\"D\",\"E\",\"E\"]], word = \"ABCB\"",
+      "output": "false",
+      "explanation": "There is no path because the second B would require reusing the first B's cell."
+    }
+  ],
+  "constraints": [
+    "m == board.length and n == board[i].length",
+    "1 <= m, n <= 6",
+    "1 <= word.length <= 15",
+    "board and word consist of uppercase and lowercase English letters",
+    "Adjacent cells share an edge (no diagonals), and each cell is used at most once per path"
+  ]
+}

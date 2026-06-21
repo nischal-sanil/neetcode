@@ -1,0 +1,23 @@
+{
+  "slug": "combination-sum",
+  "summary": "Given an array of distinct positive integers (candidates) and a target value, find every unique combination of candidates that sums exactly to the target.\n\nThe same candidate may be reused any number of times within a combination. Two combinations are considered the same if they contain the same numbers regardless of order, so each distinct multiset should appear only once.",
+  "examples": [
+    {
+      "input": "candidates = [2, 3, 6, 7], target = 7",
+      "output": "[[2, 2, 3], [7]]",
+      "explanation": "2 + 2 + 3 = 7 (the 2 is reused), and 7 by itself = 7."
+    },
+    {
+      "input": "candidates = [2, 3, 5], target = 8",
+      "output": "[[2, 2, 2, 2], [2, 3, 3], [3, 5]]"
+    }
+  ],
+  "constraints": [
+    "1 <= candidates.length <= 30",
+    "2 <= candidates[i] <= 40",
+    "All elements of candidates are distinct",
+    "1 <= target <= 40",
+    "Each candidate may be chosen an unlimited number of times",
+    "Combinations may be returned in any order"
+  ]
+}

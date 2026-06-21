@@ -1,0 +1,21 @@
+{
+  "slug": "sum-of-two-integers",
+  "summary": "Compute the sum of two integers a and b, but without using the + or - operators. You must rely on bitwise operations instead.\n\nThe standard technique adds the bits with XOR and tracks the carries with AND shifted left by one, repeating until there is no carry left.",
+  "examples": [
+    {
+      "input": "a = 1, b = 2",
+      "output": "3",
+      "explanation": "1 + 2 equals 3, computed using only bitwise operations."
+    },
+    {
+      "input": "a = 2, b = 3",
+      "output": "5",
+      "explanation": "2 + 3 equals 5."
+    }
+  ],
+  "constraints": [
+    "-1000 <= a, b <= 1000",
+    "You may not use the + or - operators",
+    "Inputs and the result fit within a signed 32-bit integer"
+  ]
+}

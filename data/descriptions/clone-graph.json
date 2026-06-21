@@ -1,0 +1,22 @@
+{
+  "slug": "clone-graph",
+  "summary": "Given a reference to a node in a connected, undirected graph, produce a deep copy of the whole graph. Every node holds an integer value and a list of its neighbors, and your copy must contain brand-new node objects with the same values and the same connection structure.\n\nIn this app the graph is encoded as an adjacency list: index i (1-based node value) maps to the list of values it is connected to. A correct clone reproduces the identical adjacency list.",
+  "examples": [
+    {
+      "input": "adjList = [[2, 4], [1, 3], [2, 4], [1, 3]]",
+      "output": "[[2, 4], [1, 3], [2, 4], [1, 3]]",
+      "explanation": "Node 1 connects to 2 and 4, node 2 connects to 1 and 3, and so on; the cloned graph has the same four nodes and edges."
+    },
+    {
+      "input": "adjList = [[2], [1]]",
+      "output": "[[2], [1]]",
+      "explanation": "A two-node graph where node 1 and node 2 are neighbors of each other."
+    }
+  ],
+  "constraints": [
+    "0 <= number of nodes <= 100",
+    "Node values are unique and equal to the node's 1-based index",
+    "The graph is undirected and connected (the empty graph returns an empty result)",
+    "The returned graph must use entirely new node objects, not the originals"
+  ]
+}

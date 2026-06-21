@@ -1,0 +1,22 @@
+{
+  "slug": "minimum-window-substring",
+  "summary": "Given two strings s and t, find the shortest contiguous substring of s that contains every character of t, counting duplicates.\n\nReturn that substring. If no window of s covers all the required characters, return an empty string. When more than one shortest window exists, the test cases expect a single correct window.",
+  "examples": [
+    {
+      "input": "s = \"ADOBECODEBANC\", t = \"ABC\"",
+      "output": "\"BANC\"",
+      "explanation": "\"BANC\" is the smallest slice of s that contains one 'A', one 'B', and one 'C'."
+    },
+    {
+      "input": "s = \"a\", t = \"aa\"",
+      "output": "\"\"",
+      "explanation": "t needs two 'a's but s has only one, so no valid window exists and the answer is the empty string."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 10^5",
+    "Both s and t consist of uppercase and lowercase English letters",
+    "Character counts in t must all be matched, including repeats",
+    "The answer is unique for the given test inputs"
+  ]
+}

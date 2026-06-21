@@ -1,0 +1,17 @@
+{
+  "slug": "min-stack",
+  "summary": "Design a stack data structure that, in addition to the usual operations, can report the smallest value it currently holds in constant time.\n\nImplement the MinStack class with these methods: push(val) adds a value to the top of the stack, pop() removes the value on top, top() returns the value on top without removing it, and getMin() returns the minimum value currently in the stack. Every method should run in O(1) time.",
+  "examples": [
+    {
+      "input": "operations = [\"MinStack\", \"push\", \"push\", \"push\", \"getMin\", \"pop\", \"top\", \"getMin\"], args = [[], [-2], [0], [-3], [], [], [], []]",
+      "output": "[null, null, null, null, -3, null, 0, -2]",
+      "explanation": "After pushing -2, 0, -3 the minimum is -3. Popping removes -3, leaving 0 on top and -2 as the new minimum."
+    }
+  ],
+  "constraints": [
+    "-2^31 <= val <= 2^31 - 1",
+    "pop(), top() and getMin() are only called on a non-empty stack",
+    "Each of push, pop, top and getMin must run in O(1) time",
+    "At most 3 * 10^4 calls are made across all methods"
+  ]
+}

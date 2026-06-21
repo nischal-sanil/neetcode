@@ -1,0 +1,21 @@
+{
+  "slug": "container-with-most-water",
+  "summary": "You are given an array where each value is the height of a vertical line drawn at that position along a horizontal axis. Picking any two lines, they form a container together with the x-axis.\n\nThe amount of water the container holds equals the distance between the two lines multiplied by the shorter of the two heights. Return the maximum amount of water any pair of lines can hold.",
+  "examples": [
+    {
+      "input": "height = [1, 8, 6, 2, 5, 4, 8, 3, 7]",
+      "output": "49",
+      "explanation": "The lines at index 1 (height 8) and index 8 (height 7) are 7 apart, and the shorter height is 7, giving 7 * 7 = 49, the largest possible area."
+    },
+    {
+      "input": "height = [1, 1]",
+      "output": "1",
+      "explanation": "The two lines are 1 apart with height 1, so the area is 1 * 1 = 1."
+    }
+  ],
+  "constraints": [
+    "2 <= height.length <= 10^5",
+    "0 <= height[i] <= 10^4",
+    "The container cannot be tilted; the area uses the shorter of the two chosen heights"
+  ]
+}

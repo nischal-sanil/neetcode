@@ -1,0 +1,22 @@
+{
+  "slug": "interleaving-string",
+  "summary": "Given three strings s1, s2, and s3, decide whether s3 can be formed by interleaving s1 and s2. An interleaving merges the two strings into one while preserving the left-to-right order of characters within each original string.\n\nReturn true if such an interleaving produces s3 exactly, and false otherwise. Note that this is only possible when the combined lengths of s1 and s2 equal the length of s3.",
+  "examples": [
+    {
+      "input": "s1 = \"aabcc\", s2 = \"dbbca\", s3 = \"aadbbcbcac\"",
+      "output": "true",
+      "explanation": "s3 can be split into pieces drawn alternately from s1 and s2 while keeping each source string's order intact."
+    },
+    {
+      "input": "s1 = \"aabcc\", s2 = \"dbbca\", s3 = \"aadbbbaccc\"",
+      "output": "false",
+      "explanation": "No valid interleaving of s1 and s2 produces this string."
+    }
+  ],
+  "constraints": [
+    "0 <= s1.length, s2.length <= 100",
+    "0 <= s3.length <= 200",
+    "All three strings consist of lowercase English letters",
+    "An interleaving is only possible when s1.length + s2.length == s3.length"
+  ]
+}

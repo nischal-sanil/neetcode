@@ -1,0 +1,23 @@
+{
+  "slug": "coin-change-ii",
+  "summary": "You are given a target amount of money and a list of coin denominations, with an unlimited supply of each denomination. Count the number of distinct combinations of coins that add up exactly to the target amount.\n\nTwo combinations are considered the same if they use the same multiset of coins regardless of order. Return 0 if no combination reaches the amount.",
+  "examples": [
+    {
+      "input": "amount = 5, coins = [1, 2, 5]",
+      "output": "4",
+      "explanation": "The amount 5 can be made as 5, 2+2+1, 2+1+1+1, or 1+1+1+1+1 — four distinct combinations."
+    },
+    {
+      "input": "amount = 3, coins = [2]",
+      "output": "0",
+      "explanation": "Using only 2-value coins there is no way to reach 3."
+    }
+  ],
+  "constraints": [
+    "1 <= coins.length <= 300",
+    "1 <= coins[i] <= 5000",
+    "All coin values are distinct",
+    "0 <= amount <= 5000",
+    "Each denomination may be used any number of times"
+  ]
+}

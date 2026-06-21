@@ -1,0 +1,22 @@
+{
+  "slug": "implement-trie-prefix-tree",
+  "summary": "Build a trie (also called a prefix tree), a data structure designed for storing and looking up strings by their character sequences. It is commonly used for fast prefix-based queries such as autocomplete and spell checking.\n\nImplement a Trie class with three methods: insert(word) adds a word to the structure, search(word) returns true only if that exact word was inserted earlier, and startsWith(prefix) returns true if any stored word begins with the given prefix.",
+  "examples": [
+    {
+      "input": "operations = [\"Trie\", \"insert\", \"search\", \"search\", \"startsWith\", \"insert\", \"search\"]\nargs = [[], [\"apple\"], [\"apple\"], [\"app\"], [\"app\"], [\"app\"], [\"app\"]]",
+      "output": "[null, null, true, false, true, null, true]",
+      "explanation": "After inserting \"apple\", search(\"apple\") is true but search(\"app\") is false because \"app\" was never inserted as a full word. startsWith(\"app\") is true since \"apple\" begins with it. After inserting \"app\", search(\"app\") becomes true."
+    },
+    {
+      "input": "operations = [\"Trie\", \"insert\", \"insert\", \"search\", \"search\", \"startsWith\", \"startsWith\"]\nargs = [[], [\"dog\"], [\"dog\"], [\"dog\"], [\"do\"], [\"do\"], [\"dox\"]]",
+      "output": "[null, null, null, true, false, true, false]",
+      "explanation": "search(\"do\") is false because only the complete word \"dog\" was stored, but startsWith(\"do\") is true. startsWith(\"dox\") is false since no stored word begins with that prefix."
+    }
+  ],
+  "constraints": [
+    "1 <= word.length, prefix.length <= 2000",
+    "word and prefix consist of lowercase English letters",
+    "At most 30000 calls in total will be made to insert, search, and startsWith",
+    "Constructor calls return null; insert returns null"
+  ]
+}

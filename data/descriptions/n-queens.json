@@ -1,0 +1,24 @@
+{
+  "slug": "n-queens",
+  "summary": "Place n queens on an n x n chessboard so that no two queens attack each other, meaning no two share a row, column, or diagonal.\n\nReturn every distinct valid arrangement. Each solution is described as a list of n strings, one per row, where 'Q' marks a queen and '.' marks an empty square.",
+  "examples": [
+    {
+      "input": "n = 4",
+      "output": "[[\".Q..\", \"...Q\", \"Q...\", \"..Q.\"], [\"..Q.\", \"Q...\", \"...Q\", \".Q..\"]]",
+      "explanation": "There are exactly two ways to position four non-attacking queens on a 4x4 board."
+    },
+    {
+      "input": "n = 1",
+      "output": "[[\"Q\"]]",
+      "explanation": "A single queen on a 1x1 board trivially attacks nothing."
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 9",
+    "Exactly n queens must be placed, one per row and one per column",
+    "No two queens may lie on the same row, column, or diagonal",
+    "Each board uses 'Q' for a queen and '.' for an empty cell",
+    "For n = 2 and n = 3 no valid arrangement exists, so the result is empty",
+    "Solutions may be returned in any order"
+  ]
+}

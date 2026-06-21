@@ -1,0 +1,22 @@
+{
+  "slug": "letter-combinations-of-a-phone-number",
+  "summary": "Given a string of digits from 2 to 9, return every letter combination the number could spell, using the classic telephone keypad mapping (2 -> abc, 3 -> def, and so on, with 7 -> pqrs and 9 -> wxyz).\n\nEach digit contributes one letter to each combination, in the same order as the digits. If the input is empty, return an empty list. The combinations may be returned in any order.",
+  "examples": [
+    {
+      "input": "digits = \"23\"",
+      "output": "[\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"]",
+      "explanation": "2 maps to a, b, c and 3 maps to d, e, f; pairing each gives 3 x 3 = 9 strings."
+    },
+    {
+      "input": "digits = \"\"",
+      "output": "[]"
+    }
+  ],
+  "constraints": [
+    "0 <= digits.length <= 4",
+    "Each character of digits is a digit in the range 2 through 9",
+    "Mapping follows a standard phone keypad (no letters for 0 or 1)",
+    "An empty input string yields an empty result",
+    "Combinations may be returned in any order"
+  ]
+}

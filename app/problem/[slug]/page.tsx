@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   getCategoryById,
   getChallenge,
+  getDescription,
   getProblemBySlug,
 } from "@/lib/data/content";
 import { getDraft, getProgressForSlug } from "@/lib/db/queries";
@@ -21,6 +22,7 @@ export default async function ProblemPage({
   if (!problem) notFound();
 
   const challenge = getChallenge(slug);
+  const description = getDescription(slug);
   const category = getCategoryById(problem.category);
   const progress = await getProgressForSlug(slug);
 
@@ -49,6 +51,7 @@ export default async function ProblemPage({
     <SolveView
       {...shared}
       challenge={challenge}
+      description={description}
       drafts={{ python: pythonDraft, javascript: javascriptDraft }}
     />
   );

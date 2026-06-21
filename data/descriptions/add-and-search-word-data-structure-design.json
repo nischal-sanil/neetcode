@@ -1,0 +1,23 @@
+{
+  "slug": "add-and-search-word-data-structure-design",
+  "summary": "Design a data structure that stores words and supports searching for them, including wildcard searches. This builds on a trie by allowing a query to match any single character.\n\nImplement a WordDictionary class with two methods: addWord(word) stores a word, and search(word) returns true if any stored word matches the query. In a query, a '.' character is a wildcard that may match any single letter, so search must explore all branches that could satisfy the pattern.",
+  "examples": [
+    {
+      "input": "operations = [\"WordDictionary\", \"addWord\", \"addWord\", \"addWord\", \"search\", \"search\", \"search\", \"search\"]\nargs = [[], [\"bad\"], [\"dad\"], [\"mad\"], [\"pad\"], [\"bad\"], [\".ad\"], [\"b..\"]]",
+      "output": "[null, null, null, null, false, true, true, true]",
+      "explanation": "search(\"pad\") is false (never added). search(\"bad\") is true. search(\".ad\") matches \"bad\", \"dad\", and \"mad\". search(\"b..\") matches \"bad\" since the two dots cover any two letters following 'b'."
+    },
+    {
+      "input": "operations = [\"WordDictionary\", \"addWord\", \"search\", \"search\", \"search\", \"search\"]\nargs = [[], [\"a\"], [\"a\"], [\".a\"], [\"a.\"], [\"aa\"]]",
+      "output": "[null, null, true, false, false, false]",
+      "explanation": "Only \"a\" is stored. Queries \".a\", \"a.\", and \"aa\" all require two characters, so none match the single-letter stored word."
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 25",
+    "word in addWord consists of lowercase English letters",
+    "word in search consists of lowercase English letters or '.'",
+    "At most 2 dots appear in a single search query when word.length > 10",
+    "At most 10000 calls in total will be made to addWord and search"
+  ]
+}

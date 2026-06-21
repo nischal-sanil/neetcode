@@ -1,0 +1,21 @@
+{
+  "slug": "binary-tree-maximum-path-sum",
+  "summary": "Given the root of a binary tree, return the largest possible sum of values along any path.\n\nA path here is any sequence of connected nodes where each consecutive pair shares an edge; a node may appear at most once and the path need not touch the root. You want the path whose node values add up to the maximum total.",
+  "examples": [
+    {
+      "input": "root = [1,2,3]",
+      "output": "6",
+      "explanation": "The path 2 -> 1 -> 3 sums to 6, the highest achievable."
+    },
+    {
+      "input": "root = [-10,9,20,null,null,15,7]",
+      "output": "42",
+      "explanation": "The path 15 -> 20 -> 7 sums to 42; including the negative root would only lower the total."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [1, 3 * 10^4].",
+    "-1000 <= Node.val <= 1000.",
+    "A valid path contains at least one node and may start and end at any nodes."
+  ]
+}

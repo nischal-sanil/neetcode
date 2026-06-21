@@ -1,0 +1,22 @@
+{
+  "slug": "reverse-nodes-in-k-group",
+  "summary": "You are given the head of a linked list and an integer k. Reverse the nodes of the list in consecutive groups of k, and return the new head.\n\nIf the final group has fewer than k nodes remaining, leave those nodes in their original order. Only the links may be changed, not the node values.",
+  "examples": [
+    {
+      "input": "head = [1, 2, 3, 4, 5], k = 2",
+      "output": "[2, 1, 4, 3, 5]",
+      "explanation": "Each pair is reversed; the leftover node 5 stays as-is."
+    },
+    {
+      "input": "head = [1, 2, 3, 4, 5], k = 3",
+      "output": "[3, 2, 1, 4, 5]",
+      "explanation": "The first group of three is reversed; the remaining two nodes are too few to form a group, so they keep their order."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [1, 5000].",
+    "0 <= Node.val <= 1000",
+    "1 <= k <= number of nodes in the list",
+    "Modify node links only; do not change the values stored in the nodes."
+  ]
+}

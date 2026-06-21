@@ -1,0 +1,21 @@
+{
+  "slug": "koko-eating-bananas",
+  "summary": "There are several piles of bananas, where piles[i] is the number of bananas in the i-th pile, and a deadline of h hours. Each hour Koko picks a single pile and eats up to k bananas from it; if that pile has fewer than k bananas left, she finishes it and stops eating until the next hour. She never eats from more than one pile within the same hour.\n\nFind the smallest eating speed k (bananas per hour) that lets her finish every pile within h hours, and return it.",
+  "examples": [
+    {
+      "input": "piles = [3, 6, 7, 11], h = 8",
+      "output": "4",
+      "explanation": "At speed 4 the piles take 1 + 2 + 2 + 3 = 8 hours, which meets the deadline; any slower speed exceeds 8 hours."
+    },
+    {
+      "input": "piles = [30, 11, 23, 4, 20], h = 6",
+      "output": "23"
+    }
+  ],
+  "constraints": [
+    "1 <= piles.length <= 10^4",
+    "piles.length <= h <= 10^9",
+    "1 <= piles[i] <= 10^9",
+    "The returned speed is an integer number of bananas per hour"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "decode-ways",
+  "summary": "A message of digits has been encoded by mapping 'A' to 1, 'B' to 2, and so on through 'Z' to 26. To decode a string of digits s, you group its characters into chunks where each chunk is a number from 1 to 26.\n\nReturn how many distinct ways the string can be decoded. A chunk cannot have a leading zero, so values like \"06\" are invalid groupings.",
+  "examples": [
+    {
+      "input": "s = \"226\"",
+      "output": "3",
+      "explanation": "It can be read as \"2 2 6\" (BBF), \"22 6\" (VF), or \"2 26\" (BZ)."
+    },
+    {
+      "input": "s = \"12\"",
+      "output": "2",
+      "explanation": "Either \"1 2\" (AB) or \"12\" (L)."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s contains only digit characters",
+    "A grouping with a leading zero (such as \"06\") is not allowed",
+    "Return 0 when no valid decoding exists, as for \"0\""
+  ]
+}

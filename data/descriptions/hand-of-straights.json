@@ -1,0 +1,23 @@
+{
+  "slug": "hand-of-straights",
+  "summary": "You hold a hand of cards given as an array of integers, and a group size. Decide whether the cards can be split into groups, each containing exactly groupSize cards whose values form a run of consecutive integers.\n\nEvery card must be used, and each group must consist of consecutive numbers (for example 3, 4, 5). Return true if such an arrangement is possible, false otherwise.",
+  "examples": [
+    {
+      "input": "hand = [1, 2, 3, 6, 2, 3, 4, 7, 8], groupSize = 3",
+      "output": "true",
+      "explanation": "The cards split into [1,2,3], [2,3,4], and [6,7,8], each a run of 3 consecutive values."
+    },
+    {
+      "input": "hand = [1, 2, 3, 4, 5], groupSize = 4",
+      "output": "false",
+      "explanation": "Five cards cannot be divided evenly into groups of four."
+    }
+  ],
+  "constraints": [
+    "1 <= hand.length <= 10^4",
+    "0 <= hand[i] <= 10^9",
+    "1 <= groupSize <= hand.length",
+    "Every card must belong to exactly one group",
+    "If hand.length is not divisible by groupSize, the answer is false"
+  ]
+}

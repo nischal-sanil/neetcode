@@ -1,0 +1,22 @@
+{
+  "slug": "longest-consecutive-sequence",
+  "summary": "Given an unsorted array of integers, find the length of the longest run of consecutive numbers that can be formed from its values.\n\nThe numbers in a run must be consecutive integers (each one greater than the last by exactly 1), but they do not need to be adjacent or in order within the array. The intended solution runs in linear time.",
+  "examples": [
+    {
+      "input": "nums = [100, 4, 200, 1, 3, 2]",
+      "output": "4",
+      "explanation": "The values 1, 2, 3, 4 form the longest consecutive run, which has length 4."
+    },
+    {
+      "input": "nums = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]",
+      "output": "9",
+      "explanation": "The numbers 0 through 8 are all present, giving a consecutive run of length 9 (the duplicate 0 does not extend it)."
+    }
+  ],
+  "constraints": [
+    "0 <= nums.length <= 10^5",
+    "-10^9 <= nums[i] <= 10^9",
+    "Duplicate values do not lengthen a run",
+    "An empty array yields a longest sequence of length 0"
+  ]
+}

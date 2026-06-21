@@ -1,0 +1,22 @@
+{
+  "slug": "valid-sudoku",
+  "summary": "Given a 9x9 Sudoku grid, check whether its currently filled cells follow Sudoku's rules. Empty cells are marked with '.' and only the placed digits need to be validated; you do not have to solve the board.\n\nThe board is valid when no digit repeats within any single row, any single column, or any of the nine 3x3 sub-grids.",
+  "examples": [
+    {
+      "input": "board = [\n  [\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"],\n  [\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"],\n  [\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"],\n  [\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"],\n  [\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"],\n  [\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"],\n  [\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"],\n  [\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"],\n  [\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]\n]",
+      "output": "true",
+      "explanation": "No row, column, or 3x3 box repeats a digit, so the partially filled board is valid."
+    },
+    {
+      "input": "Same board as above but with the top-left '5' changed to '8'",
+      "output": "false",
+      "explanation": "There are now two 8s in the first column (and the same 3x3 box), which breaks a Sudoku rule."
+    }
+  ],
+  "constraints": [
+    "board is a 9x9 grid",
+    "Each cell holds a digit '1'-'9' or the placeholder '.'",
+    "Only the already-filled cells are validated",
+    "A digit may not repeat in any row, column, or 3x3 sub-grid"
+  ]
+}

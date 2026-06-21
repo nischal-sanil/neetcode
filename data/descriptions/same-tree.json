@@ -1,0 +1,21 @@
+{
+  "slug": "same-tree",
+  "summary": "You are given the roots of two binary trees, p and q. Return true if the two trees are identical and false otherwise.\n\nTwo trees count as the same when they have exactly the same shape and every pair of corresponding nodes holds the same value.",
+  "examples": [
+    {
+      "input": "p = [1,2,3], q = [1,2,3]",
+      "output": "true",
+      "explanation": "Both trees have the same structure and matching values at every position."
+    },
+    {
+      "input": "p = [1,2], q = [1,null,2]",
+      "output": "false",
+      "explanation": "The value 2 sits on the left in p but on the right in q, so the shapes differ."
+    }
+  ],
+  "constraints": [
+    "The number of nodes in each tree is in the range [0, 100].",
+    "-10^4 <= Node.val <= 10^4.",
+    "Two empty trees are considered equal."
+  ]
+}

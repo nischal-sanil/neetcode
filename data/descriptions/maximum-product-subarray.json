@@ -1,0 +1,22 @@
+{
+  "slug": "maximum-product-subarray",
+  "summary": "Given an integer array nums, look at every contiguous subarray (a run of one or more consecutive elements) and compute the product of its values.\n\nReturn the largest such product. The answer is guaranteed to fit within a 32-bit integer.",
+  "examples": [
+    {
+      "input": "nums = [2, 3, -2, 4]",
+      "output": "6",
+      "explanation": "The subarray [2, 3] has product 6, the largest possible here."
+    },
+    {
+      "input": "nums = [-2, 3, -4]",
+      "output": "24",
+      "explanation": "The whole array multiplies to (-2)(3)(-4) = 24."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 2 * 10^4",
+    "-10 <= nums[i] <= 10",
+    "The subarray must be contiguous and non-empty",
+    "The maximum product fits in a 32-bit signed integer"
+  ]
+}

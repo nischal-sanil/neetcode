@@ -1,0 +1,22 @@
+{
+  "slug": "longest-palindromic-substring",
+  "summary": "Given a string s, find the longest contiguous run of characters within it that reads the same forwards and backwards.\n\nReturn that longest palindromic substring. If more than one substring of the maximum length exists, any of them is acceptable.",
+  "examples": [
+    {
+      "input": "s = \"cbbd\"",
+      "output": "\"bb\"",
+      "explanation": "\"bb\" is the longest substring that is a palindrome."
+    },
+    {
+      "input": "s = \"racecar\"",
+      "output": "\"racecar\"",
+      "explanation": "The entire string is already a palindrome."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists of digits and English letters",
+    "A single character counts as a palindrome",
+    "Any valid answer is accepted when several share the maximum length"
+  ]
+}

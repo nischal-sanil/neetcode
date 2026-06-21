@@ -24,6 +24,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Generated + non-source content.
     "data/challenges/index.ts",
+    "data/descriptions/index.ts",
     "lib/workers/py-harness.generated.ts",
     "scripts/**",
     "refsol/**",

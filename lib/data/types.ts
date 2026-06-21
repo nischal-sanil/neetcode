@@ -73,6 +73,23 @@ export interface ProblemsFile {
   problems: Problem[];
 }
 
+// --- descriptions (one file per slug under data/descriptions/) ---
+// Original, paraphrased problem statements — NEVER copied from LeetCode.
+
+export interface DescriptionExample {
+  input: string;
+  output: string;
+  explanation?: string;
+}
+
+export interface Description {
+  slug: string;
+  /** 2-4 sentence original summary of the task. Paragraphs split on blank lines. */
+  summary: string;
+  examples: DescriptionExample[];
+  constraints: string[];
+}
+
 // --- challenges (one file per slug under data/challenges/) ---
 
 export type Comparison = "exact" | "set" | "nested-unordered" | "float";

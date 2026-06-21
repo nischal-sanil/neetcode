@@ -1,0 +1,23 @@
+{
+  "slug": "course-schedule",
+  "summary": "You must complete numCourses courses labeled 0 to numCourses - 1. The list prerequisites contains pairs [a, b] meaning course b has to be taken before course a.\n\nDecide whether it is possible to finish every course. This is possible exactly when the prerequisite relationships contain no cycle.",
+  "examples": [
+    {
+      "input": "numCourses = 2, prerequisites = [[1, 0]]",
+      "output": "true",
+      "explanation": "Take course 0 first, then course 1. There is no conflicting dependency."
+    },
+    {
+      "input": "numCourses = 2, prerequisites = [[1, 0], [0, 1]]",
+      "output": "false",
+      "explanation": "Course 1 needs course 0 and course 0 needs course 1, a cycle that can never be satisfied."
+    }
+  ],
+  "constraints": [
+    "1 <= numCourses <= 2000",
+    "0 <= prerequisites.length <= 5000",
+    "Each prerequisites[i] = [a, b] with 0 <= a, b < numCourses",
+    "All prerequisite pairs are distinct",
+    "Return true only if all courses can be completed (the dependency graph is acyclic)"
+  ]
+}

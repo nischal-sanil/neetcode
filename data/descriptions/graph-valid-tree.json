@@ -1,0 +1,23 @@
+{
+  "slug": "graph-valid-tree",
+  "summary": "You are given n nodes labeled 0 to n - 1 and a list of undirected edges, where each edge connects two nodes. Determine whether these nodes and edges form a valid tree.\n\nA graph is a tree when it is fully connected (every node is reachable from every other) and contains no cycles. Equivalently, all n nodes are connected using exactly n - 1 edges.",
+  "examples": [
+    {
+      "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+      "output": "true",
+      "explanation": "All 5 nodes are connected with 4 edges and there is no cycle, so it is a valid tree."
+    },
+    {
+      "input": "n = 5, edges = [[0,1],[1,2],[2,3],[1,3],[1,4]]",
+      "output": "false",
+      "explanation": "The edges 1-2, 2-3, and 1-3 create a cycle, so the graph is not a tree."
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2000",
+    "0 <= edges.length <= 5000",
+    "Each edge connects two distinct nodes in the range 0 to n - 1",
+    "No duplicate edges appear",
+    "Return true only when the graph is connected and acyclic"
+  ]
+}

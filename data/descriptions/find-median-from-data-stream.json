@@ -1,0 +1,21 @@
+{
+  "slug": "find-median-from-data-stream",
+  "summary": "Design a data structure that supports adding integers one at a time and reporting the median of everything added so far. The median is the middle value of the sorted data; when the count is even it is the average of the two middle values.\n\nImplement a MedianFinder class with addNum(num) to insert a value into the running data set, and findMedian() to return the current median as a number.",
+  "examples": [
+    {
+      "input": "MedianFinder(), addNum(1), addNum(2), findMedian(), addNum(3), findMedian()",
+      "output": "[null, null, null, 1.5, null, 2]",
+      "explanation": "After adding 1 and 2 the sorted data is [1,2] and the median is the average 1.5. After adding 3 the data is [1,2,3] and the median is the middle value 2."
+    },
+    {
+      "input": "MedianFinder(), addNum(5), findMedian()",
+      "output": "[null, null, 5]",
+      "explanation": "With a single value the median is that value."
+    }
+  ],
+  "constraints": [
+    "-10^5 <= num <= 10^5",
+    "findMedian is only called after at least one number has been added",
+    "At most 5 * 10^4 calls will be made to addNum and findMedian"
+  ]
+}

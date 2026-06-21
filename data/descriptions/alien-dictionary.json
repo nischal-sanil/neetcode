@@ -1,0 +1,23 @@
+{
+  "slug": "alien-dictionary",
+  "summary": "An alien language uses the lowercase English letters but in an unknown alphabetical order. You are given a list of words that is sorted according to that unknown order. Use this ordering of words to infer a valid order of the letters.\n\nReturn any string containing all the unique letters that are consistent with the deduced order. If no valid ordering exists (the input contradicts itself), or if the order cannot be fully determined but any consistent answer is acceptable, return a string for a valid ordering, and return \"\" when the words are inherently invalid (for example a longer word appears before its own prefix).\n\nThis problem requires a LeetCode Premium subscription to view the original on LeetCode.",
+  "examples": [
+    {
+      "input": "words = [\"wrt\", \"wrf\", \"er\", \"ett\", \"rftt\"]",
+      "output": "\"wertf\"",
+      "explanation": "Comparing adjacent words gives t before f, w before e, r before t, and e before r, which together yield the order w, e, r, t, f."
+    },
+    {
+      "input": "words = [\"z\", \"x\"]",
+      "output": "\"zx\"",
+      "explanation": "Since \"z\" comes before \"x\", z must precede x in the alien alphabet."
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 100",
+    "Each word consists only of lowercase English letters",
+    "Return \"\" if the given ordering of words is impossible (invalid)",
+    "If multiple valid letter orders exist, any one of them is accepted"
+  ]
+}

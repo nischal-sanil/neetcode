@@ -1,0 +1,22 @@
+{
+  "slug": "max-area-of-island",
+  "summary": "Given a grid of 0s and 1s, an island is a group of 1-cells connected through their up, down, left, and right neighbors. The area of an island is the number of land cells it contains.\n\nReturn the area of the largest island in the grid. If the grid has no land at all, return 0.",
+  "examples": [
+    {
+      "input": "grid = [[0, 0, 0], [0, 0, 0]]",
+      "output": "0",
+      "explanation": "There are no land cells, so the maximum island area is 0."
+    },
+    {
+      "input": "grid = [[1]]",
+      "output": "1",
+      "explanation": "A single land cell forms an island of area 1."
+    }
+  ],
+  "constraints": [
+    "1 <= grid.length, grid[i].length <= 50",
+    "Each cell is either 0 (water) or 1 (land)",
+    "Cells are connected only in the four cardinal directions",
+    "Return 0 when the grid contains no land"
+  ]
+}

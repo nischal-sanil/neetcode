@@ -1,0 +1,22 @@
+{
+  "slug": "reverse-bits",
+  "summary": "Given a 32-bit unsigned integer, reverse the order of its bits and return the resulting value. The most significant bit becomes the least significant, and vice versa.\n\nThink of the input as a fixed-width 32-bit pattern: pad with leading zeros if needed, flip the bit order end to end, then interpret the reversed pattern as an unsigned integer.",
+  "examples": [
+    {
+      "input": "n = 1",
+      "output": "2147483648",
+      "explanation": "1 is 00000000000000000000000000000001; reversed it becomes 10000000000000000000000000000000, which is 2^31 = 2147483648."
+    },
+    {
+      "input": "n = 4294967295",
+      "output": "4294967295",
+      "explanation": "All 32 bits are 1, so reversing them leaves the value unchanged."
+    }
+  ],
+  "constraints": [
+    "The input is a 32-bit unsigned integer",
+    "0 <= n <= 2^32 - 1",
+    "Treat the number as exactly 32 bits wide",
+    "The return value is also an unsigned 32-bit integer"
+  ]
+}

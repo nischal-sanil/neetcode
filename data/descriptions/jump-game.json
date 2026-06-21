@@ -1,0 +1,22 @@
+{
+  "slug": "jump-game",
+  "summary": "You start at index 0 of an array where each entry tells you the maximum number of steps you can move forward from that position. Determine whether it is possible to reach the final index.\n\nReturn true if some sequence of jumps can land you on the last index, otherwise return false.",
+  "examples": [
+    {
+      "input": "nums = [2, 3, 1, 1, 4]",
+      "output": "true",
+      "explanation": "Jump 1 step to index 1, then 3 steps to the last index."
+    },
+    {
+      "input": "nums = [3, 2, 1, 0, 4]",
+      "output": "false",
+      "explanation": "Every route lands on index 3, whose value 0 leaves no way to move past it."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10^4",
+    "0 <= nums[i] <= 10^5",
+    "You begin at index 0",
+    "From index i you may move forward between 1 and nums[i] positions"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "design-twitter",
+  "summary": "Design a simplified Twitter where users can post tweets, follow and unfollow each other, and read a news feed of the most recent tweets.\n\nImplement a Twitter class with: postTweet(userId, tweetId) to publish a tweet; getNewsFeed(userId) returning the ids of the 10 most recent tweets from the user and everyone they follow, ordered most recent first; follow(followerId, followeeId) to start following; and unfollow(followerId, followeeId) to stop. A user always sees their own tweets in their feed.",
+  "examples": [
+    {
+      "input": "Twitter(), postTweet(1, 5), getNewsFeed(1), follow(1, 2), postTweet(2, 6), getNewsFeed(1), unfollow(1, 2), getNewsFeed(1)",
+      "output": "[null, null, [5], null, null, [6, 5], null, [5]]",
+      "explanation": "User 1 first sees only their own tweet 5. After following user 2 and user 2 posting tweet 6, the feed is [6,5] with the newest first. After unfollowing user 2, user 1 again sees only [5]."
+    },
+    {
+      "input": "Twitter(), postTweet(1, 10), postTweet(1, 20), postTweet(1, 30), getNewsFeed(1)",
+      "output": "[null, null, null, null, [30, 20, 10]]",
+      "explanation": "The feed lists the user's own tweets newest first."
+    }
+  ],
+  "constraints": [
+    "1 <= userId, followeeId <= 500",
+    "0 <= tweetId <= 10^4",
+    "getNewsFeed returns at most the 10 most recent relevant tweet ids, newest first",
+    "All tweetId values are unique",
+    "At most 3 * 10^4 calls will be made across postTweet, getNewsFeed, follow, and unfollow"
+  ]
+}

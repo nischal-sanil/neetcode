@@ -1,0 +1,21 @@
+{
+  "slug": "binary-tree-level-order-traversal",
+  "summary": "Given the root of a binary tree, return its level-order traversal.\n\nGroup the node values by depth and return a list of lists, where each inner list holds the values at one level read from left to right, starting at the root's level.",
+  "examples": [
+    {
+      "input": "root = [3,9,20,null,null,15,7]",
+      "output": "[[3],[9,20],[15,7]]",
+      "explanation": "Level 0 is [3], level 1 is [9,20], and level 2 is [15,7]."
+    },
+    {
+      "input": "root = [1]",
+      "output": "[[1]]",
+      "explanation": "A single node forms one level containing just that value."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [0, 2000].",
+    "-1000 <= Node.val <= 1000.",
+    "An empty tree returns an empty list."
+  ]
+}

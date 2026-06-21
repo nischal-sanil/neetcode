@@ -1,0 +1,22 @@
+{
+  "slug": "group-anagrams",
+  "summary": "Given a list of strings, cluster together the ones that are anagrams of each other.\n\nTwo words belong in the same group when they share the same letters with identical counts. Return the groups as a list of lists; the order of the groups and the order of words within each group does not matter.",
+  "examples": [
+    {
+      "input": "strs = [\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]",
+      "output": "[[\"bat\"], [\"nat\", \"tan\"], [\"ate\", \"eat\", \"tea\"]]",
+      "explanation": "eat, tea, and ate share the same letters; nat and tan form another anagram pair; bat stands alone."
+    },
+    {
+      "input": "strs = [\"a\"]",
+      "output": "[[\"a\"]]",
+      "explanation": "A single word forms its own group."
+    }
+  ],
+  "constraints": [
+    "1 <= strs.length <= 10^4",
+    "0 <= strs[i].length <= 100",
+    "strs[i] consists of lowercase English letters",
+    "An empty string is a valid input and groups with other empty strings"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "time-based-key-value-store",
+  "summary": "Design a key-value store that records multiple timestamped versions of each key. Implement a TimeMap class with two operations:\n\n- set(key, value, timestamp): store the given value under key at the given timestamp.\n- get(key, timestamp): return the value that was stored for key at the largest stored timestamp that is less than or equal to the query timestamp. If no such entry exists, return an empty string \"\".\n\nFor any given key the set calls arrive with strictly increasing timestamps, which lets get use binary search over the stored times.",
+  "examples": [
+    {
+      "input": "operations = [\"TimeMap\", \"set\", \"get\", \"get\", \"set\", \"get\", \"get\"], args = [[], [\"foo\",\"bar\",1], [\"foo\",1], [\"foo\",3], [\"foo\",\"bar2\",4], [\"foo\",4], [\"foo\",5]]",
+      "output": "[null, null, \"bar\", \"bar\", null, \"bar2\", \"bar2\"]",
+      "explanation": "get(\"foo\",1) and get(\"foo\",3) return \"bar\" (set at time 1). After setting \"bar2\" at time 4, get(\"foo\",4) and get(\"foo\",5) return \"bar2\"."
+    },
+    {
+      "input": "operations = [\"TimeMap\", \"get\", \"set\", \"get\"], args = [[], [\"x\",5], [\"x\",\"hello\",10], [\"x\",7]]",
+      "output": "[null, \"\", null, \"\"]",
+      "explanation": "The first get finds no entry at or before time 5, and the second still finds nothing at time 7 because \"hello\" was only set at time 10."
+    }
+  ],
+  "constraints": [
+    "1 <= key.length, value.length <= 100",
+    "key and value consist of lowercase and uppercase English letters and digits",
+    "1 <= timestamp <= 10^7",
+    "For each key, set is called with strictly increasing timestamps",
+    "Up to 2 * 10^5 calls in total to set and get"
+  ]
+}

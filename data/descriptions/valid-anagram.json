@@ -1,0 +1,21 @@
+{
+  "slug": "valid-anagram",
+  "summary": "Given two strings, determine whether one is an anagram of the other.\n\nTwo strings are anagrams when they contain exactly the same characters with the same frequency, just possibly in a different order. Return true if they match this way and false otherwise.",
+  "examples": [
+    {
+      "input": "s = \"anagram\", t = \"nagaram\"",
+      "output": "true",
+      "explanation": "Both strings use the letters a, a, a, n, g, r, m, so they are anagrams."
+    },
+    {
+      "input": "s = \"rat\", t = \"car\"",
+      "output": "false",
+      "explanation": "The letter counts differ, so t is not a rearrangement of s."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 5 * 10^4",
+    "s and t consist of lowercase English letters",
+    "Strings of different lengths can never be anagrams"
+  ]
+}

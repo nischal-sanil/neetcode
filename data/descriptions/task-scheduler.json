@@ -1,0 +1,21 @@
+{
+  "slug": "task-scheduler",
+  "summary": "You are given a list of CPU tasks, each labeled by a letter, and an integer n representing a required cooldown. Two runs of the same task must be separated by at least n other time units (either different tasks or idle slots).\n\nEach task takes exactly one unit of time, and the CPU can run any task or sit idle in any unit. Return the minimum number of time units the CPU needs to finish all the given tasks.",
+  "examples": [
+    {
+      "input": "tasks = [\"A\", \"A\", \"A\", \"B\", \"B\", \"B\"], n = 2",
+      "output": "8",
+      "explanation": "One valid schedule is A B idle A B idle A B, which takes 8 units; the idle slots enforce the cooldown of 2 between repeats of A."
+    },
+    {
+      "input": "tasks = [\"A\", \"A\", \"A\", \"B\", \"B\", \"B\"], n = 0",
+      "output": "6",
+      "explanation": "With no cooldown every task can run back to back, so the total is just the number of tasks."
+    }
+  ],
+  "constraints": [
+    "1 <= tasks.length <= 10^4",
+    "Each task is an uppercase English letter",
+    "0 <= n <= 100"
+  ]
+}

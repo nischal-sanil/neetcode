@@ -1,0 +1,22 @@
+{
+  "slug": "valid-parenthesis-string",
+  "summary": "You are given a string containing only the characters '(', ')', and '*'. Each '*' can act as a single '(', a single ')', or an empty string. Decide whether the string can be made into a valid sequence of balanced parentheses.\n\nA string is valid when every opening parenthesis has a matching closing one in the correct order. Return true if at least one interpretation of the stars yields a valid string.",
+  "examples": [
+    {
+      "input": "s = \"(*)\"",
+      "output": "true",
+      "explanation": "Treat the '*' as empty (or as nothing), leaving '()', which is balanced."
+    },
+    {
+      "input": "s = \"(*))\"",
+      "output": "true",
+      "explanation": "Read the '*' as '(', giving '(())', which is valid."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s contains only the characters '(', ')', and '*'",
+    "Each '*' may be interpreted as '(', as ')', or as the empty string",
+    "Parentheses must be properly matched and correctly ordered"
+  ]
+}

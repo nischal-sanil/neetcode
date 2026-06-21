@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { Loader2, Play } from "lucide-react";
 import { toast } from "sonner";
 
-import type { Challenge, Difficulty } from "@/lib/data/types";
+import type { Challenge, Description, Difficulty } from "@/lib/data/types";
 import { runTests, warmPython, disposePython } from "@/lib/workers/client";
 import { recordRun } from "@/lib/actions/progress";
 import type { Language } from "@/lib/workers/types";
@@ -27,6 +27,7 @@ export interface SolveViewProps {
   initialStarred: boolean;
   status: string;
   challenge: Challenge;
+  description: Description | null;
   /** Server-restored drafts (null => fall back to starter_code). */
   drafts: { python: string | null; javascript: string | null };
 }
@@ -154,6 +155,7 @@ export function SolveView(props: SolveViewProps) {
         initialStarred={props.initialStarred}
         status={props.status}
         challenge={challenge}
+        description={props.description}
       />
 
       <div className="panel flex min-h-0 flex-col overflow-hidden">

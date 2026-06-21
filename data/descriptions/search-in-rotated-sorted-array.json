@@ -1,0 +1,22 @@
+{
+  "slug": "search-in-rotated-sorted-array",
+  "summary": "You are given an array of distinct integers that was sorted in ascending order and then rotated at some unknown pivot, so the values form two ascending segments (for example [4,5,6,7,0,1,2]). Given a target value, return the index where it appears, or -1 if it is not in the array.\n\nThe algorithm must run in O(log n) time, so you should adapt binary search to handle the rotation rather than scanning every element.",
+  "examples": [
+    {
+      "input": "nums = [4, 5, 6, 7, 0, 1, 2], target = 0",
+      "output": "4",
+      "explanation": "The value 0 is located at index 4."
+    },
+    {
+      "input": "nums = [4, 5, 6, 7, 0, 1, 2], target = 3",
+      "output": "-1",
+      "explanation": "3 is absent from the array."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5000",
+    "-10^4 <= nums[i], target <= 10^4",
+    "All values in nums are unique",
+    "nums is a sorted ascending array that may be rotated"
+  ]
+}

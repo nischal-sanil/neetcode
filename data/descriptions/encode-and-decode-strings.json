@@ -1,0 +1,22 @@
+{
+  "slug": "encode-and-decode-strings",
+  "summary": "Design a Codec class that can serialize a list of strings into a single string and then reconstruct the original list from that string.\n\nThe encoding must survive any characters the input strings might contain, including spaces, separators like ':', and even empty strings. The class exposes an encode method that turns a list of strings into one string, and a decode method that turns that string back into the exact original list. (The in-app test drives both directions through a single encodeDecode round-trip.)",
+  "examples": [
+    {
+      "input": "strs = [\"neet\", \"code\", \"love\", \"you\"]",
+      "output": "[\"neet\", \"code\", \"love\", \"you\"]",
+      "explanation": "Calling encode on the list and then decode on its result returns the identical list of strings."
+    },
+    {
+      "input": "strs = [\"we\", \"say\", \":\", \"yes\"]",
+      "output": "[\"we\", \"say\", \":\", \"yes\"]",
+      "explanation": "The encoding must not be confused by a string that is itself a separator character like ':'; the round-trip still reproduces the original list."
+    }
+  ],
+  "constraints": [
+    "0 <= strs.length <= 200",
+    "0 <= strs[i].length <= 200",
+    "strs[i] may contain any ASCII characters, including separators and spaces",
+    "decode(encode(strs)) must return the original list exactly, including empty strings"
+  ]
+}

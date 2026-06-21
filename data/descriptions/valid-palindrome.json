@@ -1,0 +1,21 @@
+{
+  "slug": "valid-palindrome",
+  "summary": "Given a string, decide whether it reads the same forwards and backwards once you ignore everything except letters and digits and treat uppercase and lowercase as equal.\n\nIn other words, strip out spaces, punctuation, and other symbols, lowercase the remaining alphanumeric characters, and check if that cleaned sequence is a palindrome. Return true if it is and false otherwise.",
+  "examples": [
+    {
+      "input": "s = \"A man, a plan, a canal: Panama\"",
+      "output": "true",
+      "explanation": "After removing non-alphanumeric characters and lowercasing, the string becomes \"amanaplanacanalpanama\", which is the same reversed."
+    },
+    {
+      "input": "s = \"race a car\"",
+      "output": "false",
+      "explanation": "Cleaned, the string is \"raceacar\", which is not a palindrome."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 2 * 10^5",
+    "s consists of printable ASCII characters",
+    "An empty string (after filtering) is considered a valid palindrome"
+  ]
+}

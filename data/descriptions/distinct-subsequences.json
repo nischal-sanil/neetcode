@@ -1,0 +1,22 @@
+{
+  "slug": "distinct-subsequences",
+  "summary": "Given two strings s and t, count how many distinct subsequences of s are equal to t. A subsequence is obtained by deleting zero or more characters from s without changing the relative order of the characters that remain.\n\nTwo subsequences are considered different if they pick characters from different positions in s, even if the resulting text is identical.",
+  "examples": [
+    {
+      "input": "s = \"rabbbit\", t = \"rabbit\"",
+      "output": "3",
+      "explanation": "There are three different ways to choose positions in \"rabbbit\" that spell \"rabbit\", each keeping a different one of the three b's."
+    },
+    {
+      "input": "s = \"babgbag\", t = \"bag\"",
+      "output": "5",
+      "explanation": "Five distinct sets of positions in \"babgbag\" form the subsequence \"bag\"."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 1000",
+    "Both strings consist of English letters",
+    "The answer is guaranteed to fit in a 32-bit signed integer",
+    "Characters chosen for the subsequence must preserve their order in s"
+  ]
+}

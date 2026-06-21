@@ -1,0 +1,22 @@
+{
+  "slug": "palindromic-substrings",
+  "summary": "Given a string s, count how many of its contiguous substrings are palindromes.\n\nSubstrings that occupy different positions are counted separately even when their characters are identical. Return the total count.",
+  "examples": [
+    {
+      "input": "s = \"abc\"",
+      "output": "3",
+      "explanation": "The palindromes are the three single characters \"a\", \"b\", and \"c\"."
+    },
+    {
+      "input": "s = \"aaa\"",
+      "output": "6",
+      "explanation": "\"a\" x3, \"aa\" x2, and \"aaa\" give six palindromic substrings."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists of lowercase English letters",
+    "Substrings at distinct index ranges are counted independently",
+    "Each single character is itself a palindrome"
+  ]
+}

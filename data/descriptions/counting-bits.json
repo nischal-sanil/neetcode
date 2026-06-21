@@ -1,0 +1,22 @@
+{
+  "slug": "counting-bits",
+  "summary": "Given a non-negative integer n, produce an array of length n + 1 where the value at each index i is the number of 1 bits in the binary representation of i.\n\nThe goal is to build the whole array efficiently, ideally in a single linear pass rather than counting bits from scratch for each number.",
+  "examples": [
+    {
+      "input": "n = 2",
+      "output": "[0, 1, 1]",
+      "explanation": "0 -> 0 bits, 1 -> 1 bit, 2 (binary 10) -> 1 bit."
+    },
+    {
+      "input": "n = 5",
+      "output": "[0, 1, 1, 2, 1, 2]",
+      "explanation": "Bit counts for 0 through 5: 0, 1, 1, 2, 1, 2."
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 10^5",
+    "The output array has length n + 1",
+    "Element i equals the number of set bits in i",
+    "A linear-time, single-pass solution is expected"
+  ]
+}

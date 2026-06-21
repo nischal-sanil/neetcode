@@ -1,0 +1,22 @@
+{
+  "slug": "serialize-and-deserialize-binary-tree",
+  "summary": "Design a way to turn a binary tree into a string (serialize) and to rebuild the identical tree back from that string (deserialize).\n\nYou choose the encoding format yourself; the only requirement is that serializing a tree and then deserializing the result reproduces the original tree exactly, with the same structure and values. In this exercise your function takes a tree, serializes it, deserializes that output, and returns the reconstructed tree so the round trip can be checked.",
+  "examples": [
+    {
+      "input": "root = [1,2,3,null,null,4,5]",
+      "output": "[1,2,3,null,null,4,5]",
+      "explanation": "After serializing to a string and deserializing it back, the rebuilt tree matches the original structure and values."
+    },
+    {
+      "input": "root = []",
+      "output": "[]",
+      "explanation": "An empty tree round-trips to an empty tree."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [0, 10^4].",
+    "-1000 <= Node.val <= 1000.",
+    "Deserializing the serialized output must rebuild a tree identical to the input.",
+    "An empty tree must round-trip back to an empty tree."
+  ]
+}

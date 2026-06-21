@@ -1,0 +1,22 @@
+{
+  "slug": "jump-game-ii",
+  "summary": "You start at index 0 of an array where each value is the farthest you can jump forward from that spot. Reaching the last index is always possible; your job is to find the fewest jumps needed to get there.\n\nReturn the minimum number of jumps required to arrive at the final index.",
+  "examples": [
+    {
+      "input": "nums = [2, 3, 1, 1, 4]",
+      "output": "2",
+      "explanation": "Jump from index 0 to index 1 (1 step), then from index 1 to the last index (3 steps): 2 jumps total."
+    },
+    {
+      "input": "nums = [2, 3, 0, 1, 4]",
+      "output": "2",
+      "explanation": "Index 0 to index 1, then index 1 to the end, for 2 jumps."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10^4",
+    "0 <= nums[i] <= 1000",
+    "It is always possible to reach the last index",
+    "From index i you may jump forward up to nums[i] positions"
+  ]
+}

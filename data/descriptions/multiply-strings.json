@@ -1,0 +1,22 @@
+{
+  "slug": "multiply-strings",
+  "summary": "Given two non-negative integers represented as strings, num1 and num2, return their product, also as a string.\n\nYou must compute the result without converting the inputs directly into a built-in big-integer type, so you implement the multiplication digit by digit, much like long multiplication on paper.",
+  "examples": [
+    {
+      "input": "num1 = \"123\", num2 = \"456\"",
+      "output": "\"56088\"",
+      "explanation": "123 times 456 equals 56088."
+    },
+    {
+      "input": "num1 = \"0\", num2 = \"52\"",
+      "output": "\"0\"",
+      "explanation": "Any number multiplied by 0 is 0."
+    }
+  ],
+  "constraints": [
+    "1 <= num1.length, num2.length <= 200",
+    "num1 and num2 consist of digits only",
+    "Neither input has leading zeros, except for the number 0 itself",
+    "Do not use a built-in BigInteger library or convert the strings to integers directly"
+  ]
+}

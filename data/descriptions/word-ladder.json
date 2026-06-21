@@ -1,0 +1,23 @@
+{
+  "slug": "word-ladder",
+  "summary": "Given a beginWord, an endWord, and a wordList, you transform one word into another by changing a single letter at a time. Every intermediate word produced along the way must exist in wordList.\n\nReturn the number of words in the shortest such transformation sequence (counting both beginWord and endWord), or 0 if endWord cannot be reached.",
+  "examples": [
+    {
+      "input": "beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
+      "output": "5",
+      "explanation": "One shortest path is hit -> hot -> dot -> dog -> cog, which contains 5 words."
+    },
+    {
+      "input": "beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]",
+      "output": "0",
+      "explanation": "Because \"cog\" is not in the word list, no valid sequence can end at it, so the answer is 0."
+    }
+  ],
+  "constraints": [
+    "1 <= beginWord.length <= 10",
+    "endWord.length == beginWord.length",
+    "All words consist of lowercase English letters and share the same length",
+    "Every word in wordList is unique; beginWord need not be in wordList",
+    "Return 0 if endWord is absent from wordList or otherwise unreachable"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "generate-parentheses",
+  "summary": "Given an integer n, produce every distinct string of n pairs of parentheses that is well-formed (correctly balanced).\n\nReturn all such combinations in a list. The order of the strings in the returned list does not matter.",
+  "examples": [
+    {
+      "input": "n = 2",
+      "output": "[\"(())\", \"()()\"]",
+      "explanation": "With two pairs of parentheses there are exactly two valid arrangements."
+    },
+    {
+      "input": "n = 3",
+      "output": "[\"((()))\", \"(()())\", \"(())()\", \"()(())\", \"()()()\"]",
+      "explanation": "All five balanced strings using three pairs of parentheses."
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 8",
+    "Every returned string must use exactly n opening and n closing parentheses",
+    "Each returned string must be well-formed (balanced)",
+    "The list may be returned in any order"
+  ]
+}

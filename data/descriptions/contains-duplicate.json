@@ -1,0 +1,21 @@
+{
+  "slug": "contains-duplicate",
+  "summary": "Given an array of integers, decide whether any value shows up more than once.\n\nReturn true if at least one number appears two or more times, and false when every element is unique.",
+  "examples": [
+    {
+      "input": "nums = [1, 2, 3, 1]",
+      "output": "true",
+      "explanation": "The value 1 appears at index 0 and index 3, so a duplicate exists."
+    },
+    {
+      "input": "nums = [1, 2, 3, 4]",
+      "output": "false",
+      "explanation": "All four values are distinct, so there are no duplicates."
+    }
+  ],
+  "constraints": [
+    "0 <= nums.length <= 10^5",
+    "-10^9 <= nums[i] <= 10^9",
+    "An empty array contains no duplicates and should return false"
+  ]
+}

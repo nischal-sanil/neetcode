@@ -1,0 +1,22 @@
+{
+  "slug": "combination-sum-ii",
+  "summary": "Given an array of positive integers (candidates), which may contain duplicates, and a target value, find all unique combinations whose elements sum to the target.\n\nUnlike the first version, each number in the input may be used at most once per combination. The final list must not contain duplicate combinations, even when repeated values in the input could form the same set.",
+  "examples": [
+    {
+      "input": "candidates = [10, 1, 2, 7, 6, 1, 5], target = 8",
+      "output": "[[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]",
+      "explanation": "Each element is used at most once; the two 1s are separate items, so [1, 1, 6] is valid."
+    },
+    {
+      "input": "candidates = [2, 5, 2, 1, 2], target = 5",
+      "output": "[[1, 2, 2], [5]]"
+    }
+  ],
+  "constraints": [
+    "1 <= candidates.length <= 100",
+    "1 <= candidates[i] <= 50",
+    "1 <= target <= 30",
+    "Each element may be used at most once in a combination",
+    "The output must not contain duplicate combinations"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "car-fleet",
+  "summary": "Cars are driving toward a destination at position target on a single-lane road, so no car can pass another. There are n cars; position[i] gives the starting location of car i and speed[i] gives its constant speed. A faster car that catches up to a slower one ahead slows down and travels at the slower car's speed from then on, forming a group.\n\nA car fleet is a set of one or more cars bunched together that arrive at the destination at the same time (a single car alone also counts as a fleet). If a car reaches the target at the exact same moment as a fleet ahead, it joins that fleet. Return how many distinct fleets reach the destination.",
+  "examples": [
+    {
+      "input": "target = 12, position = [10, 8, 0, 5, 3], speed = [2, 4, 1, 1, 4]",
+      "output": "3",
+      "explanation": "The cars starting at 10 and 8 meet and travel together as one fleet; the car at 0 stays alone; the cars at 5 and 3 form another fleet, giving 3 fleets in total."
+    },
+    {
+      "input": "target = 10, position = [3], speed = [3]",
+      "output": "1",
+      "explanation": "A single car forms one fleet on its own."
+    }
+  ],
+  "constraints": [
+    "n == position.length == speed.length",
+    "0 <= n <= 10^5",
+    "0 < target <= 10^6",
+    "0 <= position[i] < target and all positions are distinct",
+    "0 < speed[i] <= 10^6",
+    "An empty road (n == 0) produces 0 fleets"
+  ]
+}

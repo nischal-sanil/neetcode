@@ -1,0 +1,24 @@
+{
+  "slug": "cheapest-flights-within-k-stops",
+  "summary": "You are given n cities labeled 0 to n-1 and a list of flights, where flights[i] = [from, to, price] is a one-way flight from city from to city to at the given price. Given a source city src, a destination city dst, and an integer k, find the cheapest total price to travel from src to dst using at most k intermediate stops.\n\nIf no route from src to dst exists within the allowed number of stops, return -1.",
+  "examples": [
+    {
+      "input": "n = 4, flights = [[0,1,100], [1,2,100], [2,0,100], [1,3,600], [2,3,200]], src = 0, dst = 3, k = 1",
+      "output": "700",
+      "explanation": "The route 0 -> 1 -> 3 costs 700 and uses 1 stop. The cheaper-looking 0 -> 1 -> 2 -> 3 (500) needs 2 stops, which exceeds k."
+    },
+    {
+      "input": "n = 3, flights = [[0,1,100], [1,2,100], [0,2,500]], src = 0, dst = 2, k = 1",
+      "output": "200",
+      "explanation": "With one stop allowed, 0 -> 1 -> 2 costs 200, which beats the direct flight 0 -> 2 at 500."
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 100",
+    "0 <= flights.length <= n * (n - 1)",
+    "flights[i] = [from, to, price] with from != to and 0 <= from, to < n",
+    "1 <= price <= 10^4",
+    "0 <= src, dst, k < n and src != dst",
+    "There is at most one flight between any ordered pair of cities"
+  ]
+}

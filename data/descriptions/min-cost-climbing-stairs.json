@@ -1,0 +1,22 @@
+{
+  "slug": "min-cost-climbing-stairs",
+  "summary": "An array cost gives the price of stepping off each stair, where cost[i] is paid when you leave stair i. From any stair you may climb either one or two stairs forward.\n\nYou can begin at index 0 or index 1, and your goal is to move past the final stair. Return the smallest total cost needed to reach the top.",
+  "examples": [
+    {
+      "input": "cost = [10, 15, 20]",
+      "output": "15",
+      "explanation": "Start at index 1, pay 15, and take two steps to climb past the end."
+    },
+    {
+      "input": "cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]",
+      "output": "6",
+      "explanation": "Start at index 0 and skip the costly index-1 and index-5 stairs, paying 1 six times."
+    }
+  ],
+  "constraints": [
+    "2 <= cost.length <= 1000",
+    "0 <= cost[i] <= 999",
+    "You may start from index 0 or index 1",
+    "The top is reached by stepping beyond the last index"
+  ]
+}

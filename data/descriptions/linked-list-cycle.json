@@ -1,0 +1,22 @@
+{
+  "slug": "linked-list-cycle",
+  "summary": "You are given the head of a singly linked list. Determine whether the list contains a cycle, meaning some node can be reached again by repeatedly following next pointers.\n\nReturn true if a cycle exists and false otherwise. In the tests the input encodes a list of values plus a pos index marking which node the tail links back to (pos = -1 means no cycle).",
+  "examples": [
+    {
+      "input": "head = [3, 2, 0, -4], pos = 1",
+      "output": "true",
+      "explanation": "The tail node (-4) points back to the node at index 1, forming a loop."
+    },
+    {
+      "input": "head = [1], pos = -1",
+      "output": "false",
+      "explanation": "A single node whose next is null has no cycle."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [0, 10^4].",
+    "-10^5 <= Node.val <= 10^5",
+    "pos is -1 or a valid index into the list.",
+    "Aim for O(1) extra memory, e.g. using fast and slow pointers."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "minimum-interval-to-include-each-query",
+  "summary": "You are given a list of intervals, each written as [left, right] and covering every integer from left to right inclusive, along with a list of query points.\n\nFor each query, find the length of the smallest interval that contains that point, where an interval's length is right - left + 1. If no interval contains the query point, the answer for that query is -1. Return the answers in the same order as the queries.",
+  "examples": [
+    {
+      "input": "intervals = [[1, 4], [2, 4], [3, 6], [4, 4]], queries = [2, 3, 4, 5]",
+      "output": "[3, 3, 1, 4]",
+      "explanation": "Query 4 is covered by [4, 4], whose length is 1 (the smallest), while query 5 is only inside [3, 6], length 4."
+    },
+    {
+      "input": "intervals = [[2, 3], [2, 5], [1, 8], [20, 25]], queries = [2, 19, 5, 22]",
+      "output": "[2, -1, 4, 6]",
+      "explanation": "No interval covers 19, so its answer is -1; query 22 falls in [20, 25], whose length is 6."
+    }
+  ],
+  "constraints": [
+    "1 <= intervals.length <= 10^5",
+    "1 <= queries.length <= 10^5",
+    "Each interval is [left, right] with left <= right",
+    "Interval length is computed as right - left + 1",
+    "Return -1 for any query that no interval contains"
+  ]
+}

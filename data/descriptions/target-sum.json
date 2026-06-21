@@ -1,0 +1,23 @@
+{
+  "slug": "target-sum",
+  "summary": "You are given an array of non-negative integers and a target value. By placing either a '+' or a '-' sign in front of every number and then summing them, you build an expression.\n\nCount how many different ways of assigning signs produce an expression whose value equals the target.",
+  "examples": [
+    {
+      "input": "nums = [1, 1, 1, 1, 1], target = 3",
+      "output": "5",
+      "explanation": "There are five sign assignments that evaluate to 3, such as -1+1+1+1+1 and +1-1+1+1+1."
+    },
+    {
+      "input": "nums = [1], target = 2",
+      "output": "0",
+      "explanation": "A single 1 can only form +1 or -1, neither of which equals 2."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 20",
+    "0 <= nums[i] <= 1000",
+    "The sum of all numbers does not exceed 1000",
+    "-1000 <= target <= 1000",
+    "Every number must receive exactly one sign"
+  ]
+}

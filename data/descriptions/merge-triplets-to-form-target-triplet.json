@@ -1,0 +1,23 @@
+{
+  "slug": "merge-triplets-to-form-target-triplet",
+  "summary": "You are given a list of triplets (each is three integers) and a target triplet. You may repeatedly pick two triplets and merge them: the result keeps, position by position, the larger of the two values. Merged triplets replace the ones used and can be merged again.\n\nReturn true if, through some sequence of merges, you can produce the exact target triplet, and false otherwise.",
+  "examples": [
+    {
+      "input": "triplets = [[2,5,3], [1,8,4], [1,7,5]], target = [2, 7, 5]",
+      "output": "true",
+      "explanation": "Merging [2,5,3] and [1,7,5] gives [2,7,5], which matches the target."
+    },
+    {
+      "input": "triplets = [[3,4,5], [4,5,6]], target = [3, 2, 5]",
+      "output": "false",
+      "explanation": "No triplet has a 2 in the middle slot, and merging only keeps the maximum, so 2 can never be produced."
+    }
+  ],
+  "constraints": [
+    "1 <= triplets.length <= 10^5",
+    "triplets[i].length == target.length == 3",
+    "1 <= triplets[i][j], target[j] <= 1000",
+    "A merge of two triplets keeps the per-position maximum of each",
+    "Only triplets whose every value is at most the target's can contribute"
+  ]
+}

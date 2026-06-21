@@ -1,0 +1,23 @@
+{
+  "slug": "reconstruct-itinerary",
+  "summary": "You are given a list of airline tickets, where each ticket is a pair [from, to] representing one flight from a departure airport to an arrival airport. Reconstruct the complete journey that uses every ticket exactly once, starting from \"JFK\".\n\nA valid itinerary must use all tickets and may revisit airports. If several itineraries are possible, return the one that is smallest in lexical (dictionary) order when the sequence of airport codes is read as a single list. A valid answer is guaranteed to exist.",
+  "examples": [
+    {
+      "input": "tickets = [[\"MUC\",\"LHR\"], [\"JFK\",\"MUC\"], [\"SFO\",\"SJC\"], [\"LHR\",\"SFO\"]]",
+      "output": "[\"JFK\", \"MUC\", \"LHR\", \"SFO\", \"SJC\"]",
+      "explanation": "Starting at JFK, the only way to use all four tickets is JFK -> MUC -> LHR -> SFO -> SJC."
+    },
+    {
+      "input": "tickets = [[\"JFK\",\"SFO\"], [\"JFK\",\"ATL\"], [\"SFO\",\"ATL\"], [\"ATL\",\"JFK\"], [\"ATL\",\"SFO\"]]",
+      "output": "[\"JFK\", \"ATL\", \"JFK\", \"SFO\", \"ATL\", \"SFO\"]",
+      "explanation": "Both JFK->ATL... and JFK->SFO... start the trip, but the lexically smaller choice begins with ATL."
+    }
+  ],
+  "constraints": [
+    "1 <= tickets.length <= 300",
+    "Each ticket is [from, to] where both are airport codes of 3 uppercase letters",
+    "from and to may be the same airport",
+    "The journey always starts at \"JFK\"",
+    "At least one valid itinerary that uses every ticket exists"
+  ]
+}

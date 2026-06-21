@@ -1,0 +1,23 @@
+{
+  "slug": "word-break",
+  "summary": "You are given a string s and a list of words wordDict. Determine whether s can be split into a sequence of one or more words, where every piece appears in the dictionary.\n\nDictionary words may be reused as many times as needed. Return true if such a segmentation exists and false otherwise.",
+  "examples": [
+    {
+      "input": "s = \"leetcode\", wordDict = [\"leet\", \"code\"]",
+      "output": "true",
+      "explanation": "\"leetcode\" splits into \"leet\" + \"code\", both in the dictionary."
+    },
+    {
+      "input": "s = \"catsandog\", wordDict = [\"cats\", \"dog\", \"sand\", \"and\", \"cat\"]",
+      "output": "false",
+      "explanation": "No arrangement of dictionary words spells out the full string."
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 300",
+    "1 <= wordDict.length <= 1000",
+    "1 <= wordDict[i].length <= 20",
+    "s and the dictionary words contain only lowercase English letters",
+    "Each dictionary word can be used multiple times"
+  ]
+}

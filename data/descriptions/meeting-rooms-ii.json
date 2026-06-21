@@ -1,0 +1,23 @@
+{
+  "slug": "meeting-rooms-ii",
+  "summary": "You are given a list of meeting time intervals, each written as [start, end]. Return the smallest number of rooms required so that every meeting can take place, given that overlapping meetings must each occupy their own room.",
+  "examples": [
+    {
+      "input": "intervals = [[0, 30], [5, 10], [15, 20]]",
+      "output": "2",
+      "explanation": "[0, 30] runs the whole time, while [5, 10] and [15, 20] fit one after another in a second room."
+    },
+    {
+      "input": "intervals = [[7, 10], [2, 4]]",
+      "output": "1",
+      "explanation": "The two meetings never overlap, so a single room is enough."
+    }
+  ],
+  "constraints": [
+    "0 <= intervals.length <= 10^4",
+    "Each interval is [start, end] with start <= end",
+    "An empty list of meetings requires 0 rooms",
+    "A meeting that starts exactly when another ends can reuse the same room",
+    "This is a LeetCode Premium problem"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "unique-paths",
+  "summary": "A robot starts in the top-left cell of an m x n grid and wants to reach the bottom-right cell. On each step it can only move one cell to the right or one cell down.\n\nCount how many distinct paths the robot can take to get from the start to the destination.",
+  "examples": [
+    {
+      "input": "m = 3, n = 7",
+      "output": "28",
+      "explanation": "There are 28 different sequences of right/down moves that connect the top-left corner to the bottom-right corner of a 3-by-7 grid."
+    },
+    {
+      "input": "m = 3, n = 2",
+      "output": "3",
+      "explanation": "The robot can go down-down-right, down-right-down, or right-down-down."
+    }
+  ],
+  "constraints": [
+    "1 <= m, n <= 100",
+    "Movement is restricted to right and down only",
+    "The result is guaranteed to fit in a 32-bit signed integer"
+  ]
+}

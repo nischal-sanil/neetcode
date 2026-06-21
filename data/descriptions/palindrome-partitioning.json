@@ -1,0 +1,22 @@
+{
+  "slug": "palindrome-partitioning",
+  "summary": "Given a string, split it into contiguous pieces so that every piece is a palindrome.\n\nReturn all possible ways to partition the string this way. Each partition is the ordered list of substrings that concatenate back to the original string, and every substring in it must read the same forwards and backwards.",
+  "examples": [
+    {
+      "input": "s = \"aab\"",
+      "output": "[[\"a\", \"a\", \"b\"], [\"aa\", \"b\"]]",
+      "explanation": "Splitting into a|a|b and aa|b both yield only palindromic pieces."
+    },
+    {
+      "input": "s = \"ab\"",
+      "output": "[[\"a\", \"b\"]]"
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 16",
+    "s contains only lowercase English letters",
+    "Every substring in a returned partition must be a palindrome",
+    "Concatenating a partition's substrings reproduces s exactly",
+    "Partitions may be returned in any order"
+  ]
+}

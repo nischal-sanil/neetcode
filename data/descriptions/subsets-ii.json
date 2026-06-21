@@ -1,0 +1,22 @@
+{
+  "slug": "subsets-ii",
+  "summary": "Given an array of integers that may contain duplicate values, return all possible subsets (the power set).\n\nThe answer must not contain duplicate subsets: if two subsets contain the same multiset of values, only one should appear. The empty subset is included, and subsets can be returned in any order.",
+  "examples": [
+    {
+      "input": "nums = [1, 2, 2]",
+      "output": "[[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]",
+      "explanation": "Although there are two 2s, subsets like [2] are listed only once rather than twice."
+    },
+    {
+      "input": "nums = [0]",
+      "output": "[[], [0]]"
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10",
+    "-10 <= nums[i] <= 10",
+    "Input may contain duplicate values",
+    "The output must not include duplicate subsets",
+    "Subsets may be returned in any order"
+  ]
+}

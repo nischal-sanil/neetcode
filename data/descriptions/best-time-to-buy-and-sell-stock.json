@@ -1,0 +1,22 @@
+{
+  "slug": "best-time-to-buy-and-sell-stock",
+  "summary": "You are given an array where each entry is the price of a stock on a given day. Choose one day to buy and a later day to sell, and return the largest profit you can make.\n\nIf no buy/sell pair produces a positive profit, return 0 (you simply don't trade).",
+  "examples": [
+    {
+      "input": "prices = [7, 1, 5, 3, 6, 4]",
+      "output": "5",
+      "explanation": "Buy on day 2 at price 1 and sell on day 5 at price 6 for a profit of 6 - 1 = 5."
+    },
+    {
+      "input": "prices = [7, 6, 4, 3, 1]",
+      "output": "0",
+      "explanation": "Prices only fall, so any sale would lose money; the best choice is to make no transaction."
+    }
+  ],
+  "constraints": [
+    "1 <= prices.length <= 10^5",
+    "0 <= prices[i] <= 10^4",
+    "You must buy before you sell (the sell day comes strictly after the buy day)",
+    "At most one buy and one sell are allowed"
+  ]
+}

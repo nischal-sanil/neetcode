@@ -1,0 +1,22 @@
+{
+  "slug": "non-overlapping-intervals",
+  "summary": "You are given a list of intervals, each written as [start, end]. Return the minimum number of intervals you must delete so that none of the remaining intervals overlap one another.",
+  "examples": [
+    {
+      "input": "intervals = [[1, 2], [2, 3], [3, 4], [1, 3]]",
+      "output": "1",
+      "explanation": "Removing [1, 3] leaves [1, 2], [2, 3], [3, 4], which do not overlap."
+    },
+    {
+      "input": "intervals = [[1, 2], [1, 2], [1, 2]]",
+      "output": "2",
+      "explanation": "Two of the three identical intervals must be removed to leave a single non-overlapping interval."
+    }
+  ],
+  "constraints": [
+    "1 <= intervals.length <= 10^5",
+    "Each interval is [start, end] with start < end",
+    "Intervals that only share an endpoint (such as [1, 2] and [2, 3]) are not considered overlapping",
+    "Return the count of removals, not the surviving intervals"
+  ]
+}

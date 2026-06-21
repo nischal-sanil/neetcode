@@ -1,0 +1,23 @@
+{
+  "slug": "coin-change",
+  "summary": "You are given coins, an array of available coin denominations, and a target amount. You have an unlimited supply of each denomination.\n\nReturn the fewest number of coins that sum exactly to amount. If no combination of the coins can reach the target, return -1.",
+  "examples": [
+    {
+      "input": "coins = [1, 2, 5], amount = 11",
+      "output": "3",
+      "explanation": "11 = 5 + 5 + 1 uses three coins, which is the minimum."
+    },
+    {
+      "input": "coins = [2], amount = 3",
+      "output": "-1",
+      "explanation": "No multiple of 2 equals 3, so the amount cannot be formed."
+    }
+  ],
+  "constraints": [
+    "1 <= coins.length <= 12",
+    "1 <= coins[i] <= 2^31 - 1",
+    "0 <= amount <= 10^4",
+    "Each denomination may be used any number of times",
+    "Return -1 if the amount is unreachable"
+  ]
+}

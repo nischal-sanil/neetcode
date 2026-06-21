@@ -1,0 +1,22 @@
+{
+  "slug": "reorder-list",
+  "summary": "You are given the head of a singly linked list. Rearrange the nodes by interleaving the front half with the reversed back half: the first node, then the last, then the second, then the second-to-last, and so on.\n\nOnly the node links may be changed; node values must not be modified. The tests return the reordered list as a value array.",
+  "examples": [
+    {
+      "input": "head = [1, 2, 3, 4]",
+      "output": "[1, 4, 2, 3]",
+      "explanation": "Alternate from the front and the back: 1, then 4, then 2, then 3."
+    },
+    {
+      "input": "head = [1, 2, 3, 4, 5]",
+      "output": "[1, 5, 2, 4, 3]",
+      "explanation": "With an odd count, the middle node ends up last."
+    }
+  ],
+  "constraints": [
+    "The number of nodes is in the range [1, 5 * 10^4].",
+    "1 <= Node.val <= 1000",
+    "Rearrange the nodes in place without changing their values.",
+    "A common approach: find the middle, reverse the second half, then merge the two halves."
+  ]
+}

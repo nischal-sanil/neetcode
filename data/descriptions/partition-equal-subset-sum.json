@@ -1,0 +1,22 @@
+{
+  "slug": "partition-equal-subset-sum",
+  "summary": "Given an array of positive integers nums, decide whether its elements can be split into two groups that have the same total sum.\n\nEvery element must belong to exactly one of the two groups. Return true if such an even split is possible and false otherwise.",
+  "examples": [
+    {
+      "input": "nums = [1, 5, 11, 5]",
+      "output": "true",
+      "explanation": "The groups [1, 5, 5] and [11] each sum to 11."
+    },
+    {
+      "input": "nums = [1, 2, 3, 5]",
+      "output": "false",
+      "explanation": "The total is 11, an odd number, so no equal split exists."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 200",
+    "1 <= nums[i] <= 100",
+    "Every element must go into exactly one of the two subsets",
+    "The two subsets must have equal sums"
+  ]
+}

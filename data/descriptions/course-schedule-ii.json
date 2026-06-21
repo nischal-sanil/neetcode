@@ -1,0 +1,23 @@
+{
+  "slug": "course-schedule-ii",
+  "summary": "There are numCourses courses labeled 0 to numCourses - 1, and prerequisites is a list of pairs [a, b] meaning course b must come before course a.\n\nReturn any valid ordering in which all courses can be taken. If finishing every course is impossible because of a cycle, return an empty array.",
+  "examples": [
+    {
+      "input": "numCourses = 1, prerequisites = []",
+      "output": "[0]",
+      "explanation": "A single course with no prerequisites; the only ordering is [0]."
+    },
+    {
+      "input": "numCourses = 2, prerequisites = [[1, 0]]",
+      "output": "[0, 1]",
+      "explanation": "Course 0 has no prerequisite and must precede course 1, so the order is [0, 1]."
+    }
+  ],
+  "constraints": [
+    "1 <= numCourses <= 2000",
+    "0 <= prerequisites.length <= numCourses * (numCourses - 1)",
+    "Each prerequisites[i] = [a, b] with 0 <= a, b < numCourses",
+    "All prerequisite pairs are distinct",
+    "Return an empty array if no valid ordering exists; otherwise any valid ordering is accepted"
+  ]
+}

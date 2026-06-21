@@ -1,0 +1,21 @@
+{
+  "slug": "longest-substring-without-repeating-characters",
+  "summary": "Given a string, find the length of the longest contiguous run of characters in which no character repeats.\n\nA substring here means a slice of consecutive characters from the original string; you are returning its length, not the substring itself.",
+  "examples": [
+    {
+      "input": "s = \"abcabcbb\"",
+      "output": "3",
+      "explanation": "The longest stretch with all-unique characters is \"abc\", which has length 3."
+    },
+    {
+      "input": "s = \"pwwkew\"",
+      "output": "3",
+      "explanation": "\"wke\" is the longest substring without a repeat. Note that \"pwke\" is not valid because it is not contiguous."
+    }
+  ],
+  "constraints": [
+    "0 <= s.length <= 5 * 10^4",
+    "s may be empty, in which case the answer is 0",
+    "s consists of English letters, digits, symbols, and spaces"
+  ]
+}
